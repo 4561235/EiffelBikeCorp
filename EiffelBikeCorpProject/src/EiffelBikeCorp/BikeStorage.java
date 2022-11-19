@@ -19,6 +19,7 @@ public class BikeStorage extends UnicastRemoteObject implements EiffelBikeStorag
     @Override
     public void rentBike(EiffelUserInterface user) throws RemoteException {
         // TODO: 19/11/2022
+        if(!user.hasABike()) user.borrowBike(bikeStorage.getFirst());
     }
 
     @Override
