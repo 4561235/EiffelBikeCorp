@@ -10,11 +10,14 @@ import java.util.Objects;
 
 public class Bike extends UnicastRemoteObject implements BikeInterface {
 
+    private final String bikeName;
     private final ArrayList<String> notes = new ArrayList<>();
 
-    protected Bike() throws RemoteException {
+    public Bike(String bikeName) throws RemoteException {
+        super();
+        Objects.requireNonNull(bikeName);
+        this.bikeName = bikeName;
     }
-
     public void addNote(String note){
         Objects.requireNonNull(note);
         this.notes.add(note);
@@ -26,7 +29,12 @@ public class Bike extends UnicastRemoteObject implements BikeInterface {
     }
 
     @Override
+    public int getId() throws RemoteException {
+        return Math.abs(Objects.hash(this.bikeName));
+    }
+
+    @Override
     public String toString() {
-        return "Bike, notes: " +notes;
+        return "Bike " +this.bikeName +", notes: " +notes;
     }
 }
