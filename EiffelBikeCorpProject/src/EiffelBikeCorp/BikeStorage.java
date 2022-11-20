@@ -1,6 +1,6 @@
 package EiffelBikeCorp;
 
-import common.Bike;
+import common.BikeInterface;
 import common.EiffelBikeStorageInterface;
 import common.EiffelUserInterface;
 
@@ -11,19 +11,35 @@ import java.util.concurrent.LinkedBlockingDeque;
 
 public class BikeStorage extends UnicastRemoteObject implements EiffelBikeStorageInterface {
 
-    private final LinkedBlockingDeque<Bike> bikeStorage = new LinkedBlockingDeque<>();
+    private final LinkedBlockingDeque<BikeInterface> bikeStorage = new LinkedBlockingDeque<>();
+    private final LinkedBlockingDeque<EiffelUserInterface> usersQueue = new LinkedBlockingDeque<>();
 
     protected BikeStorage() throws RemoteException {
     }
 
     @Override
     public void rentBike(EiffelUserInterface user) throws RemoteException {
-        // TODO: 19/11/2022
-        if(!user.hasABike()) user.borrowBike(bikeStorage.getFirst());
+        BikeInterface bikeToBorrow = bikeStorage.pollFirst();
+        if (bikeToBorrow != null){
+            if(!user.hasABike()) user.borrowBike(bikeToBorrow);
+        }
+        else {
+            this.usersQueue.add(user);
+        }
+    }
+
+    private void tryBorrowBikeToUserInQueue() throws RemoteException {
+        if(!bikeStorage.isEmpty() && !usersQueue.isEmpty()){
+
+            EiffelUserInterface user = usersQueue.pollFirst();
+            BikeInterface bikeToBorrow = bikeStorage.pollFirst();
+
+            if(!user.hasABike()) user.borrowBike(bikeToBorrow);
+        }
     }
 
     @Override
-    public void returnBike(Bike bike) throws RemoteException {
+    public void returnBike(BikeInterface bike) throws RemoteException {
         Objects.requireNonNull(bike);
         this.bikeStorage.add(bike);
     }
@@ -32,4 +48,8 @@ public class BikeStorage extends UnicastRemoteObject implements EiffelBikeStorag
         Objects.requireNonNull(bike);
         this.bikeStorage.add(bike);
     }
+
+
+
+
 }

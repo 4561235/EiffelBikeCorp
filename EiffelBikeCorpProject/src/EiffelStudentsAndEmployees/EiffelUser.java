@@ -1,6 +1,7 @@
 package EiffelStudentsAndEmployees;
 
-import common.Bike;
+import EiffelBikeCorp.Bike;
+import common.BikeInterface;
 import common.EiffelUserInterface;
 
 import java.rmi.RemoteException;
@@ -13,7 +14,7 @@ public class EiffelUser extends UnicastRemoteObject implements EiffelUserInterfa
     private final String surname;
     private final String name;
 
-    private Bike bike = null;
+    private BikeInterface bike = null;
 
 
     public EiffelUser(String surname, String name) throws RemoteException {
@@ -26,7 +27,7 @@ public class EiffelUser extends UnicastRemoteObject implements EiffelUserInterfa
 
 
     @Override
-    public void borrowBike(Bike bike) throws RemoteException {
+    public void borrowBike(BikeInterface bike) throws RemoteException {
         Objects.requireNonNull(bike);
         if (this.hasABike()) throw new IllegalStateException("User: " +this.surname +" " +this.name +" already has a bike");
         this.bike = bike;
@@ -37,7 +38,14 @@ public class EiffelUser extends UnicastRemoteObject implements EiffelUserInterfa
         return this.bike != null;
     }
 
-    public Optional<Bike> getBike(){
-        return Optional.of(this.bike);
+    public Optional<BikeInterface> getBike(){
+        return Optional.ofNullable(this.bike);
     }
+
+    public Optional<BikeInterface> giveBikeBack(){
+        Optional<BikeInterface> opt = Optional.ofNullable(this.bike);
+        this.bike = null;
+        return opt;
+    }
+
 }
