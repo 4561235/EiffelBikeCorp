@@ -1,7 +1,8 @@
 package EiffelBikeCorp;
 
 import common.BikeInterface;
-import common.EiffelBikeStorageInterface;
+import common.EiffelBikeCorpAccessInterface;
+import common.EiffelBikeCorpInterface;
 import common.EiffelUserInterface;
 
 import java.rmi.RemoteException;
@@ -12,9 +13,8 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.LinkedBlockingDeque;
 import java.util.stream.Collectors;
 
-public class BikeStorage extends UnicastRemoteObject implements EiffelBikeStorageInterface {
+public class BikeStorage extends UnicastRemoteObject implements EiffelBikeCorpInterface, EiffelBikeCorpAccessInterface {
 
-    // TODO: 20/11/2022 Changer en hashmap pour pouvoir acheter des velos
     private final ConcurrentHashMap<Integer, BikeInterface> bikeStorage = new ConcurrentHashMap<>();
     private final LinkedBlockingDeque<BorrowRequest> usersQueue = new LinkedBlockingDeque<>();
 
@@ -62,7 +62,7 @@ public class BikeStorage extends UnicastRemoteObject implements EiffelBikeStorag
     public void returnBike(BikeInterface bike) throws RemoteException {
         Objects.requireNonNull(bike);
         this.bikeStorage.put(bike.getId(), bike);
-        System.out.println("Return");
+        System.out.println("Bike returned");
     }
 
     @Override
@@ -82,6 +82,8 @@ public class BikeStorage extends UnicastRemoteObject implements EiffelBikeStorag
     }
 
 
-
-
+    @Override
+    public BikeInterface removeBike(int bikeID) {
+        return this.bikeStorage.remove(bikeID);
+    }
 }

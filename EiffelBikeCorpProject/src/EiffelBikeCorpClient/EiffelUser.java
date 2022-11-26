@@ -1,6 +1,5 @@
-package EiffelStudentsAndEmployees;
+package EiffelBikeCorpClient;
 
-import EiffelBikeCorp.Bike;
 import common.BikeInterface;
 import common.EiffelUserInterface;
 
@@ -42,10 +41,13 @@ public class EiffelUser extends UnicastRemoteObject implements EiffelUserInterfa
         return Optional.ofNullable(this.bike);
     }
 
-    public Optional<BikeInterface> giveBikeBack(){
-        Optional<BikeInterface> opt = Optional.ofNullable(this.bike);
+    public BikeInterface giveBikeBack(){
+//        Optional<BikeInterface> opt = Optional.ofNullable(this.bike);
+//        this.bike = null;
+//        return opt;
+        BikeInterface ret = this.bike;
         this.bike = null;
-        return opt;
+        return ret;
     }
 
 }
