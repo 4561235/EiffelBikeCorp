@@ -12,11 +12,14 @@ public class Bike extends UnicastRemoteObject implements BikeInterface {
 
     private final String bikeName;
     private final ArrayList<String> notes = new ArrayList<>();
+    private final int price;
 
-    public Bike(String bikeName) throws RemoteException {
+    public Bike(String bikeName, int price) throws RemoteException {
         super();
         Objects.requireNonNull(bikeName);
+        if (price < 0) throw new IllegalArgumentException("Price can't be < 0");
         this.bikeName = bikeName;
+        this.price = price;
     }
     public void addNote(String note){
         Objects.requireNonNull(note);
@@ -30,11 +33,11 @@ public class Bike extends UnicastRemoteObject implements BikeInterface {
 
     @Override
     public int getId() throws RemoteException {
-        return Math.abs(Objects.hash(this.bikeName));
+        return Math.abs(Objects.hash(this.bikeName, this.price));
     }
 
     @Override
     public String toString() {
-        return "Bike " +this.bikeName +", notes: " +notes;
+        return "Bike: " +this.bikeName +" Price: " +this.price +", notes: " +notes;
     }
 }

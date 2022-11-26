@@ -17,12 +17,12 @@ public class EiffelUsersClient {
         EiffelUser ron = new EiffelUser("Ron", "Weasley");
         EiffelUser hermione = new EiffelUser("Hermione", "Granger");
 
-        bikeStorage.rentBike(harry, 96);
+        bikeStorage.rentBike(harry, 3076);
         BikeInterface harryBike = harry.getBike().get();
         harryBike.addNote("Harry: This is my bike");
         System.out.println(harryBike.getNotes());
 
-        bikeStorage.rentBike(ron, 97);
+        bikeStorage.rentBike(ron, 3207);
         BikeInterface ronBike = ron.getBike().get();
         ronBike.addNote("Ron: I like my bike");
         System.out.println(ronBike.getNotes());
@@ -35,7 +35,7 @@ public class EiffelUsersClient {
 
         System.out.println(bikeStorage.bikesToBorrow());
 
-        bikeStorage.rentBike(hermione, 96);
+        bikeStorage.rentBike(hermione, 3076);
         if(hermione.getBike().isPresent()){
             BikeInterface hermioneBike = hermione.getBike().get();
             hermioneBike.addNote("Hermione: This bike is very nice");
