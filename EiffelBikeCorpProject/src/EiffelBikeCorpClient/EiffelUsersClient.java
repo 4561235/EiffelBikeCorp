@@ -30,7 +30,7 @@ public class EiffelUsersClient {
         System.out.println(bikeStorage.bikesToBorrow());
 
         if(harry.hasABike()){
-            bikeStorage.returnBike(harry.giveBikeBack());
+            bikeStorage.returnBike(harry);
         }
 
         System.out.println(bikeStorage.bikesToBorrow());
@@ -44,8 +44,8 @@ public class EiffelUsersClient {
             System.out.println("Hermione doesn't have a bike!");
         }
 
-        if(harry.hasABike()) bikeStorage.returnBike(harry.giveBikeBack());
-        if(ron.hasABike()) bikeStorage.returnBike(ron.giveBikeBack());
-        if(hermione.hasABike()) bikeStorage.returnBike(hermione.giveBikeBack());
+        if(harry.hasABike()) bikeStorage.returnBike(harry);
+        if(ron.hasABike()) bikeStorage.returnBike(ron);
+        if(hermione.hasABike()) bikeStorage.returnBike(hermione);
     }
 }

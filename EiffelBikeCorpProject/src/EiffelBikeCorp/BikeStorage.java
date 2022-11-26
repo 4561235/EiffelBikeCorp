@@ -59,10 +59,13 @@ public class BikeStorage extends UnicastRemoteObject implements EiffelBikeCorpIn
     }
 
     @Override
-    public void returnBike(BikeInterface bike) throws RemoteException {
-        Objects.requireNonNull(bike);
-        this.bikeStorage.put(bike.getId(), bike);
-        System.out.println("Bike returned");
+    public void returnBike(EiffelUserInterface user) throws RemoteException {
+        Objects.requireNonNull(user);
+        if(user.hasABike()){
+            BikeInterface bikeToReturn = user.giveBikeBack();
+            this.bikeStorage.put(bikeToReturn.getId(), bikeToReturn);
+            System.out.println("Bike returned");
+        }
     }
 
     @Override
