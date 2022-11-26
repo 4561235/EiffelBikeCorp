@@ -1,7 +1,7 @@
 package GustaveBikeService;
 
 import common.BikeInterface;
-import common.BikeStoreInterface;
+import common.GustaveBikeStoreInterface;
 import common.EiffelBikeCorpAccessInterface;
 import common.EiffelBikeCorpInterface;
 
@@ -10,7 +10,7 @@ import java.rmi.server.UnicastRemoteObject;
 import java.util.HashMap;
 import java.util.Objects;
 
-public class BikeStore extends UnicastRemoteObject implements BikeStoreInterface {
+public class BikeStore extends UnicastRemoteObject implements GustaveBikeStoreInterface {
 
     private final EiffelBikeCorpInterface eiffelBikeStorage;
     private final EiffelBikeCorpAccessInterface eiffelBikeStorageAccess;
@@ -31,7 +31,7 @@ public class BikeStore extends UnicastRemoteObject implements BikeStoreInterface
 
     @Override
     public HashMap<Integer, String> getBikes() {
-        // TODO: 26/11/2022  
+        // TODO: 26/11/2022
         return null;
     }
 }
