@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://GustaveBikeService" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://GustaveBikeService" xmlns:intf="http://GustaveBikeService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://GustaveBikeService" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="SayHello">
+    <complexType/>
+   </element>
+   <element name="SayHelloResponse">
+    <complexType>
+     <sequence>
+      <element name="SayHelloReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="SayHelloRequest">
+
+      <wsdl:part element="impl:SayHello" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="SayHelloResponse">
+
+      <wsdl:part element="impl:SayHelloResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="GustaveBikeService">
+
+      <wsdl:operation name="SayHello">
+
+         <wsdl:input message="impl:SayHelloRequest" name="SayHelloRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:SayHelloResponse" name="SayHelloResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="GustaveBikeServiceSoapBinding" type="impl:GustaveBikeService">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="SayHello">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="SayHelloRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="SayHelloResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="GustaveBikeServiceService">
+
+      <wsdl:port binding="impl:GustaveBikeServiceSoapBinding" name="GustaveBikeService">
+
+         <wsdlsoap:address location="http://localhost:8080/GustaveBikeService/services/GustaveBikeService"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>
