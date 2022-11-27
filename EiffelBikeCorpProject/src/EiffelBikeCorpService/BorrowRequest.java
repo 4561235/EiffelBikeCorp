@@ -1,4 +1,4 @@
-package EiffelBikeCorp;
+package EiffelBikeCorpService;
 
 import common.EiffelUserInterface;
 

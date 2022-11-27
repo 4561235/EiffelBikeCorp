@@ -1,4 +1,4 @@
-package EiffelBikeCorp;
+package EiffelBikeCorpService;
 
 import common.BikeInterface;
 import common.EiffelBikeCorpAccessInterface;
@@ -37,13 +37,6 @@ public class BikeStorage extends UnicastRemoteObject implements EiffelBikeCorpIn
     }
 
     private void tryBorrowBikeToUserInQueue() throws RemoteException {
-//        if(!bikeStorage.isEmpty() && !usersQueue.isEmpty()){
-//
-//            EiffelUserInterface user = usersQueue.pollFirst();
-//            BikeInterface bikeToBorrow = bikeStorage.pollFirst();
-//
-//            if(!user.hasABike()) user.borrowBike(bikeToBorrow);
-//        }
 
         this.usersQueue.forEach((BorrowRequest borrowRequest) -> {
             try {
@@ -64,6 +57,7 @@ public class BikeStorage extends UnicastRemoteObject implements EiffelBikeCorpIn
         if(user.hasABike()){
             BikeInterface bikeToReturn = user.giveBikeBack();
             this.bikeStorage.put(bikeToReturn.getId(), bikeToReturn);
+            tryBorrowBikeToUserInQueue();
             System.out.println("Bike returned");
         }
     }
@@ -82,6 +76,7 @@ public class BikeStorage extends UnicastRemoteObject implements EiffelBikeCorpIn
     public void addBike(BikeInterface bike) throws RemoteException {
         Objects.requireNonNull(bike);
         this.bikeStorage.put(bike.getId(), bike);
+        this.tryBorrowBikeToUserInQueue();
     }
 
 

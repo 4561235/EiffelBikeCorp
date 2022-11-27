@@ -1,8 +1,7 @@
-package EiffelBikeCorp;
+package EiffelBikeCorpService;
 
 import common.BikeInterface;
 
-import java.io.Serializable;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.ArrayList;

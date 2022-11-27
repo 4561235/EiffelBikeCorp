@@ -1,4 +1,4 @@
-package EiffelBikeCorp;
+package EiffelBikeCorpService;
 
 import java.net.MalformedURLException;
 import java.rmi.Naming;
