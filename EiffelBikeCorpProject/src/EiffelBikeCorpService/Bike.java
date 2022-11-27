@@ -13,6 +13,8 @@ public class Bike extends UnicastRemoteObject implements BikeInterface {
     private final ArrayList<String> notes = new ArrayList<>();
     private final int price;
 
+    private boolean isRented = false;
+
     public Bike(String bikeName, int price) throws RemoteException {
         super();
         Objects.requireNonNull(bikeName);
@@ -20,6 +22,7 @@ public class Bike extends UnicastRemoteObject implements BikeInterface {
         this.bikeName = bikeName;
         this.price = price;
     }
+    @Override
     public void addNote(String note){
         Objects.requireNonNull(note);
         this.notes.add(note);
@@ -33,6 +36,16 @@ public class Bike extends UnicastRemoteObject implements BikeInterface {
     @Override
     public int getId() throws RemoteException {
         return Math.abs(Objects.hash(this.bikeName, this.price));
+    }
+
+    @Override
+    public boolean isRented() throws RemoteException{
+        return isRented;
+    }
+
+    @Override
+    public void isRented(boolean rented) throws RemoteException{
+        isRented = rented;
     }
 
     @Override

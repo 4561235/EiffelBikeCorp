@@ -7,6 +7,7 @@ import common.EiffelUserInterface;
 
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.concurrent.ConcurrentHashMap;
@@ -23,42 +24,58 @@ public class BikeStorage extends UnicastRemoteObject implements EiffelBikeCorpIn
 
     @Override
     public void rentBike(EiffelUserInterface user, int bikeId) throws RemoteException {
+
         if(this.bikeStorage.containsKey(bikeId)){
-            if(!user.hasABike()){
-                BikeInterface bikeToBorrow = bikeStorage.remove(bikeId);
+            BikeInterface bikeToBorrow = bikeStorage.get(bikeId);
+
+            if(!user.hasABike() && !bikeToBorrow.isRented()){
+                bikeToBorrow.isRented(true);
                 user.borrowBike(bikeToBorrow);
                 System.out.println("Ok borrowed");
             }
-            else {
+            else if(!user.hasABike()){
                 this.usersQueue.add(new BorrowRequest(user, bikeId));
                 System.out.println("Added to queue");
             }
         }
+
     }
 
     private void tryBorrowBikeToUserInQueue() throws RemoteException {
+        ArrayList<BorrowRequest> requestsToRemove = new ArrayList<>();
 
         this.usersQueue.forEach((BorrowRequest borrowRequest) -> {
             try {
                 EiffelUserInterface user = borrowRequest.getUser();
                 int bikeId = borrowRequest.getBikeId();
                 if(this.bikeStorage.containsKey(bikeId) && !user.hasABike()){
-                    user.borrowBike(this.bikeStorage.remove(bikeId));
+                    BikeInterface bikeToBorrow = this.bikeStorage.get(bikeId);
+                    bikeToBorrow.isRented(true);
+                    user.borrowBike(bikeToBorrow);
+                    requestsToRemove.add(borrowRequest);
+                    System.out.println("Borrowed to someone in queue");
                 }
             } catch (RemoteException e) {
                 throw new RuntimeException(e);
             }
         });
+
+        requestsToRemove.forEach((BorrowRequest borrowRequest) -> this.usersQueue.remove(borrowRequest));
     }
 
     @Override
-    public void returnBike(EiffelUserInterface user) throws RemoteException {
+    public void returnBike(EiffelUserInterface user, String note) throws RemoteException {
         Objects.requireNonNull(user);
         if(user.hasABike()){
             BikeInterface bikeToReturn = user.giveBikeBack();
-            this.bikeStorage.put(bikeToReturn.getId(), bikeToReturn);
-            tryBorrowBikeToUserInQueue();
+            bikeToReturn.addNote(note);
+            bikeToReturn.isRented(false);
+//            this.bikeStorage.put(bikeToReturn.getId(), bikeToReturn);
             System.out.println("Bike returned");
+            tryBorrowBikeToUserInQueue();
+        }
+        else {
+            System.out.println("User wants to return but no bike is present");
         }
     }
 

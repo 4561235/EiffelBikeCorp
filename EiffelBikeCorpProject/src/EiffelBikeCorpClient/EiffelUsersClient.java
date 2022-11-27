@@ -10,7 +10,9 @@ import java.rmi.RemoteException;
 
 public class EiffelUsersClient {
     public static void main(String[] args) throws MalformedURLException, NotBoundException, RemoteException {
+
         EiffelBikeCorpInterface bikeStorage = (EiffelBikeCorpInterface) Naming.lookup("EiffelBikeCorpService");
+
         System.out.println(bikeStorage.bikesToBorrow());
 
         EiffelUser harry = new EiffelUser("Harry", "Potter");
@@ -19,33 +21,21 @@ public class EiffelUsersClient {
 
         bikeStorage.rentBike(harry, 3076);
         BikeInterface harryBike = harry.getBike().get();
-        harryBike.addNote("Harry: This is my bike");
-        System.out.println(harryBike.getNotes());
 
         bikeStorage.rentBike(ron, 3207);
         BikeInterface ronBike = ron.getBike().get();
-        ronBike.addNote("Ron: I like my bike");
-        System.out.println(ronBike.getNotes());
-
-        System.out.println(bikeStorage.bikesToBorrow());
-
-        if(harry.hasABike()){
-            bikeStorage.returnBike(harry);
-        }
-
-        System.out.println(bikeStorage.bikesToBorrow());
 
         bikeStorage.rentBike(hermione, 3076);
-        if(hermione.getBike().isPresent()){
-            BikeInterface hermioneBike = hermione.getBike().get();
-            hermioneBike.addNote("Hermione: This bike is very nice");
-            System.out.println(hermioneBike.getNotes());
-        }else {
-            System.out.println("Hermione doesn't have a bike!");
-        }
 
-        if(harry.hasABike()) bikeStorage.returnBike(harry);
-        if(ron.hasABike()) bikeStorage.returnBike(ron);
-        if(hermione.hasABike()) bikeStorage.returnBike(hermione);
+        System.out.println(bikeStorage.bikesToBorrow());
+
+        if(harry.hasABike()) bikeStorage.returnBike(harry, "Harry: This is my bike");
+        if(ron.hasABike()) bikeStorage.returnBike(ron, "Ron: Nice bike");
+
+        System.out.println(bikeStorage.bikesToBorrow());
+
+        if(hermione.hasABike()) bikeStorage.returnBike(hermione, "Hermione: I love my bike");
+
+        System.out.println(bikeStorage.bikesToBorrow());
     }
 }
