@@ -10,9 +10,13 @@
       <parameter name="className" value="GustaveBikeService.GustaveBikeService"/>
       <parameter name="wsdlPortType" value="GustaveBikeService"/>
       <parameter name="typeMappingVersion" value="1.2"/>
+      <operation xmlns:operNS="http://GustaveBikeService" xmlns:retNS="http://GustaveBikeService" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="helloWorld" qname="operNS:helloWorld" returnQName="retNS:helloWorldReturn" returnType="rtns:string" soapAction="">
+      </operation>
+      <operation xmlns:operNS="http://GustaveBikeService" xmlns:retNS="http://GustaveBikeService" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getBikesToBuy" qname="operNS:getBikesToBuy" returnQName="retNS:getBikesToBuyReturn" returnType="rtns:string" soapAction="">
+      </operation>
       <operation xmlns:operNS="http://GustaveBikeService" xmlns:retNS="http://GustaveBikeService" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="sayHello" qname="operNS:sayHello" returnQName="retNS:sayHelloReturn" returnType="rtns:string" soapAction="">
       </operation>
-      <parameter name="allowedMethods" value="sayHello"/>
+      <parameter name="allowedMethods" value="sayHello getBikesToBuy helloWorld"/>
 
   </service>
 </deployment>

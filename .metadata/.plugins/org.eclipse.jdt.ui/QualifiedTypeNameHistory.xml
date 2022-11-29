@@ -2,4 +2,10 @@
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="java.io.Serializable"/>
     <fullyQualifiedTypeName name="GustaveBikeService_pkg.GustaveBikeService"/>
+    <fullyQualifiedTypeName name="GustaveBikeService_pkg.GustaveBikeServiceServiceLocator"/>
+    <fullyQualifiedTypeName name="common.EiffelBikeCorpInterface"/>
+    <fullyQualifiedTypeName name="java.rmi.Naming"/>
+    <fullyQualifiedTypeName name="GustaveBikeService.GustaveBikeService"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
 </qualifiedTypeNameHistroy>

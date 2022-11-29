@@ -24,7 +24,7 @@
 		<item key="ShowStatusLine" value="true"/>
 		<item key="History" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0A;&lt;History/&gt;"/>
 		<section name="DialogBoundsSettings">
-			<item key="DIALOG_HEIGHT" value="685"/>
+			<item key="DIALOG_HEIGHT" value="833"/>
 			<item key="DIALOG_WIDTH" value="600"/>
 			<item key="DIALOG_X_ORIGIN" value="53"/>
 			<item key="DIALOG_Y_ORIGIN" value="84"/>
