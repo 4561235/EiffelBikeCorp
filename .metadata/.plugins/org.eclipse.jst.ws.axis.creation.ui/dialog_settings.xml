@@ -2,5 +2,6 @@
 <section name="Workbench">
 	<list key="org.eclipse.jst.ws.internal.axis.creation.ui.widgets.bean.BeanConfigWidget.wsdlFileText_">
 		<item value="GustaveBikeService.wsdl"/>
+		<item value="GustaveWebService.wsdl"/>
 	</list>
 </section>

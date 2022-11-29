@@ -1,9 +1,0 @@
-package GustaveBikeService;
-
-public class GustaveBikeService {
-	
-	public String SayHello() {
-		return "Hello its GustaveBikeService here!";
-	}
-
-}

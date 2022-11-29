@@ -1,9 +1,7 @@
 package GustaveBikeService;
 
 public class GustaveBikeService {
-	
 	public String sayHello() {
-		return "Hello its GustaveBikeService here!";
+		return "Hello m8";
 	}
-
 }

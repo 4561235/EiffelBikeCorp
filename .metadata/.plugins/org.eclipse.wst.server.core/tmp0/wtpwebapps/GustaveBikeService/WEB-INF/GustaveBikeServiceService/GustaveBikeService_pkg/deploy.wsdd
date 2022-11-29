@@ -10,7 +10,7 @@
       <parameter name="className" value="GustaveBikeService.GustaveBikeService"/>
       <parameter name="wsdlPortType" value="GustaveBikeService"/>
       <parameter name="typeMappingVersion" value="1.2"/>
-      <operation xmlns:operNS="http://GustaveBikeService" xmlns:retNS="http://GustaveBikeService" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="sayHello" qname="operNS:SayHello" returnQName="retNS:SayHelloReturn" returnType="rtns:string" soapAction="">
+      <operation xmlns:operNS="http://GustaveBikeService" xmlns:retNS="http://GustaveBikeService" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="sayHello" qname="operNS:sayHello" returnQName="retNS:sayHelloReturn" returnType="rtns:string" soapAction="">
       </operation>
       <parameter name="allowedMethods" value="sayHello"/>
 

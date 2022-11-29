@@ -4,30 +4,30 @@
 Built on Apr 22, 2006 (06:55:48 PDT)-->
  <wsdl:types>
   <schema elementFormDefault="qualified" targetNamespace="http://GustaveBikeService" xmlns="http://www.w3.org/2001/XMLSchema">
-   <element name="SayHello">
+   <element name="sayHello">
     <complexType/>
    </element>
-   <element name="SayHelloResponse">
+   <element name="sayHelloResponse">
     <complexType>
      <sequence>
-      <element name="SayHelloReturn" type="xsd:string"/>
+      <element name="sayHelloReturn" type="xsd:string"/>
      </sequence>
     </complexType>
    </element>
   </schema>
  </wsdl:types>
 
-   <wsdl:message name="SayHelloRequest">
+   <wsdl:message name="sayHelloRequest">
 
-      <wsdl:part element="impl:SayHello" name="parameters">
+      <wsdl:part element="impl:sayHello" name="parameters">
 
       </wsdl:part>
 
    </wsdl:message>
 
-   <wsdl:message name="SayHelloResponse">
+   <wsdl:message name="sayHelloResponse">
 
-      <wsdl:part element="impl:SayHelloResponse" name="parameters">
+      <wsdl:part element="impl:sayHelloResponse" name="parameters">
 
       </wsdl:part>
 
@@ -35,13 +35,13 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
    <wsdl:portType name="GustaveBikeService">
 
-      <wsdl:operation name="SayHello">
+      <wsdl:operation name="sayHello">
 
-         <wsdl:input message="impl:SayHelloRequest" name="SayHelloRequest">
+         <wsdl:input message="impl:sayHelloRequest" name="sayHelloRequest">
 
        </wsdl:input>
 
-         <wsdl:output message="impl:SayHelloResponse" name="SayHelloResponse">
+         <wsdl:output message="impl:sayHelloResponse" name="sayHelloResponse">
 
        </wsdl:output>
 
@@ -53,17 +53,17 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
       <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
 
-      <wsdl:operation name="SayHello">
+      <wsdl:operation name="sayHello">
 
          <wsdlsoap:operation soapAction=""/>
 
-         <wsdl:input name="SayHelloRequest">
+         <wsdl:input name="sayHelloRequest">
 
             <wsdlsoap:body use="literal"/>
 
          </wsdl:input>
 
-         <wsdl:output name="SayHelloResponse">
+         <wsdl:output name="sayHelloResponse">
 
             <wsdlsoap:body use="literal"/>
 

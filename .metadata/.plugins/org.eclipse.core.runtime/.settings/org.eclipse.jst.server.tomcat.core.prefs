@@ -1,2 +1,4 @@
 eclipse.preferences.version=1
+locationorg.eclipse.jst.server.tomcat.runtime.100=/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-10.0.26
+locationorg.eclipse.jst.server.tomcat.runtime.85=/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84
 locationorg.eclipse.jst.server.tomcat.runtime.90=/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/GustaveBikeService/apache-tomcat-9.0.68
