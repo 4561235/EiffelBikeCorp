@@ -7,5 +7,13 @@
     <fullyQualifiedTypeName name="java.rmi.Naming"/>
     <fullyQualifiedTypeName name="GustaveBikeService.GustaveBikeService"/>
     <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="GustaveBikeService_pkg.GustaveBikeServiceSoapBindingStub"/>
+    <fullyQualifiedTypeName name="java.lang.ArrayStoreException"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="GustaveBikeClient.GustaveBikeUser"/>
+    <fullyQualifiedTypeName name="java.util.Objects"/>
+    <fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
+    <fullyQualifiedTypeName name="common.BikeInterface"/>
+    <fullyQualifiedTypeName name="common.EiffelBikeCorpAccessInterface"/>
 </qualifiedTypeNameHistroy>
