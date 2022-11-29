@@ -20,13 +20,11 @@
       <parameter name="className" value="GustaveBikeService_pkg.GustaveBikeServiceSoapBindingImpl"/>
       <parameter name="wsdlPortType" value="GustaveBikeService"/>
       <parameter name="typeMappingVersion" value="1.2"/>
-      <operation name="helloWorld" qname="operNS:helloWorld" xmlns:operNS="http://GustaveBikeService" returnQName="retNS:helloWorldReturn" xmlns:retNS="http://GustaveBikeService" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
-      </operation>
       <operation name="getBikesToBuy" qname="operNS:getBikesToBuy" xmlns:operNS="http://GustaveBikeService" returnQName="retNS:getBikesToBuyReturn" xmlns:retNS="http://GustaveBikeService" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
       </operation>
       <operation name="sayHello" qname="operNS:sayHello" xmlns:operNS="http://GustaveBikeService" returnQName="retNS:sayHelloReturn" xmlns:retNS="http://GustaveBikeService" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
       </operation>
-      <parameter name="allowedMethods" value="sayHello getBikesToBuy helloWorld"/>
+      <parameter name="allowedMethods" value="sayHello getBikesToBuy"/>
 
   </service>
 </deployment>

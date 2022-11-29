@@ -6,27 +6,31 @@ import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 import java.util.List;
 
+import common.BikeInterface;
+import common.EiffelBikeCorpAccessInterface;
 import common.EiffelBikeCorpInterface;
 
 public class GustaveBikeService {
 	
 	private final EiffelBikeCorpInterface eiffelBikeStorage;
+	private final EiffelBikeCorpAccessInterface bikeStorageAccess;
 	
 	public GustaveBikeService() throws MalformedURLException, RemoteException, NotBoundException {
 		this.eiffelBikeStorage = (EiffelBikeCorpInterface) Naming.lookup("EiffelBikeCorpService");
-//		System.out.println(this.getBikesToBuy());
-		System.out.println("WOW ca marche");
+		this.bikeStorageAccess = (EiffelBikeCorpAccessInterface) Naming.lookup("EiffelBikeCorpService");
 	}
 	
 	public String sayHello() {
-		return "Hello m8";
+		return "Hello this is GustaveBikeService";
 	}
 	
 	public String[] getBikesToBuy() throws RemoteException {
         return this.eiffelBikeStorage.bikesToBorrow().toArray(String[]::new);
     }
 	
-	public String helloWorld() {
-		return "Hello world";
-	}
+	
+//	public BikeInterface buyBike(int id) throws RemoteException {
+//        // TODO: 26/11/2022  
+//        return bikeStorageAccess.removeBike(id);
+//    }
 }

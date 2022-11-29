@@ -14,7 +14,6 @@ public class GustaveBikeClient {
 		GustaveBikeService service = new GustaveBikeServiceServiceLocator().getGustaveBikeService();
 		((GustaveBikeServiceSoapBindingStub) service).setMaintainSession(true);
 		System.out.println(service.sayHello());
-		System.out.println(service.helloWorld());
 		
 		for (String bikeStr : service.getBikesToBuy()) {
 			System.out.println(bikeStr);

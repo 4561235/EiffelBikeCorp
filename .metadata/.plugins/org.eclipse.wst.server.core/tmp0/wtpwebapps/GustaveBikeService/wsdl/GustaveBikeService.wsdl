@@ -4,16 +4,6 @@
 Built on Apr 22, 2006 (06:55:48 PDT)-->
  <wsdl:types>
   <schema elementFormDefault="qualified" targetNamespace="http://GustaveBikeService" xmlns="http://www.w3.org/2001/XMLSchema">
-   <element name="helloWorld">
-    <complexType/>
-   </element>
-   <element name="helloWorldResponse">
-    <complexType>
-     <sequence>
-      <element name="helloWorldReturn" type="xsd:string"/>
-     </sequence>
-    </complexType>
-   </element>
    <element name="getBikesToBuy">
     <complexType/>
    </element>
@@ -53,25 +43,9 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
    </wsdl:message>
 
-   <wsdl:message name="helloWorldRequest">
-
-      <wsdl:part element="impl:helloWorld" name="parameters">
-
-      </wsdl:part>
-
-   </wsdl:message>
-
    <wsdl:message name="sayHelloRequest">
 
       <wsdl:part element="impl:sayHello" name="parameters">
-
-      </wsdl:part>
-
-   </wsdl:message>
-
-   <wsdl:message name="helloWorldResponse">
-
-      <wsdl:part element="impl:helloWorldResponse" name="parameters">
 
       </wsdl:part>
 
@@ -86,18 +60,6 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
    </wsdl:message>
 
    <wsdl:portType name="GustaveBikeService">
-
-      <wsdl:operation name="helloWorld">
-
-         <wsdl:input message="impl:helloWorldRequest" name="helloWorldRequest">
-
-       </wsdl:input>
-
-         <wsdl:output message="impl:helloWorldResponse" name="helloWorldResponse">
-
-       </wsdl:output>
-
-      </wsdl:operation>
 
       <wsdl:operation name="getBikesToBuy">
 
@@ -128,24 +90,6 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
    <wsdl:binding name="GustaveBikeServiceSoapBinding" type="impl:GustaveBikeService">
 
       <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
-
-      <wsdl:operation name="helloWorld">
-
-         <wsdlsoap:operation soapAction=""/>
-
-         <wsdl:input name="helloWorldRequest">
-
-            <wsdlsoap:body use="literal"/>
-
-         </wsdl:input>
-
-         <wsdl:output name="helloWorldResponse">
-
-            <wsdlsoap:body use="literal"/>
-
-         </wsdl:output>
-
-      </wsdl:operation>
 
       <wsdl:operation name="getBikesToBuy">
 

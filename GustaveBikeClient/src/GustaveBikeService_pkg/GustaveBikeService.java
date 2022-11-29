@@ -8,7 +8,6 @@
 package GustaveBikeService_pkg;
 
 public interface GustaveBikeService extends java.rmi.Remote {
-    public java.lang.String helloWorld() throws java.rmi.RemoteException;
     public java.lang.String[] getBikesToBuy() throws java.rmi.RemoteException;
     public java.lang.String sayHello() throws java.rmi.RemoteException;
 }
