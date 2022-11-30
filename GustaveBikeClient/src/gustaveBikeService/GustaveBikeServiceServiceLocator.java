@@ -1,59 +1,59 @@
 /**
- * BankServiceServiceLocator.java
+ * GustaveBikeServiceServiceLocator.java
  *
  * This file was auto-generated from WSDL
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package BankService_pkg;
+package gustaveBikeService;
 
-public class BankServiceServiceLocator extends org.apache.axis.client.Service implements BankService_pkg.BankServiceService {
+public class GustaveBikeServiceServiceLocator extends org.apache.axis.client.Service implements gustaveBikeService.GustaveBikeServiceService {
 
-    public BankServiceServiceLocator() {
+    public GustaveBikeServiceServiceLocator() {
     }
 
 
-    public BankServiceServiceLocator(org.apache.axis.EngineConfiguration config) {
+    public GustaveBikeServiceServiceLocator(org.apache.axis.EngineConfiguration config) {
         super(config);
     }
 
-    public BankServiceServiceLocator(java.lang.String wsdlLoc, javax.xml.namespace.QName sName) throws javax.xml.rpc.ServiceException {
+    public GustaveBikeServiceServiceLocator(java.lang.String wsdlLoc, javax.xml.namespace.QName sName) throws javax.xml.rpc.ServiceException {
         super(wsdlLoc, sName);
     }
 
-    // Use to get a proxy class for BankService
-    private java.lang.String BankService_address = "http://localhost:8080/BankService/services/BankService";
+    // Use to get a proxy class for GustaveBikeService
+    private java.lang.String GustaveBikeService_address = "http://localhost:8080/GustaveBikeService/services/GustaveBikeService";
 
-    public java.lang.String getBankServiceAddress() {
-        return BankService_address;
+    public java.lang.String getGustaveBikeServiceAddress() {
+        return GustaveBikeService_address;
     }
 
     // The WSDD service name defaults to the port name.
-    private java.lang.String BankServiceWSDDServiceName = "BankService";
+    private java.lang.String GustaveBikeServiceWSDDServiceName = "GustaveBikeService";
 
-    public java.lang.String getBankServiceWSDDServiceName() {
-        return BankServiceWSDDServiceName;
+    public java.lang.String getGustaveBikeServiceWSDDServiceName() {
+        return GustaveBikeServiceWSDDServiceName;
     }
 
-    public void setBankServiceWSDDServiceName(java.lang.String name) {
-        BankServiceWSDDServiceName = name;
+    public void setGustaveBikeServiceWSDDServiceName(java.lang.String name) {
+        GustaveBikeServiceWSDDServiceName = name;
     }
 
-    public BankService_pkg.BankService getBankService() throws javax.xml.rpc.ServiceException {
+    public gustaveBikeService.GustaveBikeService getGustaveBikeService() throws javax.xml.rpc.ServiceException {
        java.net.URL endpoint;
         try {
-            endpoint = new java.net.URL(BankService_address);
+            endpoint = new java.net.URL(GustaveBikeService_address);
         }
         catch (java.net.MalformedURLException e) {
             throw new javax.xml.rpc.ServiceException(e);
         }
-        return getBankService(endpoint);
+        return getGustaveBikeService(endpoint);
     }
 
-    public BankService_pkg.BankService getBankService(java.net.URL portAddress) throws javax.xml.rpc.ServiceException {
+    public gustaveBikeService.GustaveBikeService getGustaveBikeService(java.net.URL portAddress) throws javax.xml.rpc.ServiceException {
         try {
-            BankService_pkg.BankServiceSoapBindingStub _stub = new BankService_pkg.BankServiceSoapBindingStub(portAddress, this);
-            _stub.setPortName(getBankServiceWSDDServiceName());
+            gustaveBikeService.GustaveBikeServiceSoapBindingStub _stub = new gustaveBikeService.GustaveBikeServiceSoapBindingStub(portAddress, this);
+            _stub.setPortName(getGustaveBikeServiceWSDDServiceName());
             return _stub;
         }
         catch (org.apache.axis.AxisFault e) {
@@ -61,8 +61,8 @@ public class BankServiceServiceLocator extends org.apache.axis.client.Service im
         }
     }
 
-    public void setBankServiceEndpointAddress(java.lang.String address) {
-        BankService_address = address;
+    public void setGustaveBikeServiceEndpointAddress(java.lang.String address) {
+        GustaveBikeService_address = address;
     }
 
     /**
@@ -72,9 +72,9 @@ public class BankServiceServiceLocator extends org.apache.axis.client.Service im
      */
     public java.rmi.Remote getPort(Class serviceEndpointInterface) throws javax.xml.rpc.ServiceException {
         try {
-            if (BankService_pkg.BankService.class.isAssignableFrom(serviceEndpointInterface)) {
-                BankService_pkg.BankServiceSoapBindingStub _stub = new BankService_pkg.BankServiceSoapBindingStub(new java.net.URL(BankService_address), this);
-                _stub.setPortName(getBankServiceWSDDServiceName());
+            if (gustaveBikeService.GustaveBikeService.class.isAssignableFrom(serviceEndpointInterface)) {
+                gustaveBikeService.GustaveBikeServiceSoapBindingStub _stub = new gustaveBikeService.GustaveBikeServiceSoapBindingStub(new java.net.URL(GustaveBikeService_address), this);
+                _stub.setPortName(getGustaveBikeServiceWSDDServiceName());
                 return _stub;
             }
         }
@@ -94,8 +94,8 @@ public class BankServiceServiceLocator extends org.apache.axis.client.Service im
             return getPort(serviceEndpointInterface);
         }
         java.lang.String inputPortName = portName.getLocalPart();
-        if ("BankService".equals(inputPortName)) {
-            return getBankService();
+        if ("GustaveBikeService".equals(inputPortName)) {
+            return getGustaveBikeService();
         }
         else  {
             java.rmi.Remote _stub = getPort(serviceEndpointInterface);
@@ -105,7 +105,7 @@ public class BankServiceServiceLocator extends org.apache.axis.client.Service im
     }
 
     public javax.xml.namespace.QName getServiceName() {
-        return new javax.xml.namespace.QName("http://BankService", "BankServiceService");
+        return new javax.xml.namespace.QName("http://gustaveBikeService", "GustaveBikeServiceService");
     }
 
     private java.util.HashSet ports = null;
@@ -113,7 +113,7 @@ public class BankServiceServiceLocator extends org.apache.axis.client.Service im
     public java.util.Iterator getPorts() {
         if (ports == null) {
             ports = new java.util.HashSet();
-            ports.add(new javax.xml.namespace.QName("http://BankService", "BankService"));
+            ports.add(new javax.xml.namespace.QName("http://gustaveBikeService", "GustaveBikeService"));
         }
         return ports.iterator();
     }
@@ -123,8 +123,8 @@ public class BankServiceServiceLocator extends org.apache.axis.client.Service im
     */
     public void setEndpointAddress(java.lang.String portName, java.lang.String address) throws javax.xml.rpc.ServiceException {
         
-if ("BankService".equals(portName)) {
-            setBankServiceEndpointAddress(address);
+if ("GustaveBikeService".equals(portName)) {
+            setGustaveBikeServiceEndpointAddress(address);
         }
         else 
 { // Unknown Port Name

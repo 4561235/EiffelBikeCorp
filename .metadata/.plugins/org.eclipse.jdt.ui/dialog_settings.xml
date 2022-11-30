@@ -24,10 +24,10 @@
 		<item key="ShowStatusLine" value="true"/>
 		<item key="History" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0A;&lt;History/&gt;"/>
 		<section name="DialogBoundsSettings">
-			<item key="DIALOG_HEIGHT" value="1129"/>
+			<item key="DIALOG_HEIGHT" value="1077"/>
 			<item key="DIALOG_WIDTH" value="600"/>
 			<item key="DIALOG_X_ORIGIN" value="53"/>
-			<item key="DIALOG_Y_ORIGIN" value="-59"/>
+			<item key="DIALOG_Y_ORIGIN" value="-224"/>
 			<item key="DIALOG_FONT_NAME" value="1|Fira Sans|10.0|0|GTK|1|"/>
 		</section>
 	</section>
@@ -58,9 +58,13 @@
 	</section>
 	<section name="DialogBounds_GetterSetterTreeSelectionDialog">
 		<item key="DIALOG_X_ORIGIN" value="768"/>
-		<item key="DIALOG_Y_ORIGIN" value="144"/>
+		<item key="DIALOG_Y_ORIGIN" value="62"/>
 		<item key="DIALOG_WIDTH" value="726"/>
-		<item key="DIALOG_HEIGHT" value="941"/>
+		<item key="DIALOG_HEIGHT" value="1015"/>
 		<item key="DIALOG_FONT_NAME" value="1|Fira Sans|10.0|0|GTK|1|"/>
+	</section>
+	<section name="RenameInformationPopup">
+	</section>
+	<section name="org.eclipse.ltk.ui.refactoring.settings">
 	</section>
 </section>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<wsdl:definitions targetNamespace="http://GustaveBikeService" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://GustaveBikeService" xmlns:intf="http://GustaveBikeService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<wsdl:definitions targetNamespace="http://gustaveBikeService" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://gustaveBikeService" xmlns:intf="http://gustaveBikeService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 <!--WSDL created by Apache Axis version: 1.4
 Built on Apr 22, 2006 (06:55:48 PDT)-->
  <wsdl:types>
-  <schema elementFormDefault="qualified" targetNamespace="http://GustaveBikeService" xmlns="http://www.w3.org/2001/XMLSchema">
+  <schema elementFormDefault="qualified" targetNamespace="http://gustaveBikeService" xmlns="http://www.w3.org/2001/XMLSchema">
    <element name="getBikesToBuy">
     <complexType/>
    </element>
@@ -24,8 +24,46 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
      </sequence>
     </complexType>
    </element>
+   <element name="buyBike">
+    <complexType>
+     <sequence>
+      <element name="bikeID" type="xsd:int"/>
+      <element name="userID" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="buyBikeResponse">
+    <complexType>
+     <sequence>
+      <element name="buyBikeReturn" type="impl:GustaveBike"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="GustaveBike">
+    <sequence>
+     <element name="bikeName" nillable="true" type="xsd:string"/>
+     <element name="notes" nillable="true" type="xsd:string"/>
+     <element name="price" type="xsd:int"/>
+    </sequence>
+   </complexType>
   </schema>
  </wsdl:types>
+
+   <wsdl:message name="buyBikeRequest">
+
+      <wsdl:part element="impl:buyBike" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="sayHelloRequest">
+
+      <wsdl:part element="impl:sayHello" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
 
    <wsdl:message name="getBikesToBuyRequest">
 
@@ -43,9 +81,9 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
    </wsdl:message>
 
-   <wsdl:message name="sayHelloRequest">
+   <wsdl:message name="buyBikeResponse">
 
-      <wsdl:part element="impl:sayHello" name="parameters">
+      <wsdl:part element="impl:buyBikeResponse" name="parameters">
 
       </wsdl:part>
 
@@ -80,6 +118,18 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
        </wsdl:input>
 
          <wsdl:output message="impl:sayHelloResponse" name="sayHelloResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="buyBike">
+
+         <wsdl:input message="impl:buyBikeRequest" name="buyBikeRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:buyBikeResponse" name="buyBikeResponse">
 
        </wsdl:output>
 
@@ -120,6 +170,24 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
          </wsdl:input>
 
          <wsdl:output name="sayHelloResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="buyBike">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="buyBikeRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="buyBikeResponse">
 
             <wsdlsoap:body use="literal"/>
 

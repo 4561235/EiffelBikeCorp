@@ -22,6 +22,17 @@ public class Bike extends UnicastRemoteObject implements BikeInterface {
         this.bikeName = bikeName;
         this.price = price;
     }
+
+    @Override
+    public String getName() throws RemoteException {
+        return this.bikeName;
+    }
+
+    @Override
+    public int getPrice() throws RemoteException {
+        return this.price;
+    }
+
     @Override
     public void addNote(String note){
         Objects.requireNonNull(note);

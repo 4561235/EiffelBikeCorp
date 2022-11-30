@@ -15,7 +15,7 @@
   <service name="GustaveBikeService" provider="java:RPC" style="wrapped" use="literal">
       <parameter name="wsdlTargetNamespace" value="http://GustaveBikeService"/>
       <parameter name="wsdlServiceElement" value="GustaveBikeServiceService"/>
-      <parameter name="schemaQualified" value="http://GustaveBikeService"/>
+      <parameter name="schemaQualified" value="http://GustaveBikeService,http://common"/>
       <parameter name="wsdlServicePort" value="GustaveBikeService"/>
       <parameter name="className" value="GustaveBikeService_pkg.GustaveBikeServiceSoapBindingImpl"/>
       <parameter name="wsdlPortType" value="GustaveBikeService"/>
@@ -24,7 +24,18 @@
       </operation>
       <operation name="sayHello" qname="operNS:sayHello" xmlns:operNS="http://GustaveBikeService" returnQName="retNS:sayHelloReturn" xmlns:retNS="http://GustaveBikeService" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
       </operation>
-      <parameter name="allowedMethods" value="sayHello getBikesToBuy"/>
+      <operation name="buyBike" qname="operNS:buyBike" xmlns:operNS="http://GustaveBikeService" returnQName="retNS:buyBikeReturn" xmlns:retNS="http://GustaveBikeService" returnType="rtns:GustaveBike" xmlns:rtns="http://common" soapAction="" >
+        <parameter qname="pns:id" xmlns:pns="http://GustaveBikeService" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <parameter name="allowedMethods" value="sayHello buyBike getBikesToBuy"/>
 
+      <typeMapping
+        xmlns:ns="http://common"
+        qname="ns:GustaveBike"
+        type="java:common.GustaveBike"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
   </service>
 </deployment>

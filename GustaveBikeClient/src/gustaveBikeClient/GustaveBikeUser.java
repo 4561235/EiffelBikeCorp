@@ -1,4 +1,4 @@
-package GustaveBikeClient;
+package gustaveBikeClient;
 
 import java.util.Objects;
 

@@ -1,15 +1,20 @@
-package GustaveBikeClient;
+package gustaveBikeClient;
 
 import java.rmi.RemoteException;
 
+
+
 import javax.xml.rpc.ServiceException;
 
-import BankService_pkg.BankService;
-import BankService_pkg.BankServiceServiceLocator;
-import BankService_pkg.BankServiceSoapBindingStub;
-import GustaveBikeService_pkg.GustaveBikeService;
-import GustaveBikeService_pkg.GustaveBikeServiceServiceLocator;
-import GustaveBikeService_pkg.GustaveBikeServiceSoapBindingStub;
+import bankService.BankService;
+import bankService.BankServiceServiceLocator;
+import bankService.BankServiceSoapBindingStub;
+import gustaveBikeService.GustaveBike;
+import gustaveBikeService.GustaveBikeService;
+import gustaveBikeService.GustaveBikeServiceServiceLocator;
+import gustaveBikeService.GustaveBikeServiceSoapBindingStub;
+
+
 
 public class GustaveBikeClient {
 	
@@ -18,19 +23,23 @@ public class GustaveBikeClient {
 		BankService bankService = new BankServiceServiceLocator().getBankService();
 		
 		((BankServiceSoapBindingStub) bankService).setMaintainSession(true);
-		
-		
 		((GustaveBikeServiceSoapBindingStub) gustaveBikeService).setMaintainSession(true);
-		
 		
 		
 		GustaveBikeUser user = new GustaveBikeUser("Drago", "Malfoy");
 		
-//		System.out.println(gustaveBikeService.sayHello());
+		System.out.println(gustaveBikeService.sayHello());
+		
+		for (String bikeStr : gustaveBikeService.getBikesToBuy()) {
+			System.out.println(bikeStr);
+		}
+		
+		GustaveBike gustaveBike = gustaveBikeService.buyBike(3076, user.getId());
 //		
-//		for (String bikeStr : gustaveBikeService.getBikesToBuy()) {
-//			System.out.println(bikeStr);
-//		}
+		System.out.println("J'ai mon velo!!!!");
+		System.out.println(gustaveBike.getBikeName());
+		System.out.println(gustaveBike.getNotes());
+		System.out.println(gustaveBike.getPrice());
 		
 		bankService.addFounds(user.getId(), 200);
 		System.out.println(bankService.getUsersFounds(user.getId()));
