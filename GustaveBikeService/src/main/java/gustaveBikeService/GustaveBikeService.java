@@ -8,6 +8,11 @@ import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 import java.util.List;
 
+import javax.xml.rpc.ServiceException;
+
+import bankService.BankService;
+import bankService.BankServiceServiceLocator;
+import bankService.BankServiceSoapBindingStub;
 import common.BikeInterface;
 import common.EiffelBikeCorpAccessInterface;
 import common.EiffelBikeCorpInterface;
@@ -17,10 +22,13 @@ public class GustaveBikeService {
 	
 	private final EiffelBikeCorpInterface eiffelBikeStorage;
 	private final EiffelBikeCorpAccessInterface bikeStorageAccess;
+	private final BankService bankService;
 	
-	public GustaveBikeService() throws MalformedURLException, RemoteException, NotBoundException {
+	public GustaveBikeService() throws MalformedURLException, RemoteException, NotBoundException, ServiceException {
 		this.eiffelBikeStorage = (EiffelBikeCorpInterface) Naming.lookup("EiffelBikeCorpService");
 		this.bikeStorageAccess = (EiffelBikeCorpAccessInterface) Naming.lookup("EiffelBikeCorpService");
+		this.bankService = new BankServiceServiceLocator().getBankService();
+		((BankServiceSoapBindingStub) bankService).setMaintainSession(true);
 	}
 	
 	public String[] getBikesToBuy() throws RemoteException {
@@ -39,6 +47,21 @@ public class GustaveBikeService {
 	
 	public GustaveBike buyBike(int bikeID, int userID) throws RemoteException {
         BikeInterface bike = bikeStorageAccess.removeBike(bikeID);
-        return new GustaveBike(bike.getName(), bike.getNotes(), bike.getPrice());
+        if(this.bankService.removeFounds(userID, bike.getPrice())) {
+        	return new GustaveBike(bike.getName(), bike.getNotes(), bike.getPrice());
+        }
+        else {
+        	return null;
+        }
     }
+	
+	public void addFounds(int userID, long founds) throws RemoteException {
+		this.bankService.addFounds(userID, founds);
+	}
+	
+	public long getUsersFounds(int userID) throws RemoteException {
+		return this.bankService.getUsersFounds(userID);
+	}
+	
+	
 }

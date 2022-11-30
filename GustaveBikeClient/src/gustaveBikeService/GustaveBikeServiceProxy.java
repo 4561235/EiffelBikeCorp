@@ -44,12 +44,6 @@ public class GustaveBikeServiceProxy implements gustaveBikeService.GustaveBikeSe
     return gustaveBikeService;
   }
   
-  public java.lang.String[] getBikesToBuy() throws java.rmi.RemoteException{
-    if (gustaveBikeService == null)
-      _initGustaveBikeServiceProxy();
-    return gustaveBikeService.getBikesToBuy();
-  }
-  
   public java.lang.String sayHello() throws java.rmi.RemoteException{
     if (gustaveBikeService == null)
       _initGustaveBikeServiceProxy();
@@ -60,6 +54,24 @@ public class GustaveBikeServiceProxy implements gustaveBikeService.GustaveBikeSe
     if (gustaveBikeService == null)
       _initGustaveBikeServiceProxy();
     return gustaveBikeService.buyBike(bikeID, userID);
+  }
+  
+  public java.lang.String[] getBikesToBuy() throws java.rmi.RemoteException{
+    if (gustaveBikeService == null)
+      _initGustaveBikeServiceProxy();
+    return gustaveBikeService.getBikesToBuy();
+  }
+  
+  public void addFounds(int userID, long founds) throws java.rmi.RemoteException{
+    if (gustaveBikeService == null)
+      _initGustaveBikeServiceProxy();
+    gustaveBikeService.addFounds(userID, founds);
+  }
+  
+  public long getUsersFounds(int userID) throws java.rmi.RemoteException{
+    if (gustaveBikeService == null)
+      _initGustaveBikeServiceProxy();
+    return gustaveBikeService.getUsersFounds(userID);
   }
   
   

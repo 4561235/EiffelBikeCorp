@@ -24,13 +24,20 @@
  <ns1:handler name="Authenticate" type="java:org.apache.axis.handlers.SimpleAuthenticationHandler"/>
  <ns1:handler name="LocalResponder" type="java:org.apache.axis.transport.local.LocalResponder"/>
  <ns1:service name="GustaveBikeService" provider="java:RPC" style="wrapped" use="literal">
-  <ns2:operation name="getBikesToBuy" qname="ns1:getBikesToBuy" returnQName="ns1:getBikesToBuyReturn" returnType="xsd:string" soapAction="" xmlns:ns1="http://gustaveBikeService" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns2="http://xml.apache.org/axis/wsdd/"/>
-  <ns1:operation name="sayHello" qname="ns2:sayHello" returnQName="ns2:sayHelloReturn" returnType="xsd:string" soapAction="" xmlns:ns2="http://gustaveBikeService" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
-  <ns1:operation name="buyBike" qname="ns3:buyBike" returnQName="ns3:buyBikeReturn" returnType="ns3:GustaveBike" soapAction="" xmlns:ns3="http://gustaveBikeService">
-   <ns1:parameter qname="ns3:bikeID" type="xsd:int" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
-   <ns1:parameter qname="ns3:userID" type="xsd:int" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  <ns2:operation name="sayHello" qname="ns1:sayHello" returnQName="ns1:sayHelloReturn" returnType="xsd:string" soapAction="" xmlns:ns1="http://gustaveBikeService" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns2="http://xml.apache.org/axis/wsdd/"/>
+  <ns1:operation name="buyBike" qname="ns2:buyBike" returnQName="ns2:buyBikeReturn" returnType="ns2:GustaveBike" soapAction="" xmlns:ns2="http://gustaveBikeService">
+   <ns1:parameter qname="ns2:bikeID" type="xsd:int" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+   <ns1:parameter qname="ns2:userID" type="xsd:int" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
   </ns1:operation>
-  <ns1:parameter name="allowedMethods" value="sayHello buyBike getBikesToBuy"/>
+  <ns1:operation name="getBikesToBuy" qname="ns3:getBikesToBuy" returnQName="ns3:getBikesToBuyReturn" returnType="xsd:string" soapAction="" xmlns:ns3="http://gustaveBikeService" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  <ns1:operation name="addFounds" qname="ns4:addFounds" soapAction="" xmlns:ns4="http://gustaveBikeService">
+   <ns1:parameter qname="ns4:userID" type="xsd:int" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+   <ns1:parameter qname="ns4:founds" type="xsd:long" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  </ns1:operation>
+  <ns1:operation name="getUsersFounds" qname="ns5:getUsersFounds" returnQName="ns5:getUsersFoundsReturn" returnType="xsd:long" soapAction="" xmlns:ns5="http://gustaveBikeService" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns5:userID" type="xsd:int"/>
+  </ns1:operation>
+  <ns1:parameter name="allowedMethods" value="getUsersFounds sayHello buyBike addFounds getBikesToBuy"/>
   <ns1:parameter name="typeMappingVersion" value="1.2"/>
   <ns1:parameter name="wsdlPortType" value="GustaveBikeService"/>
   <ns1:parameter name="className" value="gustaveBikeService.GustaveBikeService"/>
@@ -38,7 +45,7 @@
   <ns1:parameter name="schemaQualified" value="http://gustaveBikeService"/>
   <ns1:parameter name="wsdlTargetNamespace" value="http://gustaveBikeService"/>
   <ns1:parameter name="wsdlServiceElement" value="GustaveBikeServiceService"/>
-  <ns1:typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns4:GustaveBike" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:gustaveBikeService.GustaveBike" xmlns:ns4="http://gustaveBikeService"/>
+  <ns1:typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns6:GustaveBike" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:gustaveBikeService.GustaveBike" xmlns:ns6="http://gustaveBikeService"/>
  </ns1:service>
  <ns1:service name="AdminService" provider="java:MSG">
   <ns1:parameter name="allowedMethods" value="AdminService"/>

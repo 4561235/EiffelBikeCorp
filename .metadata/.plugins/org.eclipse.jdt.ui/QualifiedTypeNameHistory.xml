@@ -19,10 +19,18 @@
     <fullyQualifiedTypeName name="BankService.BankService"/>
     <fullyQualifiedTypeName name="java.util.Objects"/>
     <fullyQualifiedTypeName name="common.BikeInterface"/>
-    <fullyQualifiedTypeName name="GustaveBikeService.GustaveBike"/>
     <fullyQualifiedTypeName name="java.sql.Array"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="GustaveBikeService_pkg.GustaveBike"/>
     <fullyQualifiedTypeName name="java.rmi.server.UnicastRemoteObject"/>
     <fullyQualifiedTypeName name="java.io.Serializable"/>
+    <fullyQualifiedTypeName name="GustaveBikeService.GustaveBike"/>
+    <fullyQualifiedTypeName name="common.GustaveBike"/>
+    <fullyQualifiedTypeName name="gustaveBikeService.GustaveBikeService"/>
+    <fullyQualifiedTypeName name="bankService.BankService"/>
+    <fullyQualifiedTypeName name="gustaveBikeService.GustaveBikeServiceServiceLocator"/>
+    <fullyQualifiedTypeName name="bankService.BankServiceServiceLocator"/>
+    <fullyQualifiedTypeName name="gustaveBikeService.GustaveBike"/>
+    <fullyQualifiedTypeName name="gustaveBikeService.GustaveBikeServiceSoapBindingStub"/>
+    <fullyQualifiedTypeName name="bankService.BankServiceSoapBindingStub"/>
 </qualifiedTypeNameHistroy>

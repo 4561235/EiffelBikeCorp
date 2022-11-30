@@ -4,11 +4,12 @@ import java.rmi.RemoteException;
 
 
 
+
 import javax.xml.rpc.ServiceException;
 
-import bankService.BankService;
-import bankService.BankServiceServiceLocator;
-import bankService.BankServiceSoapBindingStub;
+//import bankService.BankService;
+//import bankService.BankServiceServiceLocator;
+//import bankService.BankServiceSoapBindingStub;
 import gustaveBikeService.GustaveBike;
 import gustaveBikeService.GustaveBikeService;
 import gustaveBikeService.GustaveBikeServiceServiceLocator;
@@ -20,11 +21,8 @@ public class GustaveBikeClient {
 	
 	public static void main(String[] args) throws ServiceException, RemoteException {
 		GustaveBikeService gustaveBikeService = new GustaveBikeServiceServiceLocator().getGustaveBikeService();
-		BankService bankService = new BankServiceServiceLocator().getBankService();
-		
-		((BankServiceSoapBindingStub) bankService).setMaintainSession(true);
+
 		((GustaveBikeServiceSoapBindingStub) gustaveBikeService).setMaintainSession(true);
-		
 		
 		GustaveBikeUser user = new GustaveBikeUser("Drago", "Malfoy");
 		
@@ -34,19 +32,23 @@ public class GustaveBikeClient {
 			System.out.println(bikeStr);
 		}
 		
-		GustaveBike gustaveBike = gustaveBikeService.buyBike(3076, user.getId());
-//		
-		System.out.println("J'ai mon velo!!!!");
-		System.out.println(gustaveBike.getBikeName());
-		System.out.println(gustaveBike.getNotes());
-		System.out.println(gustaveBike.getPrice());
+		gustaveBikeService.addFounds(user.getId(), 200);
 		
-		bankService.addFounds(user.getId(), 200);
-		System.out.println(bankService.getUsersFounds(user.getId()));
-		bankService.addFounds(user.getId(), 200);
-		System.out.println(bankService.getUsersFounds(user.getId()));
-		bankService.removeFounds(user.getId(), 69);
-		System.out.println(bankService.getUsersFounds(user.getId()));
+		GustaveBike gustaveBike = gustaveBikeService.buyBike(3076, user.getId());
+		
+		if(gustaveBike != null) {
+			System.out.println("J'ai mon velo!!!!");
+			System.out.println(gustaveBike.getBikeName());
+			System.out.println(gustaveBike.getNotes());
+			System.out.println(gustaveBike.getPrice());
+			
+			System.out.println(gustaveBikeService.getUsersFounds(user.getId()));
+		}
+		else {
+			System.out.println("Je n'ai pas eu mon velo :(");
+		}
+		
+		
 		
 	}
 }
