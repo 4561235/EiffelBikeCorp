@@ -152,7 +152,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/ROOT" path="" reloadable="false"/><Context docBase="/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/GustaveBikeService" path="/GustaveBikeService" reloadable="true" source="org.eclipse.jst.jee.server:GustaveBikeService"/></Host>
+      <Context docBase="/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/ROOT" path="" reloadable="false"/><Context docBase="/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/GustaveBikeService" path="/GustaveBikeService" reloadable="true" source="org.eclipse.jst.jee.server:GustaveBikeService"/><Context docBase="/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/BankService" path="/BankService" reloadable="true" source="org.eclipse.jst.jee.server:BankService"/></Host>
     </Engine>
   </Service>
 </Server>

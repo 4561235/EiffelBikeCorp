@@ -1,4 +1,8 @@
 eclipse.preferences.version=1
+encoding//src/BankService_pkg/BankService.java=UTF-8
+encoding//src/BankService_pkg/BankServiceService.java=UTF-8
+encoding//src/BankService_pkg/BankServiceServiceLocator.java=UTF-8
+encoding//src/BankService_pkg/BankServiceSoapBindingStub.java=UTF-8
 encoding//src/GustaveBikeService_pkg/GustaveBikeService.java=UTF-8
 encoding//src/GustaveBikeService_pkg/GustaveBikeServiceService.java=UTF-8
 encoding//src/GustaveBikeService_pkg/GustaveBikeServiceServiceLocator.java=UTF-8

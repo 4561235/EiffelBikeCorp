@@ -9,6 +9,7 @@
   <ns1:parameter name="sendXMLDeclaration" value="true"/>
   <ns1:parameter name="attachments.implementation" value="org.apache.axis.attachments.AttachmentsImpl"/>
   <ns1:parameter name="sendXsiTypes" value="true"/>
+  <ns1:parameter name="scope" value="session"></ns1:parameter>
   <ns1:requestFlow>
    <ns1:handler type="java:org.apache.axis.handlers.JWSHandler">
     <ns1:parameter name="scope" value="session"/>
@@ -18,6 +19,7 @@
     <ns1:parameter name="extension" value=".jwr"/>
    </ns1:handler>
   </ns1:requestFlow>
+  
  </ns1:globalConfiguration>
  <ns1:handler name="URLMapper" type="java:org.apache.axis.handlers.http.URLMapper"/>
  <ns1:handler name="Authenticate" type="java:org.apache.axis.handlers.SimpleAuthenticationHandler"/>
