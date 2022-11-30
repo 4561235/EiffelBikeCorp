@@ -33,4 +33,8 @@
     <fullyQualifiedTypeName name="gustaveBikeService.GustaveBike"/>
     <fullyQualifiedTypeName name="gustaveBikeService.GustaveBikeServiceSoapBindingStub"/>
     <fullyQualifiedTypeName name="bankService.BankServiceSoapBindingStub"/>
+    <fullyQualifiedTypeName name="gustaveBikeService.CurrencyType"/>
+    <fullyQualifiedTypeName name="FxtopAPI.FxtopServices"/>
+    <fullyQualifiedTypeName name="FxtopAPI.FxtopServicesLocator"/>
+    <fullyQualifiedTypeName name="FxtopAPI.ConvertResult"/>
 </qualifiedTypeNameHistroy>

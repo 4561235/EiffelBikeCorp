@@ -44,22 +44,22 @@ public class GustaveBikeServiceProxy implements gustaveBikeService.GustaveBikeSe
     return gustaveBikeService;
   }
   
+  public java.lang.String[] getBikesToBuy() throws java.rmi.RemoteException{
+    if (gustaveBikeService == null)
+      _initGustaveBikeServiceProxy();
+    return gustaveBikeService.getBikesToBuy();
+  }
+  
   public java.lang.String sayHello() throws java.rmi.RemoteException{
     if (gustaveBikeService == null)
       _initGustaveBikeServiceProxy();
     return gustaveBikeService.sayHello();
   }
   
-  public gustaveBikeService.GustaveBike buyBike(int bikeID, int userID) throws java.rmi.RemoteException{
+  public gustaveBikeService.GustaveBike buyBike(int bikeID, int userID, java.lang.String currencyType) throws java.rmi.RemoteException{
     if (gustaveBikeService == null)
       _initGustaveBikeServiceProxy();
-    return gustaveBikeService.buyBike(bikeID, userID);
-  }
-  
-  public java.lang.String[] getBikesToBuy() throws java.rmi.RemoteException{
-    if (gustaveBikeService == null)
-      _initGustaveBikeServiceProxy();
-    return gustaveBikeService.getBikesToBuy();
+    return gustaveBikeService.buyBike(bikeID, userID, currencyType);
   }
   
   public void addFounds(int userID, long founds) throws java.rmi.RemoteException{

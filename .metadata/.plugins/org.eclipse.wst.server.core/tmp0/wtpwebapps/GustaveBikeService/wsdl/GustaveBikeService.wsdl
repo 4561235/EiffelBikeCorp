@@ -4,6 +4,16 @@
 Built on Apr 22, 2006 (06:55:48 PDT)-->
  <wsdl:types>
   <schema elementFormDefault="qualified" targetNamespace="http://gustaveBikeService" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="getBikesToBuy">
+    <complexType/>
+   </element>
+   <element name="getBikesToBuyResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="getBikesToBuyReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
    <element name="sayHello">
     <complexType/>
    </element>
@@ -19,6 +29,7 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
      <sequence>
       <element name="bikeID" type="xsd:int"/>
       <element name="userID" type="xsd:int"/>
+      <element name="currencyType" type="xsd:string"/>
      </sequence>
     </complexType>
    </element>
@@ -36,16 +47,6 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
      <element name="price" type="xsd:int"/>
     </sequence>
    </complexType>
-   <element name="getBikesToBuy">
-    <complexType/>
-   </element>
-   <element name="getBikesToBuyResponse">
-    <complexType>
-     <sequence>
-      <element maxOccurs="unbounded" name="getBikesToBuyReturn" type="xsd:string"/>
-     </sequence>
-    </complexType>
-   </element>
    <element name="addFounds">
     <complexType>
      <sequence>
@@ -156,6 +157,18 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
    <wsdl:portType name="GustaveBikeService">
 
+      <wsdl:operation name="getBikesToBuy">
+
+         <wsdl:input message="impl:getBikesToBuyRequest" name="getBikesToBuyRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getBikesToBuyResponse" name="getBikesToBuyResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
       <wsdl:operation name="sayHello">
 
          <wsdl:input message="impl:sayHelloRequest" name="sayHelloRequest">
@@ -175,18 +188,6 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
        </wsdl:input>
 
          <wsdl:output message="impl:buyBikeResponse" name="buyBikeResponse">
-
-       </wsdl:output>
-
-      </wsdl:operation>
-
-      <wsdl:operation name="getBikesToBuy">
-
-         <wsdl:input message="impl:getBikesToBuyRequest" name="getBikesToBuyRequest">
-
-       </wsdl:input>
-
-         <wsdl:output message="impl:getBikesToBuyResponse" name="getBikesToBuyResponse">
 
        </wsdl:output>
 
@@ -222,6 +223,24 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
       <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
 
+      <wsdl:operation name="getBikesToBuy">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getBikesToBuyRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getBikesToBuyResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
       <wsdl:operation name="sayHello">
 
          <wsdlsoap:operation soapAction=""/>
@@ -251,24 +270,6 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
          </wsdl:input>
 
          <wsdl:output name="buyBikeResponse">
-
-            <wsdlsoap:body use="literal"/>
-
-         </wsdl:output>
-
-      </wsdl:operation>
-
-      <wsdl:operation name="getBikesToBuy">
-
-         <wsdlsoap:operation soapAction=""/>
-
-         <wsdl:input name="getBikesToBuyRequest">
-
-            <wsdlsoap:body use="literal"/>
-
-         </wsdl:input>
-
-         <wsdl:output name="getBikesToBuyResponse">
 
             <wsdlsoap:body use="literal"/>
 

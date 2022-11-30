@@ -8,9 +8,9 @@
 package gustaveBikeService;
 
 public interface GustaveBikeService extends java.rmi.Remote {
-    public java.lang.String sayHello() throws java.rmi.RemoteException;
-    public gustaveBikeService.GustaveBike buyBike(int bikeID, int userID) throws java.rmi.RemoteException;
     public java.lang.String[] getBikesToBuy() throws java.rmi.RemoteException;
+    public java.lang.String sayHello() throws java.rmi.RemoteException;
+    public gustaveBikeService.GustaveBike buyBike(int bikeID, int userID, java.lang.String currencyType) throws java.rmi.RemoteException;
     public void addFounds(int userID, long founds) throws java.rmi.RemoteException;
     public long getUsersFounds(int userID) throws java.rmi.RemoteException;
 }

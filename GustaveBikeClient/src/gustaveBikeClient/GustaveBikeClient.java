@@ -34,7 +34,7 @@ public class GustaveBikeClient {
 		
 		gustaveBikeService.addFounds(user.getId(), 200);
 		
-		GustaveBike gustaveBike = gustaveBikeService.buyBike(3076, user.getId());
+		GustaveBike gustaveBike = gustaveBikeService.buyBike(3076, user.getId(), "GBR");
 		
 		if(gustaveBike != null) {
 			System.out.println("J'ai mon velo!!!!");

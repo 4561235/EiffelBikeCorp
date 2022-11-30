@@ -10,13 +10,14 @@
       <parameter name="className" value="gustaveBikeService.GustaveBikeService"/>
       <parameter name="wsdlPortType" value="GustaveBikeService"/>
       <parameter name="typeMappingVersion" value="1.2"/>
+      <operation xmlns:operNS="http://gustaveBikeService" xmlns:retNS="http://gustaveBikeService" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getBikesToBuy" qname="operNS:getBikesToBuy" returnQName="retNS:getBikesToBuyReturn" returnType="rtns:string" soapAction="">
+      </operation>
       <operation xmlns:operNS="http://gustaveBikeService" xmlns:retNS="http://gustaveBikeService" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="sayHello" qname="operNS:sayHello" returnQName="retNS:sayHelloReturn" returnType="rtns:string" soapAction="">
       </operation>
       <operation xmlns:operNS="http://gustaveBikeService" xmlns:retNS="http://gustaveBikeService" xmlns:rtns="http://gustaveBikeService" name="buyBike" qname="operNS:buyBike" returnQName="retNS:buyBikeReturn" returnType="rtns:GustaveBike" soapAction="">
         <parameter xmlns:pns="http://gustaveBikeService" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:bikeID" type="tns:int"/>
         <parameter xmlns:pns="http://gustaveBikeService" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:userID" type="tns:int"/>
-      </operation>
-      <operation xmlns:operNS="http://gustaveBikeService" xmlns:retNS="http://gustaveBikeService" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getBikesToBuy" qname="operNS:getBikesToBuy" returnQName="retNS:getBikesToBuyReturn" returnType="rtns:string" soapAction="">
+        <parameter xmlns:pns="http://gustaveBikeService" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:currencyType" type="tns:string"/>
       </operation>
       <operation xmlns:operNS="http://gustaveBikeService" name="addFounds" qname="operNS:addFounds" soapAction="">
         <parameter xmlns:pns="http://gustaveBikeService" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:userID" type="tns:int"/>

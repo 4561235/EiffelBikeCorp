@@ -20,13 +20,14 @@
       <parameter name="className" value="gustaveBikeService.GustaveBikeServiceSoapBindingImpl"/>
       <parameter name="wsdlPortType" value="GustaveBikeService"/>
       <parameter name="typeMappingVersion" value="1.2"/>
+      <operation name="getBikesToBuy" qname="operNS:getBikesToBuy" xmlns:operNS="http://gustaveBikeService" returnQName="retNS:getBikesToBuyReturn" xmlns:retNS="http://gustaveBikeService" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
       <operation name="sayHello" qname="operNS:sayHello" xmlns:operNS="http://gustaveBikeService" returnQName="retNS:sayHelloReturn" xmlns:retNS="http://gustaveBikeService" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
       </operation>
       <operation name="buyBike" qname="operNS:buyBike" xmlns:operNS="http://gustaveBikeService" returnQName="retNS:buyBikeReturn" xmlns:retNS="http://gustaveBikeService" returnType="rtns:GustaveBike" xmlns:rtns="http://gustaveBikeService" soapAction="" >
         <parameter qname="pns:bikeID" xmlns:pns="http://gustaveBikeService" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
         <parameter qname="pns:userID" xmlns:pns="http://gustaveBikeService" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
-      </operation>
-      <operation name="getBikesToBuy" qname="operNS:getBikesToBuy" xmlns:operNS="http://gustaveBikeService" returnQName="retNS:getBikesToBuyReturn" xmlns:retNS="http://gustaveBikeService" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:currencyType" xmlns:pns="http://gustaveBikeService" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
       </operation>
       <operation name="addFounds" qname="operNS:addFounds" xmlns:operNS="http://gustaveBikeService" soapAction="" >
         <parameter qname="pns:userID" xmlns:pns="http://gustaveBikeService" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>

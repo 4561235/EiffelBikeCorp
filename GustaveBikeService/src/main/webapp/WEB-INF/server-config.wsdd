@@ -7,9 +7,9 @@
   <ns1:parameter name="dotNetSoapEncFix" value="true"/>
   <ns1:parameter name="enableNamespacePrefixOptimization" value="false"/>
   <ns1:parameter name="sendXMLDeclaration" value="true"/>
-  <ns1:parameter name="scope" value="session"/>
-  <ns1:parameter name="sendXsiTypes" value="true"/>
   <ns1:parameter name="attachments.implementation" value="org.apache.axis.attachments.AttachmentsImpl"/>
+  <ns1:parameter name="sendXsiTypes" value="true"/>
+  <ns1:parameter name="scope" value="session"/>
   <ns1:requestFlow>
    <ns1:handler type="java:org.apache.axis.handlers.JWSHandler">
     <ns1:parameter name="scope" value="session"/>
@@ -24,12 +24,13 @@
  <ns1:handler name="Authenticate" type="java:org.apache.axis.handlers.SimpleAuthenticationHandler"/>
  <ns1:handler name="LocalResponder" type="java:org.apache.axis.transport.local.LocalResponder"/>
  <ns1:service name="GustaveBikeService" provider="java:RPC" style="wrapped" use="literal">
-  <ns2:operation name="sayHello" qname="ns1:sayHello" returnQName="ns1:sayHelloReturn" returnType="xsd:string" soapAction="" xmlns:ns1="http://gustaveBikeService" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns2="http://xml.apache.org/axis/wsdd/"/>
-  <ns1:operation name="buyBike" qname="ns2:buyBike" returnQName="ns2:buyBikeReturn" returnType="ns2:GustaveBike" soapAction="" xmlns:ns2="http://gustaveBikeService">
-   <ns1:parameter qname="ns2:bikeID" type="xsd:int" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
-   <ns1:parameter qname="ns2:userID" type="xsd:int" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  <ns2:operation name="getBikesToBuy" qname="ns1:getBikesToBuy" returnQName="ns1:getBikesToBuyReturn" returnType="xsd:string" soapAction="" xmlns:ns1="http://gustaveBikeService" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns2="http://xml.apache.org/axis/wsdd/"/>
+  <ns1:operation name="sayHello" qname="ns2:sayHello" returnQName="ns2:sayHelloReturn" returnType="xsd:string" soapAction="" xmlns:ns2="http://gustaveBikeService" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  <ns1:operation name="buyBike" qname="ns3:buyBike" returnQName="ns3:buyBikeReturn" returnType="ns3:GustaveBike" soapAction="" xmlns:ns3="http://gustaveBikeService">
+   <ns1:parameter qname="ns3:bikeID" type="xsd:int" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+   <ns1:parameter qname="ns3:userID" type="xsd:int" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+   <ns1:parameter qname="ns3:currencyType" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
   </ns1:operation>
-  <ns1:operation name="getBikesToBuy" qname="ns3:getBikesToBuy" returnQName="ns3:getBikesToBuyReturn" returnType="xsd:string" soapAction="" xmlns:ns3="http://gustaveBikeService" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
   <ns1:operation name="addFounds" qname="ns4:addFounds" soapAction="" xmlns:ns4="http://gustaveBikeService">
    <ns1:parameter qname="ns4:userID" type="xsd:int" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
    <ns1:parameter qname="ns4:founds" type="xsd:long" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
