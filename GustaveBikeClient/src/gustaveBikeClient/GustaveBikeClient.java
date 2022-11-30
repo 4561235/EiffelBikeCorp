@@ -48,7 +48,5 @@ public class GustaveBikeClient {
 			System.out.println("Je n'ai pas eu mon velo :(");
 		}
 		
-		
-		
 	}
 }

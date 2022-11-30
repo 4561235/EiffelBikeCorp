@@ -9,6 +9,7 @@ import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.LinkedBlockingDeque;
@@ -90,6 +91,17 @@ public class BikeStorage extends UnicastRemoteObject implements EiffelBikeCorpIn
         }).collect(Collectors.toList());
     }
 
+    @Override
+    public List<String> bikesToBuy() throws RemoteException {
+        return this.bikeStorage.entrySet().stream().map((Map.Entry<Integer, BikeInterface> entry) -> {
+            try {
+                return entry.getValue().getNotes();
+            } catch (RemoteException e) {
+                throw new RuntimeException(e);
+            }
+        }).filter((String note) -> !note.equals("")).collect(Collectors.toList());
+    }
+
     public void addBike(BikeInterface bike) throws RemoteException {
         Objects.requireNonNull(bike);
         this.bikeStorage.put(bike.getId(), bike);
@@ -100,5 +112,10 @@ public class BikeStorage extends UnicastRemoteObject implements EiffelBikeCorpIn
     @Override
     public BikeInterface removeBike(int bikeID) {
         return this.bikeStorage.remove(bikeID);
+    }
+
+    @Override
+    public BikeInterface getBike(int bikeID) throws RemoteException {
+        return this.bikeStorage.get(bikeID);
     }
 }

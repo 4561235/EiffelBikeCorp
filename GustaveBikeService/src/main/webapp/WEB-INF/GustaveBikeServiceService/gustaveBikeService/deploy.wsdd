@@ -19,6 +19,8 @@
         <parameter xmlns:pns="http://gustaveBikeService" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:userID" type="tns:int"/>
         <parameter xmlns:pns="http://gustaveBikeService" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:currencyType" type="tns:string"/>
       </operation>
+      <operation xmlns:operNS="http://gustaveBikeService" xmlns:retNS="http://gustaveBikeService" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="listCurrencies" qname="operNS:listCurrencies" returnQName="retNS:listCurrenciesReturn" returnType="rtns:string" soapAction="">
+      </operation>
       <operation xmlns:operNS="http://gustaveBikeService" name="addFounds" qname="operNS:addFounds" soapAction="">
         <parameter xmlns:pns="http://gustaveBikeService" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:userID" type="tns:int"/>
         <parameter xmlns:pns="http://gustaveBikeService" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:founds" type="tns:long"/>
@@ -26,7 +28,15 @@
       <operation xmlns:operNS="http://gustaveBikeService" xmlns:retNS="http://gustaveBikeService" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getUsersFounds" qname="operNS:getUsersFounds" returnQName="retNS:getUsersFoundsReturn" returnType="rtns:long" soapAction="">
         <parameter xmlns:pns="http://gustaveBikeService" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:userID" type="tns:int"/>
       </operation>
-      <parameter name="allowedMethods" value="getUsersFounds sayHello buyBike addFounds getBikesToBuy"/>
+      <operation xmlns:operNS="http://gustaveBikeService" xmlns:retNS="http://gustaveBikeService" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="addToCard" qname="operNS:addToCard" returnQName="retNS:addToCardReturn" returnType="rtns:boolean" soapAction="">
+        <parameter xmlns:pns="http://gustaveBikeService" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:userID" type="tns:int"/>
+        <parameter xmlns:pns="http://gustaveBikeService" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:bikeID" type="tns:int"/>
+      </operation>
+      <operation xmlns:operNS="http://gustaveBikeService" xmlns:retNS="http://gustaveBikeService" xmlns:rtns="http://gustaveBikeService" name="payBikesInCard" qname="operNS:payBikesInCard" returnQName="retNS:payBikesInCardReturn" returnType="rtns:GustaveBike" soapAction="">
+        <parameter xmlns:pns="http://gustaveBikeService" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:userID" type="tns:int"/>
+        <parameter xmlns:pns="http://gustaveBikeService" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:currencyType" type="tns:string"/>
+      </operation>
+      <parameter name="allowedMethods" value="getUsersFounds sayHello listCurrencies buyBike payBikesInCard addToCard addFounds getBikesToBuy"/>
 
       <typeMapping xmlns:ns="http://gustaveBikeService" qname="ns:GustaveBike" type="java:gustaveBikeService.GustaveBike" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
   </service>
