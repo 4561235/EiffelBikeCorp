@@ -42,6 +42,8 @@ public class GustaveBikeService {
 		this.card = new HashMap<>();
 	}
 	
+	
+	//Return an array of all bikes avaiable to buy
 	public String[] getBikesToBuy() throws RemoteException {
 		//Pour tester
 //		List<String> bikesList = this.eiffelBikeStorage.bikesToBuy();
@@ -57,7 +59,7 @@ public class GustaveBikeService {
 		return "Hello this is GustaveBikeService";
 	}
 	
-	
+	//Buy a bike, bike returned can be null when there is not enough founds
 	public GustaveBike buyBike(int bikeID, int userID, String currencyType) throws RemoteException {
         BikeInterface bike = bikeStorageAccess.removeBike(bikeID);
         
@@ -71,18 +73,23 @@ public class GustaveBikeService {
         }
     }
 	
+	//Return a String with all currencies
 	public String listCurrencies() throws RemoteException {
 		return this.fxtopServices.listCurrencies(null, null);
 	}
 	
+	
+	//Add founds to users bank, creates an account if the user is new
 	public void addFounds(int userID, long founds) throws RemoteException {
 		this.bankService.addFounds(userID, founds);
 	}
 	
+	//Gets users founds in bank
 	public long getUsersFounds(int userID) throws RemoteException {
 		return this.bankService.getUsersFounds(userID);
 	}
 	
+	//Add bike to card and create card for user if not created, true if success, false if bike doesn't exist
 	public boolean addToCard(int userID, int bikeID) throws RemoteException {
 		if(this.card.containsKey(userID)) {
 			BikeInterface bike = this.bikeStorageAccess.getBike(bikeID);
@@ -112,6 +119,7 @@ public class GustaveBikeService {
 		}
 	}
 	
+	//Try to buy all bikes in card with user's founds, bikes that couldn't be bought are still in card, return an array of bikes bought
 	public GustaveBike[] payBikesInCard(int userID, String currencyType) throws RemoteException {
 		ArrayList<GustaveBike> bikesBought = new ArrayList<GustaveBike>();
 		
@@ -143,6 +151,7 @@ public class GustaveBikeService {
 		
 	}
 	
+	//Remove bike from user's card, true if success, false if bike not found or user don't have a card
 	public boolean removeFromCard(int userID, int bikeID) throws RemoteException {
 		if(this.card.containsKey(userID)) {
 			List<BikeInterface> card = this.card.get(userID);
@@ -158,6 +167,7 @@ public class GustaveBikeService {
 		}
 	}
 	
+	//Return tab of bike description from the users card, return null if there is no bikes in card
 	public String[] getCard(int userID) throws RemoteException {
 		if(this.card.containsKey(userID)) {
 			List<BikeInterface> card = this.card.get(userID);
