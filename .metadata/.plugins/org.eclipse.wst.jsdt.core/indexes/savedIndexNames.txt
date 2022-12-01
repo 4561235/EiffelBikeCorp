@@ -1,8 +1,0 @@
-INDEX VERSION 1.4+/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
-2205763460.index
-1676445345.index
-246186052.index
-4153441821.index
-3820051830.index
-2347435051.index
-186505069.index
