@@ -112,12 +112,49 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
      </sequence>
     </complexType>
    </element>
+   <element name="removeFromCard">
+    <complexType>
+     <sequence>
+      <element name="userID" type="xsd:int"/>
+      <element name="bikeID" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="removeFromCardResponse">
+    <complexType>
+     <sequence>
+      <element name="removeFromCardReturn" type="xsd:boolean"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getCard">
+    <complexType>
+     <sequence>
+      <element name="userID" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getCardResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="getCardReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
   </schema>
  </wsdl:types>
 
    <wsdl:message name="buyBikeRequest">
 
       <wsdl:part element="impl:buyBike" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="removeFromCardRequest">
+
+      <wsdl:part element="impl:removeFromCard" name="parameters">
 
       </wsdl:part>
 
@@ -211,6 +248,14 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
    </wsdl:message>
 
+   <wsdl:message name="getCardResponse">
+
+      <wsdl:part element="impl:getCardResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
    <wsdl:message name="sayHelloRequest">
 
       <wsdl:part element="impl:sayHello" name="parameters">
@@ -238,6 +283,22 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
    <wsdl:message name="payBikesInCardRequest">
 
       <wsdl:part element="impl:payBikesInCard" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="removeFromCardResponse">
+
+      <wsdl:part element="impl:removeFromCardResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getCardRequest">
+
+      <wsdl:part element="impl:getCard" name="parameters">
 
       </wsdl:part>
 
@@ -336,6 +397,30 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
        </wsdl:input>
 
          <wsdl:output message="impl:payBikesInCardResponse" name="payBikesInCardResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="removeFromCard">
+
+         <wsdl:input message="impl:removeFromCardRequest" name="removeFromCardRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:removeFromCardResponse" name="removeFromCardResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getCard">
+
+         <wsdl:input message="impl:getCardRequest" name="getCardRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getCardResponse" name="getCardResponse">
 
        </wsdl:output>
 
@@ -484,6 +569,42 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
          </wsdl:input>
 
          <wsdl:output name="payBikesInCardResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="removeFromCard">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="removeFromCardRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="removeFromCardResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getCard">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getCardRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getCardResponse">
 
             <wsdlsoap:body use="literal"/>
 

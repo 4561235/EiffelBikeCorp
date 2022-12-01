@@ -4,12 +4,12 @@ import java.net.MalformedURLException;
 
 
 
+
 import java.rmi.Naming;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
 
 import javax.xml.rpc.ServiceException;
@@ -43,7 +43,9 @@ public class GustaveBikeService {
 	}
 	
 	public String[] getBikesToBuy() throws RemoteException {
-		List<String> bikesList = this.eiffelBikeStorage.bikesToBuy();
+		//Pour tester
+//		List<String> bikesList = this.eiffelBikeStorage.bikesToBuy();
+		List<String> bikesList = this.eiffelBikeStorage.bikesToBorrow();
 		String[] tab = new String[bikesList.size()];
 		for (int i = 0; i < bikesList.size(); i++) {
 			tab[i] = bikesList.get(i);
@@ -114,24 +116,60 @@ public class GustaveBikeService {
 		ArrayList<GustaveBike> bikesBought = new ArrayList<GustaveBike>();
 		
 		if(this.card.containsKey(userID)) {
-			List<BikeInterface> listToBuy = this.card.get(userID);
-			for (int i = 0; i < listToBuy.size(); i++) {
-				GustaveBike bikeBought = this.buyBike(listToBuy.get(i).getId(), userID, currencyType);
-				bikesBought.add(bikeBought);
+			
+			List<BikeInterface> card = this.card.get(userID);
+			List<BikeInterface> listToremove = new ArrayList<>();
+			
+			for (int i = 0; i < card.size(); i++) {
+				GustaveBike bikeBought = this.buyBike(card.get(i).getId(), userID, currencyType);
+				if(bikeBought != null) {
+					bikesBought.add(bikeBought);
+					listToremove.add(card.get(i));
+				}
 			}
+			
+			GustaveBike[] arr = new GustaveBike[bikesBought.size()];
+			
+			for (int i = 0; i < bikesBought.size(); i++) {
+				arr[i] = bikesBought.get(i);
+				card.remove(listToremove.get(i));
+			}
+			
+			return arr;		
+		}
+		else {
+			return new GustaveBike[0];
 		}
 		
-		GustaveBike[] arr = new GustaveBike[bikesBought.size()];
-		for (int i = 0; i < bikesBought.size(); i++) {
-			arr[i] = bikesBought.get(i);
+	}
+	
+	public boolean removeFromCard(int userID, int bikeID) throws RemoteException {
+		if(this.card.containsKey(userID)) {
+			List<BikeInterface> card = this.card.get(userID);
+			BikeInterface bike = this.bikeStorageAccess.getBike(bikeID);
+			if(bike != null) {
+				card.remove(bike);
+				return true;
+			}else {
+				return false;
+			}
+		}else {
+			return false;
 		}
-		
-		return arr;
 	}
 	
-	public boolean removeFromCard(int userID, int bikeID) {
-		return false;
+	public String[] getCard(int userID) throws RemoteException {
+		if(this.card.containsKey(userID)) {
+			List<BikeInterface> card = this.card.get(userID);
+			
+			String[] tab = new String[card.size()];
+			for (int i = 0; i < card.size(); i++) {
+				tab[i] = "BikeID: " +card.get(i).getId() +" " +card.get(i).getNotes();
+			}
+			return tab;
+		}else {
+			return new String[0];
+		}
 	}
-	
 	
 }

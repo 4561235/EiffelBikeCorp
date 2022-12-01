@@ -93,13 +93,19 @@ public class BikeStorage extends UnicastRemoteObject implements EiffelBikeCorpIn
 
     @Override
     public List<String> bikesToBuy() throws RemoteException {
-        return this.bikeStorage.entrySet().stream().map((Map.Entry<Integer, BikeInterface> entry) -> {
+        return this.bikeStorage.entrySet().stream().map(Map.Entry::getValue).filter((BikeInterface bike) -> {
             try {
-                return entry.getValue().getNotes();
+                return !bike.getNotes().equals("") && !bike.isRented();
             } catch (RemoteException e) {
                 throw new RuntimeException(e);
             }
-        }).filter((String note) -> !note.equals("")).collect(Collectors.toList());
+        }).map((BikeInterface bike) -> {
+            try {
+                return bike.getNotes();
+            } catch (RemoteException e) {
+                throw new RuntimeException(e);
+            }
+        }).collect(Collectors.toList());
     }
 
     public void addBike(BikeInterface bike) throws RemoteException {

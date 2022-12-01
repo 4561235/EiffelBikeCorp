@@ -10,7 +10,6 @@
     <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
     <fullyQualifiedTypeName name="common.EiffelBikeCorpAccessInterface"/>
-    <fullyQualifiedTypeName name="java.util.HashMap"/>
     <fullyQualifiedTypeName name="BankService_pkg.BankServiceServiceLocator"/>
     <fullyQualifiedTypeName name="BankService_pkg.BankService"/>
     <fullyQualifiedTypeName name="GustaveBikeClient.GustaveBikeUser"/>
@@ -18,7 +17,6 @@
     <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="BankService.BankService"/>
     <fullyQualifiedTypeName name="java.util.Objects"/>
-    <fullyQualifiedTypeName name="common.BikeInterface"/>
     <fullyQualifiedTypeName name="java.sql.Array"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="GustaveBikeService_pkg.GustaveBike"/>
@@ -26,15 +24,18 @@
     <fullyQualifiedTypeName name="java.io.Serializable"/>
     <fullyQualifiedTypeName name="GustaveBikeService.GustaveBike"/>
     <fullyQualifiedTypeName name="common.GustaveBike"/>
-    <fullyQualifiedTypeName name="gustaveBikeService.GustaveBikeService"/>
     <fullyQualifiedTypeName name="bankService.BankService"/>
     <fullyQualifiedTypeName name="gustaveBikeService.GustaveBikeServiceServiceLocator"/>
     <fullyQualifiedTypeName name="bankService.BankServiceServiceLocator"/>
-    <fullyQualifiedTypeName name="gustaveBikeService.GustaveBike"/>
     <fullyQualifiedTypeName name="gustaveBikeService.GustaveBikeServiceSoapBindingStub"/>
     <fullyQualifiedTypeName name="bankService.BankServiceSoapBindingStub"/>
     <fullyQualifiedTypeName name="gustaveBikeService.CurrencyType"/>
     <fullyQualifiedTypeName name="FxtopAPI.FxtopServices"/>
     <fullyQualifiedTypeName name="FxtopAPI.FxtopServicesLocator"/>
     <fullyQualifiedTypeName name="FxtopAPI.ConvertResult"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="common.BikeInterface"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="gustaveBikeService.GustaveBikeService"/>
+    <fullyQualifiedTypeName name="gustaveBikeService.GustaveBike"/>
 </qualifiedTypeNameHistroy>

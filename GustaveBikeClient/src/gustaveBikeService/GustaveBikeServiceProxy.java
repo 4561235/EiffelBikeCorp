@@ -62,6 +62,12 @@ public class GustaveBikeServiceProxy implements gustaveBikeService.GustaveBikeSe
     return gustaveBikeService.buyBike(bikeID, userID, currencyType);
   }
   
+  public java.lang.String listCurrencies() throws java.rmi.RemoteException{
+    if (gustaveBikeService == null)
+      _initGustaveBikeServiceProxy();
+    return gustaveBikeService.listCurrencies();
+  }
+  
   public void addFounds(int userID, long founds) throws java.rmi.RemoteException{
     if (gustaveBikeService == null)
       _initGustaveBikeServiceProxy();
@@ -72,6 +78,30 @@ public class GustaveBikeServiceProxy implements gustaveBikeService.GustaveBikeSe
     if (gustaveBikeService == null)
       _initGustaveBikeServiceProxy();
     return gustaveBikeService.getUsersFounds(userID);
+  }
+  
+  public boolean addToCard(int userID, int bikeID) throws java.rmi.RemoteException{
+    if (gustaveBikeService == null)
+      _initGustaveBikeServiceProxy();
+    return gustaveBikeService.addToCard(userID, bikeID);
+  }
+  
+  public gustaveBikeService.GustaveBike[] payBikesInCard(int userID, java.lang.String currencyType) throws java.rmi.RemoteException{
+    if (gustaveBikeService == null)
+      _initGustaveBikeServiceProxy();
+    return gustaveBikeService.payBikesInCard(userID, currencyType);
+  }
+  
+  public boolean removeFromCard(int userID, int bikeID) throws java.rmi.RemoteException{
+    if (gustaveBikeService == null)
+      _initGustaveBikeServiceProxy();
+    return gustaveBikeService.removeFromCard(userID, bikeID);
+  }
+  
+  public java.lang.String[] getCard(int userID) throws java.rmi.RemoteException{
+    if (gustaveBikeService == null)
+      _initGustaveBikeServiceProxy();
+    return gustaveBikeService.getCard(userID);
   }
   
   
