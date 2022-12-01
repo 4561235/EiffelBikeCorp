@@ -33,11 +33,6 @@ public class GustaveBikeClient {
 			System.out.println(bikeStr);
 		}
 		
-		System.out.println("Mon panier");
-		for (String cardItem : gustaveBikeService.getCard(user.getId())) {
-			System.out.println(cardItem);
-		}
-		
 		gustaveBikeService.addFounds(user.getId(), 500);
 		
 		gustaveBikeService.addToCard(user.getId(), 3076);
