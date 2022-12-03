@@ -12,5 +12,6 @@ public class EiffelBikeCorpService {
         bikeStorage.addBike("A", 100);
         bikeStorage.addBike("B", 200);
         Naming.rebind("EiffelBikeCorpService", bikeStorage);
+        System.out.println("EiffelBikeCorpService a été lancé");
     }
 }

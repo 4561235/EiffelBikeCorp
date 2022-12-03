@@ -37,6 +37,16 @@ public class EiffelUser extends UnicastRemoteObject implements EiffelUserInterfa
         return this.bike != null;
     }
 
+    @Override
+    public String getSurname() throws RemoteException {
+        return this.surname;
+    }
+
+    @Override
+    public String getName() throws RemoteException {
+        return this.name;
+    }
+
     public Optional<BikeInterface> getBike(){
         return Optional.ofNullable(this.bike);
     }

@@ -31,16 +31,47 @@ GustaveBikeClient communique avec GustaveBikeService pour pouvoir acheter des v�
 
 ### a) les difficultés de la partie RMI
 
-On n'a pas rencontré de difficultées particulieres pour la partie RMI.
+On n'a pas rencontré de difficultés particulières pour la partie RMI.
 
 ### a) les difficultés de la partie Web Service
 
-On a rencontées plusieurs difficultées pour la partie Web Service:
+On a rencontré plusieurs difficultés pour la partie Web Service:
 
 - La compréhension de comment fonctionne eclipse pour crée un web service et un web service client
-- Quand on essayais de crée un web service client, eclipse generais des classes dans un package. Le code generé possedais des conflits d'import. Le module se trouvais a la fois dans les jars et dans java.utils.xml. On a du changer la version de java en JEE 1.5 ce qui a reglé le souci
-- Pour la creation des methodes dans GustaveBikeService, eclipse ne nous laissais pas de generer le fichier .wsdl sans donner l'erreur precise. Apres 4h d'essais on a compris qu'on a pas le droit d'utilise de lambdas, de return seulement des tableaux et pas de list et qu'il fallais remplir le tableau a la main et pas avec la methode list.toArray()
-- La serialisation de la classe GustaveBike ne fonctionnais pas, grace a votre aide on a compris que les noms de nos packages commencaient par une majuscule ce qui causais le probleme
-- Le maintien de la session avec GustaveBikeService et BankService ne fonctionnais pas, il fallais rajouter a la main le "ns1:parameter" avec le "name: scope" et la "value: session" dans le server-config.wsdd
-- Il fallais faire attention de ne pas avoir deja un serveur lancé sur le port 8080, une personne d'entre nous avec spring lancé sur ce port qui empechais le lancement du serveur avec les services
+- Quand on essaye de crée un web service client, eclipse generais des classes dans un package. Le code généré possédait des conflits d'imports. Le module se trouvait à la fois dans les jars et dans java.utils.xml. On a dû changer la version de java en JEE 1.5 ce qui a réglé le souci
+- Pour la création des méthodes dans GustaveBikeService, eclipse ne nous laissait pas de générer le fichier .wsdl sans donner l'erreur précise. Apres 4h d'essais on a compris qu'on n'a pas le droit d'utiliser de lambdas, de return seulement des tableaux et pas de list et qu'il fallais remplir le tableau a la main et pas avec la méthode list.toArray()
+- La sérialisation de la classe GustaveBike ne fonctionnait pas, grâce à votre aide on a compris que les noms de nos packages commencés par une majuscule ce qui causait le problème
+- Le maintien de la session avec GustaveBikeService et BankService ne fonctionnait pas, il fallais rajouter à la main le "ns1:parameter" avec le "name: scope" et la "value: session" dans le server-config.wsdd
+- Il fallais faire attention de ne pas avoir déjà un serveur lancé sur le port 8080, une personne d'entre nous avec spring lancé sur ce port qui empêchait le lancement du serveur avec les services
 
+## 2. Manuel d'utilisation
+
+### a) Pour la partie RMI
+
+Tout d'abord mettez vous dans le repertoire racine du projet: EiffelBikeCorp
+
+Lancez le service EiffelBikeCorpService qui permet de louer des vélos avec la commande:
+
+```
+java -classpath EiffelBikeCorpProject/out/production/EiffelBikeCorpProject
+EiffelBikeCorpService.EiffelBikeCorpService
+```
+
+Quelques vélos vont etre rajoutées par défaut dans le service.
+
+Ensuite vous pouvez lancez autant de clients de EiffelBikeCorpService que vous voulez (1 terminal = 1 client) avec la commande:
+
+```
+java -classpath EiffelBikeCorpProject/out/production/EiffelBikeCorpProject EiffelBikeCorpClient.EiffelUsersClient
+```
+
+### b) Pour la partie Web Service
+
+Tout d'abord mettez vous dans le repertoire racine du projet: EiffelBikeCorp
+
+Si ce n'est pas déja fait lancez le service EiffelBikeCorpService qui permet de louer des vélos avec la commande:
+
+```
+java -classpath EiffelBikeCorpProject/out/production/EiffelBikeCorpProject
+EiffelBikeCorpService.EiffelBikeCorpService
+```

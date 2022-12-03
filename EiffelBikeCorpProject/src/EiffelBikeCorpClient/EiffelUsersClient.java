@@ -52,36 +52,33 @@ public class EiffelUsersClient {
         EiffelUser user = new EiffelUser(surname, name);
 
         System.out.println("Voici les actions possibles : ");
-        System.out.println("DisplayBike (-b), Quit (-q), RentABike (-r), LeaveNote (-n)");
+        System.out.println("Consulter les vélos disponibles (-b), Rendre le vélo (-ret), Louer un vélo (-rent), Consulter les notes du vélo (-notes)");
         try {
             while(scanner.hasNext()){
                 var scan = scanner.nextLine();
                 switch (scan) {
                     case "-b" :
                         System.out.println("Voici la liste des vélos disponibles : ");
-                        System.out.println(bikeStorage.bikesToBorrow());
+                        bikeStorage.bikesToBorrow().forEach((String b) -> System.out.println(b));
                         break;
-                    case "-q" :
-                        System.out.println("En revoir " + surname + " !");
+                    case "-ret" :
                         if(user.hasABike()){
-                            System.out.println("Vous aviez un vélo louer nous le reprenons");
-                            System.out.println("Voulez vous laissez une note ? oui/non");
-                            scan = scanner.nextLine();
-                            var note = "";
-                            if(scan.equals("oui")){
-                                //leave a note
-                                note = scanner.nextLine();
-                            }
-                            else {
-                                System.out.println("Vous laissez une note vide");
-                            }
+                            System.out.println("Vous avez un vélo louer, nous allons le reprendre");
+                            System.out.println("Ecrivez une note qui va etre attaché au velo:");
+
+                            var note = scanner.nextLine();
+
                             //rendre le velo
                             System.out.println("Velo ID : " + user.getBike().get().getId() + " rendu !");
                             bikeStorage.returnBike(user, note);
+
+                            System.out.println("Merci, le vélo a été rendu");
                         }
-                        scanner.close();
+                        else{
+                            System.out.println("Vous n'avez pas de vélo a rendre");
+                        }
                         break;
-                    case "-r" :
+                    case "-rent" :
                         if(!user.hasABike()) {
                             if(!bikeStorage.bikesToBorrow().isEmpty()) {
                                 //Choisie un velo
@@ -93,7 +90,7 @@ public class EiffelUsersClient {
                                     String velo = bikeStorage.bikesToBorrow().get(i);
                                     System.out.println(velo);
                                     if(velo.contains("BikeID: "+BikeID + " ")){
-                                        System.out.println("Tu a louer le velo id " + BikeID);
+                                        System.out.println("Vous avez louer le velo id " + BikeID);
                                         bikeStorage.rentBike(user, BikeID);
                                         user.getBike().get();
                                         break;
@@ -101,7 +98,7 @@ public class EiffelUsersClient {
                                     i++;
                                 }
                                 if(!user.hasABike()){
-                                    System.out.println("Ton ID n'est pas correct");
+                                    System.out.println("L'ID du velo n'est pas correct");
                                 }
                             }
                             else {
@@ -109,22 +106,21 @@ public class EiffelUsersClient {
                             }
                         }
                         else {
-                            System.out.println("Tu as déjà un vélo tu ne peux pas en louer un autre pour le moment");
+                            System.out.println("Vous avez déjà un vélo vous ne pouvez pas en louer un autre pour le moment");
 
                         }
                         break;
-                    case "-n" :
-                        if(!user.hasABike()) {
-                            System.out.println("Vous ne pouvez pas laisser de note vous n'avez pas de vélo en cour de location");
+                    case "-notes" :
+                        if(user.hasABike()){
+                            System.out.println("Voici les notes de votre vélo:");
+                            System.out.println(user.getBike().get().getNotes());
                         }
-                        else {
-                            System.out.println("Vous rendez votre vélo laisser une note : ");
-                            var note = scanner.nextLine();
-                            bikeStorage.returnBike(user, note);
+                        else{
+                            System.out.println("Vous n'avez pas de vélo");
                         }
                         break;
                     default:
-                        System.out.println("DisplayBike (-b), Quit (-q), RentABike (-r), LeaveNote (-n)");
+                        System.out.println("Consulter les vélos disponibles (-b), Rendre le vélo (-ret), Louer un vélo (-rent), Consulter les notes du vélo (-notes)");
                         break;
                 }
 
@@ -132,6 +128,7 @@ public class EiffelUsersClient {
         }catch (IllegalStateException e) {
             System.out.println(e);
         }
+        scanner.close();
         System.out.println("FIN PROGRAMME !");
 
     }

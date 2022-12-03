@@ -69,7 +69,7 @@ public class BikeStorage extends UnicastRemoteObject implements EiffelBikeCorpIn
         Objects.requireNonNull(user);
         if(user.hasABike()){
             BikeInterface bikeToReturn = user.giveBikeBack();
-            bikeToReturn.addNote(note);
+            bikeToReturn.addNote(user.getSurname() +" " +user.getName() +": " +note);
             bikeToReturn.isRented(false);
 //            this.bikeStorage.put(bikeToReturn.getId(), bikeToReturn);
             System.out.println("Bike returned");
