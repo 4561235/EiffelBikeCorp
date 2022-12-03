@@ -63,7 +63,7 @@ public class GustaveBikeService {
 	public GustaveBike buyBike(int bikeID, int userID, String currencyType) throws RemoteException {
         BikeInterface bike = bikeStorageAccess.getBike(bikeID);
         //Il faut verifier si bike != null
-        if(bike!=null) {
+        if(bike != null) {
         	 String priceBike = fxtopServices.convert(String.valueOf(bike.getPrice()), "FRA", currencyType, null, null, null).getResultAmount();
         	 if(this.bankService.removeFounds(userID, Long.valueOf(priceBike))) {
 
@@ -71,7 +71,7 @@ public class GustaveBikeService {
                  //On enleve du panier avec this.removeFromCard
              	bikeStorageAccess.removeBike(bikeID);
              	this.removeFromCard(userID, bikeID);
-                 return new GustaveBike(bike.getName(), bike.getNotes(), bike.getPrice());
+                return new GustaveBike(bike.getName(), bike.getNotes(), bike.getPrice());
              }
              else {
                  return null;

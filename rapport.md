@@ -22,9 +22,9 @@ EiffelBikeCorpService implémente deux interfaces:
 
 ### b) La partie Web Service
 
-GustaveBikeService communique directement avec EiffelBikeCorpService grace au interfaces du package "common" (qui a été copié de la partie RMI) mais aussi avec BankService pour savoir si le client peut ou non acheter un velo et avec FxtopServices qui est un service en ligne permettant d'echanger la monnaie en temps reel.
+GustaveBikeService communique directement avec EiffelBikeCorpService grace aux interfaces du package "common" (qui a été copié de la partie RMI) mais aussi avec BankService pour savoir si le client peut ou non acheter un vélo et avec FxtopServices qui est un service en ligne permettant d'echanger la monnaie en temps réel.
 
-GustaveBikeClient communique avec GustaveBikeService pour pouvoir acheter des velos dans la monnaie souhaité, rajouter des fonds, constituer son panier, afficher les velos disponibles pour l'achat
+GustaveBikeClient communique avec GustaveBikeService pour pouvoir acheter des vélos dans la monnaie souhaitée, rajouter des fonds, constituer son panier, afficher les vélos disponibles pour l'achat.
 
 
 ## 2. les difficultés rencontrées

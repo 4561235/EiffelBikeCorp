@@ -7,7 +7,6 @@ public class BankService {
 	private final HashMap<Integer, Long> usersFounds;
 	
 	public BankService() {
-		System.out.println("BankService constructor");
 		this.usersFounds = new HashMap<Integer, Long>();
 	}
 	

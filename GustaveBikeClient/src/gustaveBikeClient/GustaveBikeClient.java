@@ -1,7 +1,7 @@
 package gustaveBikeClient;
 
 import java.rmi.RemoteException;
-import java.util.Iterator;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import javax.xml.rpc.ServiceException;
@@ -22,6 +22,8 @@ public class GustaveBikeClient {
 		GustaveBikeService gustaveBikeService = new GustaveBikeServiceServiceLocator().getGustaveBikeService();
 
 		((GustaveBikeServiceSoapBindingStub) gustaveBikeService).setMaintainSession(true);
+		
+		ArrayList<GustaveBike> myBikesList = new ArrayList<GustaveBike>();
 		
 //		GustaveBikeUser user = new GustaveBikeUser("Drago", "Malfoy");
 //		
@@ -91,13 +93,14 @@ public class GustaveBikeClient {
         System.out.println("Liste des choix : \n"
         		+ "1) Liste des vélos à acheter disponible (-listBikes) \n"
         		+ "2) Acheter un vélo dans les moyens du client (-buy) \n"
-        		+ "3) Crediter un compte utilisateur(-credit) et le crée si il n'existe pas\n"
-        		+ "4) Consulter les fonds disponibles des different utilisateur (-compte)\n"
-        		+ "5) Ajouter un vélo sur la carte d'un user (-add)\n"
+        		+ "3) Crediter le compte (-credit) et le crée si il n'existe pas\n"
+        		+ "4) Consulter les fonds disponibles (-compte)\n"
+        		+ "5) Ajouter un vélo dans le panier (-add)\n"
         		+ "6) Liste de toutes les monnaies disponibles (-currencies)\n"
-        		+ "7) Acheter tout les vélos avec la carte et renvois la liste des vélo achetés (-buyAll)\n"
-        		+ "8) Retire un vélo d'une carte (-remove) \n"
-        		+ "9) Récuperer la carte d'un user (-getCard) \n"
+        		+ "7) Essayer d'acheter tout les vélos dans le panier et renvois la liste des vélo achetés (-buyAll)\n"
+        		+ "8) Retire un vélo du panier (-remove) \n"
+        		+ "9) Afficher le panier (-getCard) \n"
+        		+ "10) Afficher les velos achetées (-myBikes) \n"
         		);
         
         
@@ -136,13 +139,18 @@ public class GustaveBikeClient {
 //                		int user = scanner.nextInt();
                 		System.out.println("\n"+gustaveBikeService.listCurrencies());
                 		System.out.print("\nMonnaie utiliser  ? : ");
-                		String currency = scanner.nextLine();
                 		
-                		if(gustaveBikeService.buyBike(id, user.getId(), currency)!=null) {
-                			System.out.println("\nMerci pour votre achat ! id-velo : " + id + " id-user : " + user.getId() + " currency = " + currency );
+                		String currency = scanner.nextLine();
+                		currency = scanner.nextLine();
+                		
+                		GustaveBike bikeBought = gustaveBikeService.buyBike(id, user.getId(), currency);
+                		if( bikeBought != null) {
+                			System.out.println("\nMerci pour votre achat !");
+                			System.out.println(bikeBought.getNotes());
+                			myBikesList.add(bikeBought);
                 		}
                 		else {
-                			System.out.println("Désoler mais vous n'avez pas assez de fonds sur votre carte");
+                			System.out.println("Désoler mais vous n'avez pas assez de fonds dans votre banque");
                 			
                 		}
                 		
@@ -152,7 +160,7 @@ public class GustaveBikeClient {
                 else if(scan.equals("-credit")) {
 //                	System.out.print("ID de l'user ? : ");
 //            		int user = scanner.nextInt();
-            		System.out.print("Combien voulez vous ajouter ? : ");
+            		System.out.print("Combien d'argent voulez vous ajouter ? : ");
             		long founds = scanner.nextLong();
             		//si le user n'est pas existant la banque le crée
             		gustaveBikeService.addFounds(user.getId(), founds);
@@ -170,7 +178,7 @@ public class GustaveBikeClient {
             		System.out.print("ID de la bike ? : ");
             		int idbike = scanner.nextInt();
             		
-            		if(gustaveBikeService.addToCard(user.getId(), idbike)) System.out.println("\nAjout à été un succès sur la carte du client >" + user.getId());
+            		if(gustaveBikeService.addToCard(user.getId(), idbike)) System.out.println("\nL'ajout à été un succès dans le panier du client >" + user.getId());
             		else System.out.println("\nEchec de l'ajout du vélo id > " + idbike);
             			
                 }
@@ -182,18 +190,21 @@ public class GustaveBikeClient {
 //                	System.out.print("ID de l'user ? : ");
 //            		int user = scanner.nextInt();
             		System.out.println("\n"+gustaveBikeService.listCurrencies());
+            		
             		System.out.print("\nMonnaie utiliser  ? : ");
             		String currency = scanner.nextLine();
-            		GustaveBike[] list = gustaveBikeService.payBikesInCard(user.getId(), currency);
-            		if(gustaveBikeService.payBikesInCard(user.getId(), currency)!=null) {
-            			System.out.print("Voici les vélos que vous avez acheter : " );
-            			for (GustaveBike bike : list) {
-	            			System.out.println(bike.getBikeName());
+            		
+            		GustaveBike[] bikesBoughtFromCard = gustaveBikeService.payBikesInCard(user.getId(), currency);
+            		if(bikesBoughtFromCard != null) {
+            			System.out.print("Voici les vélos que vous avez acheté : \n");
+            			for (GustaveBike bike : bikesBoughtFromCard) {
+	            			System.out.println(bike.getNotes());
+	            			myBikesList.add(bike);
 	            		}
             			
             		}
             		else {
-            			System.out.println("Aucun vélo n'a été acheter, ils sont toujours dans votre cadie");
+            			System.out.println("Aucun vélo n'a été acheter, verifiez vos fonds et votre panier");
             		}
                 }
                 //8)
@@ -205,10 +216,10 @@ public class GustaveBikeClient {
             		
             		boolean removed = gustaveBikeService.removeFromCard(user.getId(), idbike);
             		if(removed) {
-            			System.out.println("id User > "+ user +", vous avez retirer de votre panier le vélo id > " + idbike);
+            			System.out.println("Vous avez retirer de votre panier le vélo id > " + idbike);
             		}
             		else {
-            			System.out.println("Le vélo n'a pas été trouver dans votre panier ou vous n'avez pas de carte ici");
+            			System.out.println("Le vélo n'a pas été trouver dans votre panier");
             		}
                 }
                 //9)
@@ -226,11 +237,25 @@ public class GustaveBikeClient {
             		}
                 }
                 
+               //10)
+	            else if(scan.equals("-myBikes")) {
+	            	if(myBikesList.size() != 0) {
+	            		System.out.println("Voici les velos que vous avez acheté");
+	            		for (GustaveBike gustaveBike : myBikesList) {
+							System.out.println(gustaveBike.getNotes());
+						}
+	            	}
+	            	else {
+	            		System.out.println("Aucun vélo n'a été acheté");
+	            	}
+	            }	
+                
                 
             }
         }catch (IllegalStateException e) {
             System.out.println(e);
         }
+        scanner.close();
         System.out.println("FIN PROGRAMME !");
 		
 	}
