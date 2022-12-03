@@ -108,8 +108,11 @@ public class BikeStorage extends UnicastRemoteObject implements EiffelBikeCorpIn
         }).collect(Collectors.toList());
     }
 
-    public void addBike(BikeInterface bike) throws RemoteException {
-        Objects.requireNonNull(bike);
+    @Override
+    public void addBike(String name, int price) throws RemoteException {
+        Objects.requireNonNull(name);
+        if(price < 0) throw new IllegalArgumentException("price can't be < 0");
+        Bike bike = new Bike(name, price);
         this.bikeStorage.put(bike.getId(), bike);
         this.tryBorrowBikeToUserInQueue();
     }

@@ -9,4 +9,5 @@ public interface EiffelBikeCorpInterface extends Remote {
     public void returnBike(EiffelUserInterface user, String note) throws RemoteException;
     public List<String> bikesToBorrow() throws RemoteException;
     public List<String> bikesToBuy() throws RemoteException;
+    public void addBike(String name, int price) throws RemoteException;
 }
