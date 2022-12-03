@@ -12,8 +12,8 @@ public class BankService {
 	}
 	
 	public long getUsersFounds(int userID) {
-		System.out.println("Getting user");
-		System.out.println(this.usersFounds);
+//		System.out.println("Getting user");
+//		System.out.println(this.usersFounds);
 		if(this.usersFounds.containsKey(userID)) {
 			return this.usersFounds.get(userID);
 		}else {
@@ -27,9 +27,9 @@ public class BankService {
 			usersFounds = usersFounds + founds;
 			this.usersFounds.replace(userID, usersFounds);
 		}else {
-			System.out.println("User added");
+//			System.out.println("User added");
 			this.usersFounds.put(userID, founds);
-			System.out.println(this.usersFounds);
+//			System.out.println(this.usersFounds);
 		}
 	}
 	

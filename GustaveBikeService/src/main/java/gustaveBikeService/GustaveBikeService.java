@@ -61,12 +61,21 @@ public class GustaveBikeService {
 	
 	//Buy a bike, bike returned can be null when there is not enough founds
 	public GustaveBike buyBike(int bikeID, int userID, String currencyType) throws RemoteException {
-        BikeInterface bike = bikeStorageAccess.removeBike(bikeID);
-        
-        String priceBike = fxtopServices.convert(String.valueOf(bike.getPrice()), "FRA", currencyType, null, null, null).getResultAmount();
-        
-        if(this.bankService.removeFounds(userID, Long.valueOf(priceBike))) {
-        	return new GustaveBike(bike.getName(), bike.getNotes(), bike.getPrice());
+        BikeInterface bike = bikeStorageAccess.getBike(bikeID);
+        //Il faut verifier si bike != null
+        if(bike!=null) {
+        	 String priceBike = fxtopServices.convert(String.valueOf(bike.getPrice()), "FRA", currencyType, null, null, null).getResultAmount();
+        	 if(this.bankService.removeFounds(userID, Long.valueOf(priceBike))) {
+
+                 //Une fois que c'est payé on remove le bike avec bikeStorageAccess.removeBike(bikeID);
+                 //On enleve du panier avec this.removeFromCard
+             	bikeStorageAccess.removeBike(bikeID);
+             	this.removeFromCard(userID, bikeID);
+                 return new GustaveBike(bike.getName(), bike.getNotes(), bike.getPrice());
+             }
+             else {
+                 return null;
+             }
         }
         else {
         	return null;
