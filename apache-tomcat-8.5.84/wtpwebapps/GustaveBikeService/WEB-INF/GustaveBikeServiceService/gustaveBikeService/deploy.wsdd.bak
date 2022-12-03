@@ -1,0 +1,67 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from GustaveBikeServiceService WSDL service -->
+
+  <service name="GustaveBikeService" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://gustaveBikeService"/>
+      <parameter name="wsdlServiceElement" value="GustaveBikeServiceService"/>
+      <parameter name="schemaQualified" value="http://gustaveBikeService"/>
+      <parameter name="wsdlServicePort" value="GustaveBikeService"/>
+      <parameter name="className" value="gustaveBikeService.GustaveBikeServiceSoapBindingImpl"/>
+      <parameter name="wsdlPortType" value="GustaveBikeService"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation name="getBikesToBuy" qname="operNS:getBikesToBuy" xmlns:operNS="http://gustaveBikeService" returnQName="retNS:getBikesToBuyReturn" xmlns:retNS="http://gustaveBikeService" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="sayHello" qname="operNS:sayHello" xmlns:operNS="http://gustaveBikeService" returnQName="retNS:sayHelloReturn" xmlns:retNS="http://gustaveBikeService" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="buyBike" qname="operNS:buyBike" xmlns:operNS="http://gustaveBikeService" returnQName="retNS:buyBikeReturn" xmlns:retNS="http://gustaveBikeService" returnType="rtns:GustaveBike" xmlns:rtns="http://gustaveBikeService" soapAction="" >
+        <parameter qname="pns:bikeID" xmlns:pns="http://gustaveBikeService" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:userID" xmlns:pns="http://gustaveBikeService" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:currencyType" xmlns:pns="http://gustaveBikeService" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="listCurrencies" qname="operNS:listCurrencies" xmlns:operNS="http://gustaveBikeService" returnQName="retNS:listCurrenciesReturn" xmlns:retNS="http://gustaveBikeService" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="addFounds" qname="operNS:addFounds" xmlns:operNS="http://gustaveBikeService" soapAction="" >
+        <parameter qname="pns:userID" xmlns:pns="http://gustaveBikeService" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:founds" xmlns:pns="http://gustaveBikeService" type="tns:long" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="getUsersFounds" qname="operNS:getUsersFounds" xmlns:operNS="http://gustaveBikeService" returnQName="retNS:getUsersFoundsReturn" xmlns:retNS="http://gustaveBikeService" returnType="rtns:long" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:userID" xmlns:pns="http://gustaveBikeService" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="addToCard" qname="operNS:addToCard" xmlns:operNS="http://gustaveBikeService" returnQName="retNS:addToCardReturn" xmlns:retNS="http://gustaveBikeService" returnType="rtns:boolean" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:userID" xmlns:pns="http://gustaveBikeService" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:bikeID" xmlns:pns="http://gustaveBikeService" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="payBikesInCard" qname="operNS:payBikesInCard" xmlns:operNS="http://gustaveBikeService" returnQName="retNS:payBikesInCardReturn" xmlns:retNS="http://gustaveBikeService" returnType="rtns:GustaveBike" xmlns:rtns="http://gustaveBikeService" soapAction="" >
+        <parameter qname="pns:userID" xmlns:pns="http://gustaveBikeService" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:currencyType" xmlns:pns="http://gustaveBikeService" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="removeFromCard" qname="operNS:removeFromCard" xmlns:operNS="http://gustaveBikeService" returnQName="retNS:removeFromCardReturn" xmlns:retNS="http://gustaveBikeService" returnType="rtns:boolean" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:userID" xmlns:pns="http://gustaveBikeService" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:bikeID" xmlns:pns="http://gustaveBikeService" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="getCard" qname="operNS:getCard" xmlns:operNS="http://gustaveBikeService" returnQName="retNS:getCardReturn" xmlns:retNS="http://gustaveBikeService" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:userID" xmlns:pns="http://gustaveBikeService" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <parameter name="allowedMethods" value="removeFromCard getUsersFounds sayHello listCurrencies buyBike payBikesInCard addToCard addFounds getCard getBikesToBuy"/>
+
+      <typeMapping
+        xmlns:ns="http://gustaveBikeService"
+        qname="ns:GustaveBike"
+        type="java:gustaveBikeService.GustaveBike"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+  </service>
+</deployment>

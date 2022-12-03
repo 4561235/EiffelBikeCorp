@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://bankService" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://bankService" xmlns:intf="http://bankService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://bankService" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="removeFounds">
+    <complexType>
+     <sequence>
+      <element name="userID" type="xsd:int"/>
+      <element name="founds" type="xsd:long"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="removeFoundsResponse">
+    <complexType>
+     <sequence>
+      <element name="removeFoundsReturn" type="xsd:boolean"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="addFounds">
+    <complexType>
+     <sequence>
+      <element name="userID" type="xsd:int"/>
+      <element name="founds" type="xsd:long"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="addFoundsResponse">
+    <complexType/>
+   </element>
+   <element name="getUsersFounds">
+    <complexType>
+     <sequence>
+      <element name="userID" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getUsersFoundsResponse">
+    <complexType>
+     <sequence>
+      <element name="getUsersFoundsReturn" type="xsd:long"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="removeFoundsRequest">
+
+      <wsdl:part element="impl:removeFounds" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="addFoundsResponse">
+
+      <wsdl:part element="impl:addFoundsResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="removeFoundsResponse">
+
+      <wsdl:part element="impl:removeFoundsResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getUsersFoundsRequest">
+
+      <wsdl:part element="impl:getUsersFounds" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getUsersFoundsResponse">
+
+      <wsdl:part element="impl:getUsersFoundsResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="addFoundsRequest">
+
+      <wsdl:part element="impl:addFounds" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="BankService">
+
+      <wsdl:operation name="removeFounds">
+
+         <wsdl:input message="impl:removeFoundsRequest" name="removeFoundsRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:removeFoundsResponse" name="removeFoundsResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addFounds">
+
+         <wsdl:input message="impl:addFoundsRequest" name="addFoundsRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:addFoundsResponse" name="addFoundsResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getUsersFounds">
+
+         <wsdl:input message="impl:getUsersFoundsRequest" name="getUsersFoundsRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getUsersFoundsResponse" name="getUsersFoundsResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="BankServiceSoapBinding" type="impl:BankService">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="removeFounds">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="removeFoundsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="removeFoundsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addFounds">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="addFoundsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="addFoundsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getUsersFounds">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getUsersFoundsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getUsersFoundsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="BankServiceService">
+
+      <wsdl:port binding="impl:BankServiceSoapBinding" name="BankService">
+
+         <wsdlsoap:address location="http://localhost:8080/BankService/services/BankService"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

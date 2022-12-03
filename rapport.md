@@ -72,6 +72,32 @@ Tout d'abord mettez vous dans le repertoire racine du projet: EiffelBikeCorp
 Si ce n'est pas déja fait lancez le service EiffelBikeCorpService qui permet de louer des vélos avec la commande:
 
 ```
-java -classpath EiffelBikeCorpProject/out/production/EiffelBikeCorpProject
-EiffelBikeCorpService.EiffelBikeCorpService
+java -classpath EiffelBikeCorpProject/out/production/EiffelBikeCorpProject EiffelBikeCorpService.EiffelBikeCorpService
 ```
+
+Rendez le script catalina.sh du serveur tomcat 8.5 executable
+
+```
+chmod +x apache-tomcat-8.5.84/bin/catalina.sh
+```
+
+Lancez le serveur avec les Web Services: GustaveBikeService et BankService
+
+```
+./apache-tomcat-8.5.84/bin/catalina.sh start
+```
+
+Pour arreter le serveur:
+
+```
+./apache-tomcat-8.5.84/bin/catalina.sh stop
+```
+
+Pour lancer le client GustaveBikeClient qui permet de communiquer avec GustaveBikeService
+
+```
+java -jar GustaveBikeClient.jar
+```
+
+
+

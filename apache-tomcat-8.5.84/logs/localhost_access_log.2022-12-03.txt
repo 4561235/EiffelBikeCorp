@@ -1,0 +1,16 @@
+127.0.0.1 - - [03/Dec/2022:18:23:49 +0100] "GET / HTTP/1.1" 200 11428
+127.0.0.1 - - [03/Dec/2022:18:29:33 +0100] "POST /GustaveBikeService/services/GustaveBikeService HTTP/1.0" 200 397
+127.0.0.1 - - [03/Dec/2022:18:29:47 +0100] "POST /GustaveBikeService/services/GustaveBikeService HTTP/1.0" 200 512
+127.0.0.1 - - [03/Dec/2022:18:30:09 +0100] "POST /GustaveBikeService/services/GustaveBikeService HTTP/1.0" 200 397
+127.0.0.1 - - [03/Dec/2022:18:34:54 +0100] "GET / HTTP/1.1" 200 11428
+127.0.0.1 - - [03/Dec/2022:18:38:24 +0100] "GET / HTTP/1.1" 200 11428
+127.0.0.1 - - [03/Dec/2022:18:41:08 +0100] "POST /GustaveBikeService/services/GustaveBikeService HTTP/1.0" 200 397
+127.0.0.1 - - [03/Dec/2022:18:45:52 +0100] "GET / HTTP/1.1" 200 11428
+127.0.0.1 - - [03/Dec/2022:18:45:55 +0100] "POST /GustaveBikeService/services/GustaveBikeService HTTP/1.0" 200 397
+127.0.0.1 - - [03/Dec/2022:18:46:36 +0100] "GET / HTTP/1.1" 200 11428
+127.0.0.1 - - [03/Dec/2022:18:47:29 +0100] "POST /GustaveBikeService/services/GustaveBikeService HTTP/1.0" 200 397
+127.0.0.1 - - [03/Dec/2022:18:47:45 +0100] "POST /GustaveBikeService/services/GustaveBikeService HTTP/1.0" 200 512
+127.0.0.1 - - [03/Dec/2022:18:48:39 +0100] "POST /GustaveBikeService/services/GustaveBikeService HTTP/1.0" 200 397
+127.0.0.1 - - [03/Dec/2022:18:49:22 +0100] "POST /GustaveBikeService/services/GustaveBikeService HTTP/1.0" 200 397
+127.0.0.1 - - [03/Dec/2022:18:49:42 +0100] "POST /GustaveBikeService/services/GustaveBikeService HTTP/1.0" 200 397
+127.0.0.1 - - [03/Dec/2022:18:50:12 +0100] "POST /GustaveBikeService/services/GustaveBikeService HTTP/1.0" 200 397
