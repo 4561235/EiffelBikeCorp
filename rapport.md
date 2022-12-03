@@ -42,7 +42,7 @@ On a rencontré plusieurs difficultés pour la partie Web Service:
 - Pour la création des méthodes dans GustaveBikeService, eclipse ne nous laissait pas de générer le fichier .wsdl sans donner l'erreur précise. Apres 4h d'essais on a compris qu'on n'a pas le droit d'utiliser de lambdas, de return seulement des tableaux et pas de list et qu'il fallais remplir le tableau a la main et pas avec la méthode list.toArray()
 - La sérialisation de la classe GustaveBike ne fonctionnait pas, grâce à votre aide on a compris que les noms de nos packages commencés par une majuscule ce qui causait le problème
 - Le maintien de la session avec GustaveBikeService et BankService ne fonctionnait pas, à chaque fois une nouvelle instance du service a été crée, il fallais rajouter à la main le "ns1:parameter" avec le "name: scope" et la "value: application" dans le server-config.wsdd
-- Il fallais faire attention de ne pas avoir déjà un serveur lancé sur le port 8080, une personne d'entre nous avec spring lancé sur ce port qui empêchait le lancement du serveur avec les services
+- Il fallais faire attention de ne pas avoir déjà un serveur lancé sur le port 8080, une personne d'entre nous avais spring lancé sur ce port qui empêchait le lancement du serveur avec les services
 
 ## 2. Manuel d'utilisation
 
