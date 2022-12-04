@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<form action="#"  th:action="@{/EiffelBikeCorp/rent}" method="post" th:object="${formRent}">
-    <label for="s">Select BikeID to rent</label>
-    <select id="s" name="bikeID" th:field="*{bikeID}">
-        <option th:each="bikesID : *{bikesIDs}"
-                th:value="${bikesID}"
-                th:text="${bikesID}"
-                th:data="${bikesID}">
-        </option>
-    </select>
-    <ul>
-        <li th:each="bike : ${bikesToRent}" th:text="${bike}"></li>
-    </ul>
-    <button type="submit">Rent</button>
-    </div>
-</form>
-<button onclick="location.href='http://localhost:8081/EiffelBikeCorp/hub'">Back</button>
+<head>
+    <meta charset="UTF-8">
+    <title>Eiffel Corp Bike</title>
+</head>
+<body style="background-color: #424549">
+    <form action="#" th:action="@{/EiffelBikeCorp/rent}" method="post" th:object="${formRent}">
+        <label for="s" style="color: #7289da">Select BikeID to rent</label>
+        <select id="s" name="bikeID" th:field="*{bikeID}">
+            <option th:each="bikesID : *{bikesIDs}"
+                    th:value="${bikesID}"
+                    th:text="${bikesID}"
+                    th:data="${bikesID}">
+            </option>
+        </select>
+        <ul>
+            <li th:each="bike : ${bikesToRent}" th:text="${bike}"></li>
+        </ul>
+        <button style="border-radius: 6px; background-color: #7289da" type="submit">Rent</button>
+        </div>
+    </form>
+    <button style="border-radius: 6px; background-color: #7289da" onclick="location.href='http://localhost:8081/EiffelBikeCorp/hub'">Back</button>
+</body>
 </html>

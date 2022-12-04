@@ -1,9 +1,15 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-<form action="#"  th:action="@{/EiffelBikeCorp/giveback}" method="post" th:object="${formGiveBack}">
-  <label for="t" >Give a feel back : </label>
-  <textarea id="t" name="note" th:field="*{note}"></textarea>
-  <button type="submit">Giveback bike</button></div>
-</form>
-<button onclick="location.href='http://localhost:8081/EiffelBikeCorp/hub'">Back</button>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Eiffel Corp Bike</title>
+</head>
+<body style="background-color: #424549">
+  <form action="#"  th:action="@{/EiffelBikeCorp/giveback}" method="post" th:object="${formGiveBack}">
+    <label style="color: #7289da" for="t">Give a feel back : </label>
+    <textarea id="t" name="note" th:field="*{note}"></textarea>
+    <button style="border-radius: 6px" type="submit">Giveback bike</button></div>
+  </form>
+  <button style="border-radius: 6px; background-color: #7289da" onclick="location.href='http://localhost:8081/EiffelBikeCorp/hub'">Back</button>
+</body>
 </html>
