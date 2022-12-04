@@ -1,0 +1,12 @@
+EiffelBikeCorpClient/EiffelUser.class
+EiffelBikeCorpClient/form/FormRent.class
+EiffelBikeCorpClient/Bike.class
+common/EiffelBikeCorpAccessInterface.class
+EiffelBikeCorpClient/EiffelUsersClient.class
+EiffelBikeCorpClient/form/FormBike.class
+common/BikeInterface.class
+common/EiffelUserInterface.class
+EiffelBikeCorpClient/form/FormName.class
+EiffelBikeCorpClient/EiffelClientController.class
+EiffelBikeCorpClient/form/FormGiveBack.class
+common/EiffelBikeCorpInterface.class

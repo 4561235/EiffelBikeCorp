@@ -65,6 +65,20 @@ Ensuite vous pouvez lancez autant de clients de EiffelBikeCorpService que vous v
 java -classpath EiffelBikeCorpProject/out/production/EiffelBikeCorpProject EiffelBikeCorpClient.EiffelUsersClient
 ```
 
+**Pour lancer le client en interface graphique crée avec Spring Boot:**
+
+Mettez vous dans le repertoire EiffelBikeCorpSpring et lancez les deux commandes:
+```
+mvn clean package
+mvn spring-boot:run
+```
+
+Maintenant ouvrez votre navigateur et tapez dans l'URL:
+
+```
+localhost:8081
+```
+
 ### b) Pour la partie Web Service
 
 Tout d'abord mettez vous dans le repertoire racine du projet: EiffelBikeCorp

@@ -75,7 +75,6 @@ public class BikeStorage extends UnicastRemoteObject implements EiffelBikeCorpIn
             BikeInterface bikeToReturn = user.giveBikeBack();
             bikeToReturn.addNote(user.getSurname() +" " +user.getName() +": " +note);
             bikeToReturn.isRented(false);
-//            this.bikeStorage.put(bikeToReturn.getId(), bikeToReturn);
             System.out.println("Bike returned");
             tryBorrowBikeToUserInQueue();
         }
@@ -86,13 +85,6 @@ public class BikeStorage extends UnicastRemoteObject implements EiffelBikeCorpIn
 
     @Override
     public List<String> bikesToBorrow() throws RemoteException {
-//        return this.bikeStorage.entrySet().stream().map((entry) -> {
-//            try {
-//                return "BikeID: " +entry.getKey() +" " +entry.getValue().getNotes();
-//            } catch (RemoteException e) {
-//                throw new RuntimeException(e);
-//            }
-//        }).collect(Collectors.toList());
         return this.bikeStorage.entrySet().stream().map(Map.Entry::getValue).filter((BikeInterface bike) -> {
             try {
                 return !bike.isRented();
