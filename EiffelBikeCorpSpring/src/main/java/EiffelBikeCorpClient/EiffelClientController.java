@@ -65,6 +65,9 @@ public class EiffelClientController {
 
     @GetMapping("/EiffelBikeCorp/hub")
     public String hub(Model model) throws RemoteException {
+        if(eiffelUser==null){
+            return "redirect:/EiffelBikeCorp/login";
+        }
         model.addAttribute("name",eiffelUser.getName());
         model.addAttribute("bikes",bikeModel.bikesToBorrow());
         return "site";
