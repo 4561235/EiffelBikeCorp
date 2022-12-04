@@ -1,14 +1,20 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Eiffel Corp Bike</title>
+</head>
+<body style="background-color: #424549">
     <form action="#"  th:action="@{/EiffelBikeCorp/login}" method="post" th:object="${formName}">
-        <h2>Enter your information : </h2>
-        <div><label for="p">Firstname:</label>
+        <h2 style="color: #7289da">Enter your information : </h2>
+        <div><label for="p" style="color: #7289da">Firstname:</label>
             <input id="p" type="text" name="firstName" th:field="*{firstName}">
             <span  th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}">Invalid firstName</span></div>
-        <div><label for="l">Lastname:</label>
+        <div><label for="l" style="color: #7289da">Lastname:</label>
             <input type="text" id="l" name="lastName" th:field="*{lastName}">
             <span  th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}">Invalid lastName</span></div>
         <div>
-            <button type="submit">Enter</button></div>
+            <button style="border-radius: 6px; background-color: #7289da" type="submit">Enter</button></div>
     </form>
+</body>
 </html>
