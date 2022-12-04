@@ -52,7 +52,7 @@ public class EiffelUsersClient {
         EiffelUser user = new EiffelUser(surname, name);
 
         System.out.println("Voici les actions possibles : ");
-        System.out.println("Consulter les vélos disponibles (-b), Rendre le vélo (-ret), Louer un vélo (-rent), Consulter les notes du vélo (-notes)");
+        System.out.println("Consulter les vélos disponibles (-b), Rendre le vélo (-ret), Louer un vélo (-rent), Consulter les notes du vélo (-notes), Rajouter son vélo (-add)");
         try {
             while(scanner.hasNext()){
                 var scan = scanner.nextLine();
@@ -83,23 +83,15 @@ public class EiffelUsersClient {
                             if(!bikeStorage.bikesToBorrow().isEmpty()) {
                                 //Choisie un velo
                                 System.out.print("ID du vélo souhaité :");
-                                var BikeID = scanner.nextInt();
-                                // BikeID est dans la liste des choix ?
-                                int i = 0;
-                                while(i < bikeStorage.bikesToBorrow().size()){
-                                    String velo = bikeStorage.bikesToBorrow().get(i);
-                                    System.out.println(velo);
-                                    if(velo.contains("BikeID: "+BikeID + " ")){
-                                        System.out.println("Vous avez louer le velo id " + BikeID);
-                                        bikeStorage.rentBike(user, BikeID);
-                                        user.getBike().get();
-                                        break;
-                                    }
-                                    i++;
+                                var bikeID = scanner.nextInt();
+
+                                if(bikeStorage.rentBike(user, bikeID)){
+                                    System.out.println("Le vélo n'est pas disponible, vous aviez été placé dans la queue, veuillez patienter");
                                 }
-                                if(!user.hasABike()){
-                                    System.out.println("L'ID du velo n'est pas correct");
+                                else if (!user.hasABike()){
+                                    System.out.println("Un velo avec cet ID n'existe pas");
                                 }
+
                             }
                             else {
                                 System.out.println("Il n'y a plus de vélo disponibles");
@@ -119,8 +111,15 @@ public class EiffelUsersClient {
                             System.out.println("Vous n'avez pas de vélo");
                         }
                         break;
+                    case "-add":
+                        System.out.println("Donnez un nom a votre velo:");
+                        var bikeName = scanner.nextLine();
+                        System.out.println("Donnez le prix de votre velo:");
+                        var price = scanner.nextInt();
+                        bikeStorage.addBike(bikeName, price);
+                        System.out.println("Votre vélo a été rajouté");
                     default:
-                        System.out.println("Consulter les vélos disponibles (-b), Rendre le vélo (-ret), Louer un vélo (-rent), Consulter les notes du vélo (-notes)");
+                        System.out.println("Consulter les vélos disponibles (-b), Rendre le vélo (-ret), Louer un vélo (-rent), Consulter les notes du vélo (-notes), Rajouter son vélo (-add)");
                         break;
                 }
 

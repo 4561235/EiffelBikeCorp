@@ -14,6 +14,7 @@ public class Bike extends UnicastRemoteObject implements BikeInterface {
     private final int price;
 
     private boolean isRented = false;
+    private boolean wasRentedOnce = false;
 
     public Bike(String bikeName, int price) throws RemoteException {
         super();
@@ -55,7 +56,15 @@ public class Bike extends UnicastRemoteObject implements BikeInterface {
     }
 
     @Override
+    public boolean wasRentedOnce() throws RemoteException {
+        return this.wasRentedOnce;
+    }
+
+    @Override
     public void isRented(boolean rented) throws RemoteException{
+        if(rented){
+            this.wasRentedOnce = true;
+        }
         isRented = rented;
     }
 

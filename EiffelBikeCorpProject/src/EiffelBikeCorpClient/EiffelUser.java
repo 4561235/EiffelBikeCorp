@@ -29,6 +29,7 @@ public class EiffelUser extends UnicastRemoteObject implements EiffelUserInterfa
     public void borrowBike(BikeInterface bike) throws RemoteException {
         Objects.requireNonNull(bike);
         if (this.hasABike()) throw new IllegalStateException("User: " +this.surname +" " +this.name +" already has a bike");
+        System.out.println("Le vélo: \n" +bike.getNotes() +"\n vous a été loué");
         this.bike = bike;
     }
 

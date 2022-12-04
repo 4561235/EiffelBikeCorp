@@ -702,3 +702,571 @@ NOTE: Picked up JDK_JAVA_OPTIONS:  --add-opens=java.base/java.lang=ALL-UNNAMED -
 03-Dec-2022 18:50:25.056 INFOS [main] org.apache.catalina.core.StandardService.stopInternal Arrêt du service [Catalina]
 03-Dec-2022 18:50:25.065 INFOS [main] org.apache.coyote.AbstractProtocol.stop Arrêt du gestionnaire de protocole ["http-nio-8080"]
 03-Dec-2022 18:50:25.069 INFOS [main] org.apache.coyote.AbstractProtocol.destroy Destruction du gestionnaire de protocole ["http-nio-8080"]
+NOTE: Picked up JDK_JAVA_OPTIONS:  --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+04-Dec-2022 14:24:54.224 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Nom version serveur :              Apache Tomcat/8.5.84
+04-Dec-2022 14:24:54.228 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Serveur compilé :                  Nov 16 2022 13:34:24 UTC
+04-Dec-2022 14:24:54.228 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Version du serveur :               8.5.84.0
+04-Dec-2022 14:24:54.228 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Nom de l'OS :                      Linux
+04-Dec-2022 14:24:54.229 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Version OS :                       6.0.6-76060006-generic
+04-Dec-2022 14:24:54.229 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture :                     amd64
+04-Dec-2022 14:24:54.229 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home :                        /usr/lib/jvm/java-17-openjdk-amd64
+04-Dec-2022 14:24:54.229 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Version JVM :                      17.0.5+8-Ubuntu-2ubuntu122.04
+04-Dec-2022 14:24:54.229 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Fournisseur de la JVM :            Private Build
+04-Dec-2022 14:24:54.229 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE :                    /home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84
+04-Dec-2022 14:24:54.229 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME :                    /home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84
+04-Dec-2022 14:24:54.229 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : --add-opens=java.base/java.lang=ALL-UNNAMED
+04-Dec-2022 14:24:54.229 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : --add-opens=java.base/java.io=ALL-UNNAMED
+04-Dec-2022 14:24:54.230 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : --add-opens=java.base/java.util=ALL-UNNAMED
+04-Dec-2022 14:24:54.230 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+04-Dec-2022 14:24:54.230 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+04-Dec-2022 14:24:54.230 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Djava.util.logging.config.file=/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/conf/logging.properties
+04-Dec-2022 14:24:54.230 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+04-Dec-2022 14:24:54.230 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Djdk.tls.ephemeralDHKeySize=2048
+04-Dec-2022 14:24:54.230 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+04-Dec-2022 14:24:54.230 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+04-Dec-2022 14:24:54.230 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Dignore.endorsed.dirs=
+04-Dec-2022 14:24:54.230 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Dcatalina.base=/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84
+04-Dec-2022 14:24:54.230 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Dcatalina.home=/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84
+04-Dec-2022 14:24:54.230 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Djava.io.tmpdir=/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/temp
+04-Dec-2022 14:24:54.230 INFOS [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent La librairie Apache Tomcat Native basée sur APR qui permet des performances optimales dans les environnements de production n'a pas été trouvée sur le java.library.path : [/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+04-Dec-2022 14:24:54.246 INFOS [main] org.apache.coyote.AbstractProtocol.init Initialisation du gestionnaire de protocole ["http-nio-8080"]
+04-Dec-2022 14:24:54.256 INFOS [main] org.apache.catalina.startup.Catalina.load Initialization processed in 250 ms
+04-Dec-2022 14:24:54.273 INFOS [main] org.apache.catalina.core.StandardService.startInternal Démarrage du service [Catalina]
+04-Dec-2022 14:24:54.273 INFOS [main] org.apache.catalina.core.StandardEngine.startInternal Démarrage du moteur de Servlets : [Apache Tomcat/8.5.84]
+04-Dec-2022 14:24:54.498 INFOS [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès ; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Dec-2022 14:24:54.560 AVERTISSEMENT [localhost-startStop-1] org.apache.axis.utils.JavaUtils.isAttachmentSupported Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
+04-Dec-2022 14:24:54.685 INFOS [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès ; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Dec-2022 14:24:54.716 AVERTISSEMENT [localhost-startStop-1] org.apache.axis.utils.JavaUtils.isAttachmentSupported Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
+04-Dec-2022 14:24:54.750 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/ROOT]
+04-Dec-2022 14:24:54.758 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/ROOT] de l'application web s'est terminé en [8] ms
+04-Dec-2022 14:24:54.758 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/examples]
+04-Dec-2022 14:24:54.831 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/examples] de l'application web s'est terminé en [73] ms
+04-Dec-2022 14:24:54.831 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/host-manager]
+04-Dec-2022 14:24:54.841 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/host-manager] de l'application web s'est terminé en [10] ms
+04-Dec-2022 14:24:54.841 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/manager]
+04-Dec-2022 14:24:54.849 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/manager] de l'application web s'est terminé en [8] ms
+04-Dec-2022 14:24:54.849 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/docs]
+04-Dec-2022 14:24:54.856 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/docs] de l'application web s'est terminé en [7] ms
+04-Dec-2022 14:24:54.857 INFOS [main] org.apache.coyote.AbstractProtocol.start Démarrage du gestionnaire de protocole ["http-nio-8080"]
+04-Dec-2022 14:24:54.862 INFOS [main] org.apache.catalina.startup.Catalina.start Server startup in 605 ms
+04-Dec-2022 14:53:45.439 INFOS [main] org.apache.catalina.core.StandardServer.await Une commande d'arrêt valide a été reçue sur le port d'arrêt, arrêt de l'instance du serveur
+04-Dec-2022 14:53:45.439 INFOS [main] org.apache.coyote.AbstractProtocol.pause Le gestionnaire de protocole ["http-nio-8080"] est mis en pause
+04-Dec-2022 14:53:45.440 INFOS [main] org.apache.catalina.core.StandardService.stopInternal Arrêt du service [Catalina]
+04-Dec-2022 14:53:45.450 INFOS [main] org.apache.coyote.AbstractProtocol.stop Arrêt du gestionnaire de protocole ["http-nio-8080"]
+04-Dec-2022 14:53:45.463 INFOS [main] org.apache.coyote.AbstractProtocol.destroy Destruction du gestionnaire de protocole ["http-nio-8080"]
+NOTE: Picked up JDK_JAVA_OPTIONS:  --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+04-Dec-2022 14:53:47.051 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Nom version serveur :              Apache Tomcat/8.5.84
+04-Dec-2022 14:53:47.052 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Serveur compilé :                  Nov 16 2022 13:34:24 UTC
+04-Dec-2022 14:53:47.052 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Version du serveur :               8.5.84.0
+04-Dec-2022 14:53:47.052 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Nom de l'OS :                      Linux
+04-Dec-2022 14:53:47.053 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Version OS :                       6.0.6-76060006-generic
+04-Dec-2022 14:53:47.053 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture :                     amd64
+04-Dec-2022 14:53:47.053 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home :                        /usr/lib/jvm/java-17-openjdk-amd64
+04-Dec-2022 14:53:47.053 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Version JVM :                      17.0.5+8-Ubuntu-2ubuntu122.04
+04-Dec-2022 14:53:47.053 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Fournisseur de la JVM :            Private Build
+04-Dec-2022 14:53:47.053 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE :                    /home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84
+04-Dec-2022 14:53:47.053 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME :                    /home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84
+04-Dec-2022 14:53:47.054 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : --add-opens=java.base/java.lang=ALL-UNNAMED
+04-Dec-2022 14:53:47.054 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : --add-opens=java.base/java.io=ALL-UNNAMED
+04-Dec-2022 14:53:47.054 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : --add-opens=java.base/java.util=ALL-UNNAMED
+04-Dec-2022 14:53:47.054 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+04-Dec-2022 14:53:47.054 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+04-Dec-2022 14:53:47.054 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Djava.util.logging.config.file=/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/conf/logging.properties
+04-Dec-2022 14:53:47.054 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+04-Dec-2022 14:53:47.054 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Djdk.tls.ephemeralDHKeySize=2048
+04-Dec-2022 14:53:47.054 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+04-Dec-2022 14:53:47.054 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+04-Dec-2022 14:53:47.054 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Dignore.endorsed.dirs=
+04-Dec-2022 14:53:47.054 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Dcatalina.base=/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84
+04-Dec-2022 14:53:47.054 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Dcatalina.home=/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84
+04-Dec-2022 14:53:47.054 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Djava.io.tmpdir=/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/temp
+04-Dec-2022 14:53:47.054 INFOS [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent La librairie Apache Tomcat Native basée sur APR qui permet des performances optimales dans les environnements de production n'a pas été trouvée sur le java.library.path : [/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+04-Dec-2022 14:53:47.070 INFOS [main] org.apache.coyote.AbstractProtocol.init Initialisation du gestionnaire de protocole ["http-nio-8080"]
+04-Dec-2022 14:53:47.080 INFOS [main] org.apache.catalina.startup.Catalina.load Initialization processed in 241 ms
+04-Dec-2022 14:53:47.098 INFOS [main] org.apache.catalina.core.StandardService.startInternal Démarrage du service [Catalina]
+04-Dec-2022 14:53:47.098 INFOS [main] org.apache.catalina.core.StandardEngine.startInternal Démarrage du moteur de Servlets : [Apache Tomcat/8.5.84]
+04-Dec-2022 14:53:47.312 INFOS [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès ; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Dec-2022 14:53:47.380 AVERTISSEMENT [localhost-startStop-1] org.apache.axis.utils.JavaUtils.isAttachmentSupported Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
+04-Dec-2022 14:53:47.520 INFOS [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès ; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Dec-2022 14:53:47.555 AVERTISSEMENT [localhost-startStop-1] org.apache.axis.utils.JavaUtils.isAttachmentSupported Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
+04-Dec-2022 14:53:47.604 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/ROOT]
+04-Dec-2022 14:53:47.613 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/ROOT] de l'application web s'est terminé en [9] ms
+04-Dec-2022 14:53:47.613 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/examples]
+04-Dec-2022 14:53:47.687 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/examples] de l'application web s'est terminé en [74] ms
+04-Dec-2022 14:53:47.688 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/host-manager]
+04-Dec-2022 14:53:47.698 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/host-manager] de l'application web s'est terminé en [10] ms
+04-Dec-2022 14:53:47.698 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/manager]
+04-Dec-2022 14:53:47.707 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/manager] de l'application web s'est terminé en [9] ms
+04-Dec-2022 14:53:47.707 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/docs]
+04-Dec-2022 14:53:47.713 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/docs] de l'application web s'est terminé en [6] ms
+04-Dec-2022 14:53:47.715 INFOS [main] org.apache.coyote.AbstractProtocol.start Démarrage du gestionnaire de protocole ["http-nio-8080"]
+04-Dec-2022 14:53:47.720 INFOS [main] org.apache.catalina.startup.Catalina.start Server startup in 639 ms
+04-Dec-2022 14:54:47.509 INFOS [main] org.apache.catalina.core.StandardServer.await Une commande d'arrêt valide a été reçue sur le port d'arrêt, arrêt de l'instance du serveur
+04-Dec-2022 14:54:47.510 INFOS [main] org.apache.coyote.AbstractProtocol.pause Le gestionnaire de protocole ["http-nio-8080"] est mis en pause
+04-Dec-2022 14:54:47.510 INFOS [main] org.apache.catalina.core.StandardService.stopInternal Arrêt du service [Catalina]
+04-Dec-2022 14:54:47.521 INFOS [main] org.apache.coyote.AbstractProtocol.stop Arrêt du gestionnaire de protocole ["http-nio-8080"]
+04-Dec-2022 14:54:47.523 INFOS [main] org.apache.coyote.AbstractProtocol.destroy Destruction du gestionnaire de protocole ["http-nio-8080"]
+NOTE: Picked up JDK_JAVA_OPTIONS:  --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+04-Dec-2022 14:56:10.210 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Nom version serveur :              Apache Tomcat/8.5.84
+04-Dec-2022 14:56:10.212 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Serveur compilé :                  Nov 16 2022 13:34:24 UTC
+04-Dec-2022 14:56:10.212 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Version du serveur :               8.5.84.0
+04-Dec-2022 14:56:10.212 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Nom de l'OS :                      Linux
+04-Dec-2022 14:56:10.212 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Version OS :                       6.0.6-76060006-generic
+04-Dec-2022 14:56:10.212 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture :                     amd64
+04-Dec-2022 14:56:10.212 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home :                        /usr/lib/jvm/java-17-openjdk-amd64
+04-Dec-2022 14:56:10.212 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Version JVM :                      17.0.5+8-Ubuntu-2ubuntu122.04
+04-Dec-2022 14:56:10.212 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Fournisseur de la JVM :            Private Build
+04-Dec-2022 14:56:10.212 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE :                    /home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84
+04-Dec-2022 14:56:10.212 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME :                    /home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84
+04-Dec-2022 14:56:10.213 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : --add-opens=java.base/java.lang=ALL-UNNAMED
+04-Dec-2022 14:56:10.213 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : --add-opens=java.base/java.io=ALL-UNNAMED
+04-Dec-2022 14:56:10.213 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : --add-opens=java.base/java.util=ALL-UNNAMED
+04-Dec-2022 14:56:10.213 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+04-Dec-2022 14:56:10.213 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+04-Dec-2022 14:56:10.213 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Djava.util.logging.config.file=/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/conf/logging.properties
+04-Dec-2022 14:56:10.213 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+04-Dec-2022 14:56:10.213 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Djdk.tls.ephemeralDHKeySize=2048
+04-Dec-2022 14:56:10.213 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+04-Dec-2022 14:56:10.213 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+04-Dec-2022 14:56:10.213 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Dignore.endorsed.dirs=
+04-Dec-2022 14:56:10.213 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Dcatalina.base=/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84
+04-Dec-2022 14:56:10.213 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Dcatalina.home=/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84
+04-Dec-2022 14:56:10.213 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Djava.io.tmpdir=/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/temp
+04-Dec-2022 14:56:10.213 INFOS [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent La librairie Apache Tomcat Native basée sur APR qui permet des performances optimales dans les environnements de production n'a pas été trouvée sur le java.library.path : [/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+04-Dec-2022 14:56:10.228 INFOS [main] org.apache.coyote.AbstractProtocol.init Initialisation du gestionnaire de protocole ["http-nio-8080"]
+04-Dec-2022 14:56:10.239 INFOS [main] org.apache.catalina.startup.Catalina.load Initialization processed in 235 ms
+04-Dec-2022 14:56:10.256 INFOS [main] org.apache.catalina.core.StandardService.startInternal Démarrage du service [Catalina]
+04-Dec-2022 14:56:10.256 INFOS [main] org.apache.catalina.core.StandardEngine.startInternal Démarrage du moteur de Servlets : [Apache Tomcat/8.5.84]
+04-Dec-2022 14:56:10.476 INFOS [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès ; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Dec-2022 14:56:10.542 AVERTISSEMENT [localhost-startStop-1] org.apache.axis.utils.JavaUtils.isAttachmentSupported Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
+04-Dec-2022 14:56:10.677 INFOS [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès ; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Dec-2022 14:56:10.713 AVERTISSEMENT [localhost-startStop-1] org.apache.axis.utils.JavaUtils.isAttachmentSupported Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
+04-Dec-2022 14:56:10.752 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/ROOT]
+04-Dec-2022 14:56:10.762 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/ROOT] de l'application web s'est terminé en [9] ms
+04-Dec-2022 14:56:10.762 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/examples]
+04-Dec-2022 14:56:10.841 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/examples] de l'application web s'est terminé en [79] ms
+04-Dec-2022 14:56:10.841 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/host-manager]
+04-Dec-2022 14:56:10.853 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/host-manager] de l'application web s'est terminé en [12] ms
+04-Dec-2022 14:56:10.853 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/manager]
+04-Dec-2022 14:56:10.863 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/manager] de l'application web s'est terminé en [10] ms
+04-Dec-2022 14:56:10.863 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/docs]
+04-Dec-2022 14:56:10.870 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/docs] de l'application web s'est terminé en [7] ms
+04-Dec-2022 14:56:10.872 INFOS [main] org.apache.coyote.AbstractProtocol.start Démarrage du gestionnaire de protocole ["http-nio-8080"]
+04-Dec-2022 14:56:10.878 INFOS [main] org.apache.catalina.startup.Catalina.start Server startup in 638 ms
+04-Dec-2022 15:06:25.065 INFOS [main] org.apache.catalina.core.StandardServer.await Une commande d'arrêt valide a été reçue sur le port d'arrêt, arrêt de l'instance du serveur
+04-Dec-2022 15:06:25.065 INFOS [main] org.apache.coyote.AbstractProtocol.pause Le gestionnaire de protocole ["http-nio-8080"] est mis en pause
+04-Dec-2022 15:06:25.066 INFOS [main] org.apache.catalina.core.StandardService.stopInternal Arrêt du service [Catalina]
+04-Dec-2022 15:06:25.078 INFOS [main] org.apache.coyote.AbstractProtocol.stop Arrêt du gestionnaire de protocole ["http-nio-8080"]
+04-Dec-2022 15:06:25.089 INFOS [main] org.apache.coyote.AbstractProtocol.destroy Destruction du gestionnaire de protocole ["http-nio-8080"]
+NOTE: Picked up JDK_JAVA_OPTIONS:  --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+04-Dec-2022 15:07:02.635 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Nom version serveur :              Apache Tomcat/8.5.84
+04-Dec-2022 15:07:02.637 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Serveur compilé :                  Nov 16 2022 13:34:24 UTC
+04-Dec-2022 15:07:02.637 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Version du serveur :               8.5.84.0
+04-Dec-2022 15:07:02.637 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Nom de l'OS :                      Linux
+04-Dec-2022 15:07:02.637 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Version OS :                       6.0.6-76060006-generic
+04-Dec-2022 15:07:02.637 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture :                     amd64
+04-Dec-2022 15:07:02.637 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home :                        /usr/lib/jvm/java-17-openjdk-amd64
+04-Dec-2022 15:07:02.637 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Version JVM :                      17.0.5+8-Ubuntu-2ubuntu122.04
+04-Dec-2022 15:07:02.637 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Fournisseur de la JVM :            Private Build
+04-Dec-2022 15:07:02.637 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE :                    /home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84
+04-Dec-2022 15:07:02.637 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME :                    /home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84
+04-Dec-2022 15:07:02.638 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : --add-opens=java.base/java.lang=ALL-UNNAMED
+04-Dec-2022 15:07:02.638 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : --add-opens=java.base/java.io=ALL-UNNAMED
+04-Dec-2022 15:07:02.638 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : --add-opens=java.base/java.util=ALL-UNNAMED
+04-Dec-2022 15:07:02.638 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+04-Dec-2022 15:07:02.638 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+04-Dec-2022 15:07:02.638 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Djava.util.logging.config.file=/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/conf/logging.properties
+04-Dec-2022 15:07:02.638 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+04-Dec-2022 15:07:02.638 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Djdk.tls.ephemeralDHKeySize=2048
+04-Dec-2022 15:07:02.638 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+04-Dec-2022 15:07:02.638 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+04-Dec-2022 15:07:02.638 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Dignore.endorsed.dirs=
+04-Dec-2022 15:07:02.638 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Dcatalina.base=/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84
+04-Dec-2022 15:07:02.638 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Dcatalina.home=/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84
+04-Dec-2022 15:07:02.639 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Djava.io.tmpdir=/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/temp
+04-Dec-2022 15:07:02.639 INFOS [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent La librairie Apache Tomcat Native basée sur APR qui permet des performances optimales dans les environnements de production n'a pas été trouvée sur le java.library.path : [/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+04-Dec-2022 15:07:02.654 INFOS [main] org.apache.coyote.AbstractProtocol.init Initialisation du gestionnaire de protocole ["http-nio-8080"]
+04-Dec-2022 15:07:02.665 INFOS [main] org.apache.catalina.startup.Catalina.load Initialization processed in 254 ms
+04-Dec-2022 15:07:02.683 INFOS [main] org.apache.catalina.core.StandardService.startInternal Démarrage du service [Catalina]
+04-Dec-2022 15:07:02.683 INFOS [main] org.apache.catalina.core.StandardEngine.startInternal Démarrage du moteur de Servlets : [Apache Tomcat/8.5.84]
+04-Dec-2022 15:07:02.903 INFOS [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès ; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Dec-2022 15:07:02.972 AVERTISSEMENT [localhost-startStop-1] org.apache.axis.utils.JavaUtils.isAttachmentSupported Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
+04-Dec-2022 15:07:03.108 INFOS [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès ; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Dec-2022 15:07:03.142 AVERTISSEMENT [localhost-startStop-1] org.apache.axis.utils.JavaUtils.isAttachmentSupported Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
+04-Dec-2022 15:07:03.179 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/ROOT]
+04-Dec-2022 15:07:03.189 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/ROOT] de l'application web s'est terminé en [10] ms
+04-Dec-2022 15:07:03.189 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/examples]
+04-Dec-2022 15:07:03.275 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/examples] de l'application web s'est terminé en [86] ms
+04-Dec-2022 15:07:03.275 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/host-manager]
+04-Dec-2022 15:07:03.287 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/host-manager] de l'application web s'est terminé en [12] ms
+04-Dec-2022 15:07:03.287 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/manager]
+04-Dec-2022 15:07:03.298 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/manager] de l'application web s'est terminé en [11] ms
+04-Dec-2022 15:07:03.298 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/docs]
+04-Dec-2022 15:07:03.307 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/docs] de l'application web s'est terminé en [9] ms
+04-Dec-2022 15:07:03.309 INFOS [main] org.apache.coyote.AbstractProtocol.start Démarrage du gestionnaire de protocole ["http-nio-8080"]
+04-Dec-2022 15:07:03.320 INFOS [main] org.apache.catalina.startup.Catalina.start Server startup in 654 ms
+04-Dec-2022 15:09:04.687 INFOS [main] org.apache.catalina.core.StandardServer.await Une commande d'arrêt valide a été reçue sur le port d'arrêt, arrêt de l'instance du serveur
+04-Dec-2022 15:09:04.687 INFOS [main] org.apache.coyote.AbstractProtocol.pause Le gestionnaire de protocole ["http-nio-8080"] est mis en pause
+04-Dec-2022 15:09:04.688 INFOS [main] org.apache.catalina.core.StandardService.stopInternal Arrêt du service [Catalina]
+04-Dec-2022 15:09:04.699 INFOS [main] org.apache.coyote.AbstractProtocol.stop Arrêt du gestionnaire de protocole ["http-nio-8080"]
+04-Dec-2022 15:09:04.710 INFOS [main] org.apache.coyote.AbstractProtocol.destroy Destruction du gestionnaire de protocole ["http-nio-8080"]
+NOTE: Picked up JDK_JAVA_OPTIONS:  --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+04-Dec-2022 15:09:44.147 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Nom version serveur :              Apache Tomcat/8.5.84
+04-Dec-2022 15:09:44.149 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Serveur compilé :                  Nov 16 2022 13:34:24 UTC
+04-Dec-2022 15:09:44.149 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Version du serveur :               8.5.84.0
+04-Dec-2022 15:09:44.149 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Nom de l'OS :                      Linux
+04-Dec-2022 15:09:44.149 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Version OS :                       6.0.6-76060006-generic
+04-Dec-2022 15:09:44.149 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture :                     amd64
+04-Dec-2022 15:09:44.149 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home :                        /usr/lib/jvm/java-17-openjdk-amd64
+04-Dec-2022 15:09:44.149 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Version JVM :                      17.0.5+8-Ubuntu-2ubuntu122.04
+04-Dec-2022 15:09:44.149 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Fournisseur de la JVM :            Private Build
+04-Dec-2022 15:09:44.149 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE :                    /home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84
+04-Dec-2022 15:09:44.149 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME :                    /home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84
+04-Dec-2022 15:09:44.150 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : --add-opens=java.base/java.lang=ALL-UNNAMED
+04-Dec-2022 15:09:44.150 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : --add-opens=java.base/java.io=ALL-UNNAMED
+04-Dec-2022 15:09:44.150 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : --add-opens=java.base/java.util=ALL-UNNAMED
+04-Dec-2022 15:09:44.150 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+04-Dec-2022 15:09:44.150 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+04-Dec-2022 15:09:44.150 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Djava.util.logging.config.file=/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/conf/logging.properties
+04-Dec-2022 15:09:44.151 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+04-Dec-2022 15:09:44.151 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Djdk.tls.ephemeralDHKeySize=2048
+04-Dec-2022 15:09:44.151 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+04-Dec-2022 15:09:44.151 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+04-Dec-2022 15:09:44.151 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Dignore.endorsed.dirs=
+04-Dec-2022 15:09:44.151 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Dcatalina.base=/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84
+04-Dec-2022 15:09:44.151 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Dcatalina.home=/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84
+04-Dec-2022 15:09:44.151 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Djava.io.tmpdir=/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/temp
+04-Dec-2022 15:09:44.151 INFOS [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent La librairie Apache Tomcat Native basée sur APR qui permet des performances optimales dans les environnements de production n'a pas été trouvée sur le java.library.path : [/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+04-Dec-2022 15:09:44.166 INFOS [main] org.apache.coyote.AbstractProtocol.init Initialisation du gestionnaire de protocole ["http-nio-8080"]
+04-Dec-2022 15:09:44.177 INFOS [main] org.apache.catalina.startup.Catalina.load Initialization processed in 257 ms
+04-Dec-2022 15:09:44.194 INFOS [main] org.apache.catalina.core.StandardService.startInternal Démarrage du service [Catalina]
+04-Dec-2022 15:09:44.194 INFOS [main] org.apache.catalina.core.StandardEngine.startInternal Démarrage du moteur de Servlets : [Apache Tomcat/8.5.84]
+04-Dec-2022 15:09:44.400 INFOS [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès ; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Dec-2022 15:09:44.465 AVERTISSEMENT [localhost-startStop-1] org.apache.axis.utils.JavaUtils.isAttachmentSupported Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
+04-Dec-2022 15:09:44.593 INFOS [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès ; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Dec-2022 15:09:44.625 AVERTISSEMENT [localhost-startStop-1] org.apache.axis.utils.JavaUtils.isAttachmentSupported Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
+04-Dec-2022 15:09:44.660 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/ROOT]
+04-Dec-2022 15:09:44.668 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/ROOT] de l'application web s'est terminé en [8] ms
+04-Dec-2022 15:09:44.668 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/examples]
+04-Dec-2022 15:09:44.744 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/examples] de l'application web s'est terminé en [75] ms
+04-Dec-2022 15:09:44.744 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/host-manager]
+04-Dec-2022 15:09:44.754 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/host-manager] de l'application web s'est terminé en [10] ms
+04-Dec-2022 15:09:44.754 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/manager]
+04-Dec-2022 15:09:44.763 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/manager] de l'application web s'est terminé en [9] ms
+04-Dec-2022 15:09:44.763 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/docs]
+04-Dec-2022 15:09:44.769 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/docs] de l'application web s'est terminé en [6] ms
+04-Dec-2022 15:09:44.770 INFOS [main] org.apache.coyote.AbstractProtocol.start Démarrage du gestionnaire de protocole ["http-nio-8080"]
+04-Dec-2022 15:09:44.776 INFOS [main] org.apache.catalina.startup.Catalina.start Server startup in 598 ms
+04-Dec-2022 15:12:32.171 INFOS [main] org.apache.catalina.core.StandardServer.await Une commande d'arrêt valide a été reçue sur le port d'arrêt, arrêt de l'instance du serveur
+04-Dec-2022 15:12:32.172 INFOS [main] org.apache.coyote.AbstractProtocol.pause Le gestionnaire de protocole ["http-nio-8080"] est mis en pause
+04-Dec-2022 15:12:32.172 INFOS [main] org.apache.catalina.core.StandardService.stopInternal Arrêt du service [Catalina]
+04-Dec-2022 15:12:32.183 INFOS [main] org.apache.coyote.AbstractProtocol.stop Arrêt du gestionnaire de protocole ["http-nio-8080"]
+04-Dec-2022 15:12:32.195 INFOS [main] org.apache.coyote.AbstractProtocol.destroy Destruction du gestionnaire de protocole ["http-nio-8080"]
+NOTE: Picked up JDK_JAVA_OPTIONS:  --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+04-Dec-2022 15:12:33.583 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Nom version serveur :              Apache Tomcat/8.5.84
+04-Dec-2022 15:12:33.585 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Serveur compilé :                  Nov 16 2022 13:34:24 UTC
+04-Dec-2022 15:12:33.585 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Version du serveur :               8.5.84.0
+04-Dec-2022 15:12:33.585 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Nom de l'OS :                      Linux
+04-Dec-2022 15:12:33.585 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Version OS :                       6.0.6-76060006-generic
+04-Dec-2022 15:12:33.585 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture :                     amd64
+04-Dec-2022 15:12:33.585 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home :                        /usr/lib/jvm/java-17-openjdk-amd64
+04-Dec-2022 15:12:33.585 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Version JVM :                      17.0.5+8-Ubuntu-2ubuntu122.04
+04-Dec-2022 15:12:33.585 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Fournisseur de la JVM :            Private Build
+04-Dec-2022 15:12:33.585 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE :                    /home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84
+04-Dec-2022 15:12:33.585 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME :                    /home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84
+04-Dec-2022 15:12:33.586 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : --add-opens=java.base/java.lang=ALL-UNNAMED
+04-Dec-2022 15:12:33.586 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : --add-opens=java.base/java.io=ALL-UNNAMED
+04-Dec-2022 15:12:33.586 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : --add-opens=java.base/java.util=ALL-UNNAMED
+04-Dec-2022 15:12:33.586 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+04-Dec-2022 15:12:33.586 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+04-Dec-2022 15:12:33.586 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Djava.util.logging.config.file=/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/conf/logging.properties
+04-Dec-2022 15:12:33.586 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+04-Dec-2022 15:12:33.586 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Djdk.tls.ephemeralDHKeySize=2048
+04-Dec-2022 15:12:33.586 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+04-Dec-2022 15:12:33.586 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+04-Dec-2022 15:12:33.586 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Dignore.endorsed.dirs=
+04-Dec-2022 15:12:33.586 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Dcatalina.base=/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84
+04-Dec-2022 15:12:33.586 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Dcatalina.home=/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84
+04-Dec-2022 15:12:33.587 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Djava.io.tmpdir=/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/temp
+04-Dec-2022 15:12:33.587 INFOS [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent La librairie Apache Tomcat Native basée sur APR qui permet des performances optimales dans les environnements de production n'a pas été trouvée sur le java.library.path : [/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+04-Dec-2022 15:12:33.602 INFOS [main] org.apache.coyote.AbstractProtocol.init Initialisation du gestionnaire de protocole ["http-nio-8080"]
+04-Dec-2022 15:12:33.613 INFOS [main] org.apache.catalina.startup.Catalina.load Initialization processed in 241 ms
+04-Dec-2022 15:12:33.631 INFOS [main] org.apache.catalina.core.StandardService.startInternal Démarrage du service [Catalina]
+04-Dec-2022 15:12:33.631 INFOS [main] org.apache.catalina.core.StandardEngine.startInternal Démarrage du moteur de Servlets : [Apache Tomcat/8.5.84]
+04-Dec-2022 15:12:33.873 INFOS [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès ; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Dec-2022 15:12:33.949 AVERTISSEMENT [localhost-startStop-1] org.apache.axis.utils.JavaUtils.isAttachmentSupported Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
+04-Dec-2022 15:12:34.090 INFOS [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès ; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Dec-2022 15:12:34.124 AVERTISSEMENT [localhost-startStop-1] org.apache.axis.utils.JavaUtils.isAttachmentSupported Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
+04-Dec-2022 15:12:34.170 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/ROOT]
+04-Dec-2022 15:12:34.181 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/ROOT] de l'application web s'est terminé en [11] ms
+04-Dec-2022 15:12:34.182 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/examples]
+04-Dec-2022 15:12:34.300 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/examples] de l'application web s'est terminé en [117] ms
+04-Dec-2022 15:12:34.300 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/host-manager]
+04-Dec-2022 15:12:34.313 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/host-manager] de l'application web s'est terminé en [12] ms
+04-Dec-2022 15:12:34.313 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/manager]
+04-Dec-2022 15:12:34.324 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/manager] de l'application web s'est terminé en [11] ms
+04-Dec-2022 15:12:34.324 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/docs]
+04-Dec-2022 15:12:34.331 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/docs] de l'application web s'est terminé en [7] ms
+04-Dec-2022 15:12:34.334 INFOS [main] org.apache.coyote.AbstractProtocol.start Démarrage du gestionnaire de protocole ["http-nio-8080"]
+04-Dec-2022 15:12:34.349 INFOS [main] org.apache.catalina.startup.Catalina.start Server startup in 735 ms
+04-Dec-2022 15:13:28.112 INFOS [main] org.apache.catalina.core.StandardServer.await Une commande d'arrêt valide a été reçue sur le port d'arrêt, arrêt de l'instance du serveur
+04-Dec-2022 15:13:28.113 INFOS [main] org.apache.coyote.AbstractProtocol.pause Le gestionnaire de protocole ["http-nio-8080"] est mis en pause
+04-Dec-2022 15:13:28.115 INFOS [main] org.apache.catalina.core.StandardService.stopInternal Arrêt du service [Catalina]
+04-Dec-2022 15:13:28.127 INFOS [main] org.apache.coyote.AbstractProtocol.stop Arrêt du gestionnaire de protocole ["http-nio-8080"]
+04-Dec-2022 15:13:28.139 INFOS [main] org.apache.coyote.AbstractProtocol.destroy Destruction du gestionnaire de protocole ["http-nio-8080"]
+NOTE: Picked up JDK_JAVA_OPTIONS:  --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+04-Dec-2022 15:13:29.430 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Nom version serveur :              Apache Tomcat/8.5.84
+04-Dec-2022 15:13:29.432 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Serveur compilé :                  Nov 16 2022 13:34:24 UTC
+04-Dec-2022 15:13:29.432 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Version du serveur :               8.5.84.0
+04-Dec-2022 15:13:29.432 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Nom de l'OS :                      Linux
+04-Dec-2022 15:13:29.432 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Version OS :                       6.0.6-76060006-generic
+04-Dec-2022 15:13:29.432 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture :                     amd64
+04-Dec-2022 15:13:29.432 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home :                        /usr/lib/jvm/java-17-openjdk-amd64
+04-Dec-2022 15:13:29.432 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Version JVM :                      17.0.5+8-Ubuntu-2ubuntu122.04
+04-Dec-2022 15:13:29.432 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Fournisseur de la JVM :            Private Build
+04-Dec-2022 15:13:29.432 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE :                    /home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84
+04-Dec-2022 15:13:29.432 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME :                    /home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84
+04-Dec-2022 15:13:29.433 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : --add-opens=java.base/java.lang=ALL-UNNAMED
+04-Dec-2022 15:13:29.433 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : --add-opens=java.base/java.io=ALL-UNNAMED
+04-Dec-2022 15:13:29.433 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : --add-opens=java.base/java.util=ALL-UNNAMED
+04-Dec-2022 15:13:29.433 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+04-Dec-2022 15:13:29.433 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+04-Dec-2022 15:13:29.433 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Djava.util.logging.config.file=/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/conf/logging.properties
+04-Dec-2022 15:13:29.433 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+04-Dec-2022 15:13:29.433 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Djdk.tls.ephemeralDHKeySize=2048
+04-Dec-2022 15:13:29.433 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+04-Dec-2022 15:13:29.434 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+04-Dec-2022 15:13:29.434 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Dignore.endorsed.dirs=
+04-Dec-2022 15:13:29.434 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Dcatalina.base=/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84
+04-Dec-2022 15:13:29.434 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Dcatalina.home=/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84
+04-Dec-2022 15:13:29.434 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Djava.io.tmpdir=/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/temp
+04-Dec-2022 15:13:29.434 INFOS [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent La librairie Apache Tomcat Native basée sur APR qui permet des performances optimales dans les environnements de production n'a pas été trouvée sur le java.library.path : [/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+04-Dec-2022 15:13:29.449 INFOS [main] org.apache.coyote.AbstractProtocol.init Initialisation du gestionnaire de protocole ["http-nio-8080"]
+04-Dec-2022 15:13:29.460 INFOS [main] org.apache.catalina.startup.Catalina.load Initialization processed in 239 ms
+04-Dec-2022 15:13:29.477 INFOS [main] org.apache.catalina.core.StandardService.startInternal Démarrage du service [Catalina]
+04-Dec-2022 15:13:29.478 INFOS [main] org.apache.catalina.core.StandardEngine.startInternal Démarrage du moteur de Servlets : [Apache Tomcat/8.5.84]
+04-Dec-2022 15:13:29.708 INFOS [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès ; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Dec-2022 15:13:29.780 AVERTISSEMENT [localhost-startStop-1] org.apache.axis.utils.JavaUtils.isAttachmentSupported Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
+04-Dec-2022 15:13:29.915 INFOS [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès ; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Dec-2022 15:13:29.948 AVERTISSEMENT [localhost-startStop-1] org.apache.axis.utils.JavaUtils.isAttachmentSupported Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
+04-Dec-2022 15:13:29.983 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/ROOT]
+04-Dec-2022 15:13:29.991 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/ROOT] de l'application web s'est terminé en [7] ms
+04-Dec-2022 15:13:29.991 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/examples]
+04-Dec-2022 15:13:30.071 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/examples] de l'application web s'est terminé en [80] ms
+04-Dec-2022 15:13:30.071 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/host-manager]
+04-Dec-2022 15:13:30.085 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/host-manager] de l'application web s'est terminé en [13] ms
+04-Dec-2022 15:13:30.085 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/manager]
+04-Dec-2022 15:13:30.096 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/manager] de l'application web s'est terminé en [11] ms
+04-Dec-2022 15:13:30.096 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/docs]
+04-Dec-2022 15:13:30.104 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/docs] de l'application web s'est terminé en [8] ms
+04-Dec-2022 15:13:30.106 INFOS [main] org.apache.coyote.AbstractProtocol.start Démarrage du gestionnaire de protocole ["http-nio-8080"]
+04-Dec-2022 15:13:30.117 INFOS [main] org.apache.catalina.startup.Catalina.start Server startup in 657 ms
+04-Dec-2022 15:16:27.931 INFOS [main] org.apache.catalina.core.StandardServer.await Une commande d'arrêt valide a été reçue sur le port d'arrêt, arrêt de l'instance du serveur
+04-Dec-2022 15:16:27.931 INFOS [main] org.apache.coyote.AbstractProtocol.pause Le gestionnaire de protocole ["http-nio-8080"] est mis en pause
+04-Dec-2022 15:16:27.932 INFOS [main] org.apache.catalina.core.StandardService.stopInternal Arrêt du service [Catalina]
+04-Dec-2022 15:16:27.943 INFOS [main] org.apache.coyote.AbstractProtocol.stop Arrêt du gestionnaire de protocole ["http-nio-8080"]
+04-Dec-2022 15:16:27.955 INFOS [main] org.apache.coyote.AbstractProtocol.destroy Destruction du gestionnaire de protocole ["http-nio-8080"]
+NOTE: Picked up JDK_JAVA_OPTIONS:  --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+04-Dec-2022 15:36:29.724 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Nom version serveur :              Apache Tomcat/8.5.84
+04-Dec-2022 15:36:29.726 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Serveur compilé :                  Nov 16 2022 13:34:24 UTC
+04-Dec-2022 15:36:29.726 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Version du serveur :               8.5.84.0
+04-Dec-2022 15:36:29.726 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Nom de l'OS :                      Linux
+04-Dec-2022 15:36:29.726 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Version OS :                       6.0.6-76060006-generic
+04-Dec-2022 15:36:29.726 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture :                     amd64
+04-Dec-2022 15:36:29.726 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home :                        /usr/lib/jvm/java-17-openjdk-amd64
+04-Dec-2022 15:36:29.726 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Version JVM :                      17.0.5+8-Ubuntu-2ubuntu122.04
+04-Dec-2022 15:36:29.727 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Fournisseur de la JVM :            Private Build
+04-Dec-2022 15:36:29.727 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE :                    /home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84
+04-Dec-2022 15:36:29.727 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME :                    /home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84
+04-Dec-2022 15:36:29.727 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : --add-opens=java.base/java.lang=ALL-UNNAMED
+04-Dec-2022 15:36:29.728 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : --add-opens=java.base/java.io=ALL-UNNAMED
+04-Dec-2022 15:36:29.728 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : --add-opens=java.base/java.util=ALL-UNNAMED
+04-Dec-2022 15:36:29.728 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+04-Dec-2022 15:36:29.728 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+04-Dec-2022 15:36:29.728 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Djava.util.logging.config.file=/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/conf/logging.properties
+04-Dec-2022 15:36:29.728 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+04-Dec-2022 15:36:29.728 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Djdk.tls.ephemeralDHKeySize=2048
+04-Dec-2022 15:36:29.728 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+04-Dec-2022 15:36:29.728 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+04-Dec-2022 15:36:29.728 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Dignore.endorsed.dirs=
+04-Dec-2022 15:36:29.728 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Dcatalina.base=/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84
+04-Dec-2022 15:36:29.728 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Dcatalina.home=/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84
+04-Dec-2022 15:36:29.728 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Djava.io.tmpdir=/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/temp
+04-Dec-2022 15:36:29.728 INFOS [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent La librairie Apache Tomcat Native basée sur APR qui permet des performances optimales dans les environnements de production n'a pas été trouvée sur le java.library.path : [/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+04-Dec-2022 15:36:29.745 INFOS [main] org.apache.coyote.AbstractProtocol.init Initialisation du gestionnaire de protocole ["http-nio-8080"]
+04-Dec-2022 15:36:29.755 INFOS [main] org.apache.catalina.startup.Catalina.load Initialization processed in 248 ms
+04-Dec-2022 15:36:29.774 INFOS [main] org.apache.catalina.core.StandardService.startInternal Démarrage du service [Catalina]
+04-Dec-2022 15:36:29.775 INFOS [main] org.apache.catalina.core.StandardEngine.startInternal Démarrage du moteur de Servlets : [Apache Tomcat/8.5.84]
+04-Dec-2022 15:36:29.998 INFOS [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès ; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Dec-2022 15:36:30.080 AVERTISSEMENT [localhost-startStop-1] org.apache.axis.utils.JavaUtils.isAttachmentSupported Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
+04-Dec-2022 15:36:30.226 INFOS [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès ; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Dec-2022 15:36:30.269 AVERTISSEMENT [localhost-startStop-1] org.apache.axis.utils.JavaUtils.isAttachmentSupported Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
+04-Dec-2022 15:36:30.319 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/ROOT]
+04-Dec-2022 15:36:30.330 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/ROOT] de l'application web s'est terminé en [11] ms
+04-Dec-2022 15:36:30.331 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/examples]
+04-Dec-2022 15:36:30.421 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/examples] de l'application web s'est terminé en [91] ms
+04-Dec-2022 15:36:30.421 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/host-manager]
+04-Dec-2022 15:36:30.435 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/host-manager] de l'application web s'est terminé en [14] ms
+04-Dec-2022 15:36:30.435 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/manager]
+04-Dec-2022 15:36:30.446 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/manager] de l'application web s'est terminé en [11] ms
+04-Dec-2022 15:36:30.446 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/docs]
+04-Dec-2022 15:36:30.454 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/docs] de l'application web s'est terminé en [7] ms
+04-Dec-2022 15:36:30.455 INFOS [main] org.apache.coyote.AbstractProtocol.start Démarrage du gestionnaire de protocole ["http-nio-8080"]
+04-Dec-2022 15:36:30.462 INFOS [main] org.apache.catalina.startup.Catalina.start Server startup in 706 ms
+04-Dec-2022 15:37:11.446 GRAVE [http-nio-8080-exec-4] org.apache.axis.providers.java.JavaProvider.getServiceClass Exception:
+	java.lang.ClassNotFoundException: bankService.BankService
+		at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1420)
+		at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1228)
+		at org.apache.axis.utils.ClassUtils$2.run(ClassUtils.java:187)
+		at java.base/java.security.AccessController.doPrivileged(AccessController.java:318)
+		at org.apache.axis.utils.ClassUtils.loadClass(ClassUtils.java:160)
+		at org.apache.axis.utils.ClassUtils.forName(ClassUtils.java:142)
+		at org.apache.axis.utils.cache.ClassCache.lookup(ClassCache.java:85)
+		at org.apache.axis.providers.java.JavaProvider.getServiceClass(JavaProvider.java:428)
+		at org.apache.axis.providers.java.JavaProvider.initServiceDesc(JavaProvider.java:461)
+		at org.apache.axis.handlers.soap.SOAPService.getInitializedServiceDesc(SOAPService.java:286)
+		at org.apache.axis.deployment.wsdd.WSDDService.makeNewInstance(WSDDService.java:500)
+		at org.apache.axis.deployment.wsdd.WSDDDeployableItem.getNewInstance(WSDDDeployableItem.java:274)
+		at org.apache.axis.deployment.wsdd.WSDDDeployableItem.getInstance(WSDDDeployableItem.java:260)
+		at org.apache.axis.deployment.wsdd.WSDDDeployment.getService(WSDDDeployment.java:427)
+		at org.apache.axis.configuration.FileProvider.getService(FileProvider.java:231)
+		at org.apache.axis.AxisEngine.getService(AxisEngine.java:311)
+		at org.apache.axis.MessageContext.setTargetService(MessageContext.java:756)
+		at org.apache.axis.handlers.http.URLMapper.invoke(URLMapper.java:50)
+		at org.apache.axis.strategies.InvocationStrategy.visit(InvocationStrategy.java:32)
+		at org.apache.axis.SimpleChain.doVisiting(SimpleChain.java:118)
+		at org.apache.axis.SimpleChain.invoke(SimpleChain.java:83)
+		at org.apache.axis.server.AxisServer.invoke(AxisServer.java:239)
+		at org.apache.axis.transport.http.AxisServlet.doPost(AxisServlet.java:699)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:682)
+		at org.apache.axis.transport.http.AxisServletBase.service(AxisServletBase.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:765)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:543)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:698)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:367)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:639)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:885)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1688)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+04-Dec-2022 15:37:11.450 GRAVE [http-nio-8080-exec-4] org.apache.axis.providers.java.JavaProvider.getServiceClass Exception:
+	java.lang.ClassNotFoundException: bankService.BankService
+		at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1420)
+		at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1228)
+		at org.apache.axis.utils.ClassUtils$2.run(ClassUtils.java:187)
+		at java.base/java.security.AccessController.doPrivileged(AccessController.java:318)
+		at org.apache.axis.utils.ClassUtils.loadClass(ClassUtils.java:160)
+		at org.apache.axis.utils.ClassUtils.forName(ClassUtils.java:142)
+		at org.apache.axis.utils.cache.ClassCache.lookup(ClassCache.java:85)
+		at org.apache.axis.providers.java.JavaProvider.getServiceClass(JavaProvider.java:428)
+		at org.apache.axis.providers.java.JavaProvider.initServiceDesc(JavaProvider.java:461)
+		at org.apache.axis.handlers.soap.SOAPService.getInitializedServiceDesc(SOAPService.java:286)
+		at org.apache.axis.deployment.wsdd.WSDDService.makeNewInstance(WSDDService.java:500)
+		at org.apache.axis.deployment.wsdd.WSDDDeployableItem.getNewInstance(WSDDDeployableItem.java:274)
+		at org.apache.axis.deployment.wsdd.WSDDDeployableItem.getInstance(WSDDDeployableItem.java:260)
+		at org.apache.axis.deployment.wsdd.WSDDDeployment.getServiceByNamespaceURI(WSDDDeployment.java:436)
+		at org.apache.axis.configuration.FileProvider.getServiceByNamespaceURI(FileProvider.java:247)
+		at org.apache.axis.AxisEngine.getService(AxisEngine.java:314)
+		at org.apache.axis.MessageContext.setTargetService(MessageContext.java:756)
+		at org.apache.axis.handlers.http.URLMapper.invoke(URLMapper.java:50)
+		at org.apache.axis.strategies.InvocationStrategy.visit(InvocationStrategy.java:32)
+		at org.apache.axis.SimpleChain.doVisiting(SimpleChain.java:118)
+		at org.apache.axis.SimpleChain.invoke(SimpleChain.java:83)
+		at org.apache.axis.server.AxisServer.invoke(AxisServer.java:239)
+		at org.apache.axis.transport.http.AxisServlet.doPost(AxisServlet.java:699)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:682)
+		at org.apache.axis.transport.http.AxisServletBase.service(AxisServletBase.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:765)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:543)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:698)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:367)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:639)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:885)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1688)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+04-Dec-2022 15:38:45.542 INFOS [main] org.apache.catalina.core.StandardServer.await Une commande d'arrêt valide a été reçue sur le port d'arrêt, arrêt de l'instance du serveur
+04-Dec-2022 15:38:45.542 INFOS [main] org.apache.coyote.AbstractProtocol.pause Le gestionnaire de protocole ["http-nio-8080"] est mis en pause
+04-Dec-2022 15:38:45.543 INFOS [main] org.apache.catalina.core.StandardService.stopInternal Arrêt du service [Catalina]
+04-Dec-2022 15:38:45.560 INFOS [main] org.apache.coyote.AbstractProtocol.stop Arrêt du gestionnaire de protocole ["http-nio-8080"]
+04-Dec-2022 15:38:45.566 INFOS [main] org.apache.coyote.AbstractProtocol.destroy Destruction du gestionnaire de protocole ["http-nio-8080"]
+NOTE: Picked up JDK_JAVA_OPTIONS:  --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+04-Dec-2022 15:46:12.841 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Nom version serveur :              Apache Tomcat/8.5.84
+04-Dec-2022 15:46:12.843 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Serveur compilé :                  Nov 16 2022 13:34:24 UTC
+04-Dec-2022 15:46:12.843 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Version du serveur :               8.5.84.0
+04-Dec-2022 15:46:12.843 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Nom de l'OS :                      Linux
+04-Dec-2022 15:46:12.843 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Version OS :                       6.0.6-76060006-generic
+04-Dec-2022 15:46:12.843 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture :                     amd64
+04-Dec-2022 15:46:12.843 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home :                        /usr/lib/jvm/java-17-openjdk-amd64
+04-Dec-2022 15:46:12.843 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Version JVM :                      17.0.5+8-Ubuntu-2ubuntu122.04
+04-Dec-2022 15:46:12.843 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Fournisseur de la JVM :            Private Build
+04-Dec-2022 15:46:12.843 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE :                    /home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84
+04-Dec-2022 15:46:12.843 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME :                    /home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84
+04-Dec-2022 15:46:12.844 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : --add-opens=java.base/java.lang=ALL-UNNAMED
+04-Dec-2022 15:46:12.844 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : --add-opens=java.base/java.io=ALL-UNNAMED
+04-Dec-2022 15:46:12.844 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : --add-opens=java.base/java.util=ALL-UNNAMED
+04-Dec-2022 15:46:12.844 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+04-Dec-2022 15:46:12.844 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+04-Dec-2022 15:46:12.844 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Djava.util.logging.config.file=/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/conf/logging.properties
+04-Dec-2022 15:46:12.844 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+04-Dec-2022 15:46:12.844 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Djdk.tls.ephemeralDHKeySize=2048
+04-Dec-2022 15:46:12.844 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+04-Dec-2022 15:46:12.844 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+04-Dec-2022 15:46:12.844 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Dignore.endorsed.dirs=
+04-Dec-2022 15:46:12.844 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Dcatalina.base=/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84
+04-Dec-2022 15:46:12.844 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Dcatalina.home=/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84
+04-Dec-2022 15:46:12.845 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Djava.io.tmpdir=/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/temp
+04-Dec-2022 15:46:12.845 INFOS [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent La librairie Apache Tomcat Native basée sur APR qui permet des performances optimales dans les environnements de production n'a pas été trouvée sur le java.library.path : [/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+04-Dec-2022 15:46:12.861 INFOS [main] org.apache.coyote.AbstractProtocol.init Initialisation du gestionnaire de protocole ["http-nio-8080"]
+04-Dec-2022 15:46:12.874 INFOS [main] org.apache.catalina.startup.Catalina.load Initialization processed in 301 ms
+04-Dec-2022 15:46:12.899 INFOS [main] org.apache.catalina.core.StandardService.startInternal Démarrage du service [Catalina]
+04-Dec-2022 15:46:12.899 INFOS [main] org.apache.catalina.core.StandardEngine.startInternal Démarrage du moteur de Servlets : [Apache Tomcat/8.5.84]
+04-Dec-2022 15:46:13.178 INFOS [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès ; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Dec-2022 15:46:13.257 AVERTISSEMENT [localhost-startStop-1] org.apache.axis.utils.JavaUtils.isAttachmentSupported Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
+04-Dec-2022 15:46:13.399 INFOS [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès ; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Dec-2022 15:46:13.434 AVERTISSEMENT [localhost-startStop-1] org.apache.axis.utils.JavaUtils.isAttachmentSupported Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
+04-Dec-2022 15:46:13.502 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/ROOT]
+04-Dec-2022 15:46:13.519 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/ROOT] de l'application web s'est terminé en [17] ms
+04-Dec-2022 15:46:13.520 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/examples]
+04-Dec-2022 15:46:13.648 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/examples] de l'application web s'est terminé en [127] ms
+04-Dec-2022 15:46:13.648 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/host-manager]
+04-Dec-2022 15:46:13.671 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/host-manager] de l'application web s'est terminé en [23] ms
+04-Dec-2022 15:46:13.671 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/manager]
+04-Dec-2022 15:46:13.695 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/manager] de l'application web s'est terminé en [23] ms
+04-Dec-2022 15:46:13.695 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/docs]
+04-Dec-2022 15:46:13.706 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/home/mateusz/TP_Master_2/ServiceRest/Projet/EiffelBikeCorp/apache-tomcat-8.5.84/webapps/docs] de l'application web s'est terminé en [11] ms
+04-Dec-2022 15:46:13.708 INFOS [main] org.apache.coyote.AbstractProtocol.start Démarrage du gestionnaire de protocole ["http-nio-8080"]
+04-Dec-2022 15:46:13.722 INFOS [main] org.apache.catalina.startup.Catalina.start Server startup in 847 ms
+04-Dec-2022 15:48:28.272 INFOS [main] org.apache.catalina.core.StandardServer.await Une commande d'arrêt valide a été reçue sur le port d'arrêt, arrêt de l'instance du serveur
+04-Dec-2022 15:48:28.272 INFOS [main] org.apache.coyote.AbstractProtocol.pause Le gestionnaire de protocole ["http-nio-8080"] est mis en pause
+04-Dec-2022 15:48:28.273 INFOS [main] org.apache.catalina.core.StandardService.stopInternal Arrêt du service [Catalina]
+04-Dec-2022 15:48:28.291 INFOS [main] org.apache.coyote.AbstractProtocol.stop Arrêt du gestionnaire de protocole ["http-nio-8080"]
+04-Dec-2022 15:48:28.296 INFOS [main] org.apache.coyote.AbstractProtocol.destroy Destruction du gestionnaire de protocole ["http-nio-8080"]

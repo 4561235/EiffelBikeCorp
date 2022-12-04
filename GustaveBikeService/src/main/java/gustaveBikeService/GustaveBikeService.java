@@ -5,12 +5,13 @@ import java.net.MalformedURLException;
 
 
 
+
 import java.rmi.Naming;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
+import java.util.concurrent.ConcurrentHashMap;
 
 import javax.xml.rpc.ServiceException;
 import FxtopAPI.FxtopServicesLocator;
@@ -30,7 +31,7 @@ public class GustaveBikeService {
 	private final BankService bankService;
 	private final FxtopServicesPortType fxtopServices;
 	
-	private final HashMap<Integer, List<BikeInterface>> card;
+	private final ConcurrentHashMap<Integer, List<BikeInterface>> card;
 	
 	public GustaveBikeService() throws MalformedURLException, RemoteException, NotBoundException, ServiceException {
 		this.eiffelBikeStorage = (EiffelBikeCorpInterface) Naming.lookup("EiffelBikeCorpService");
@@ -39,15 +40,16 @@ public class GustaveBikeService {
 		this.bankService = new BankServiceServiceLocator().getBankService();
 		((BankServiceSoapBindingStub) bankService).setMaintainSession(true);
 		
-		this.card = new HashMap<>();
+		this.card = new ConcurrentHashMap<>();
 	}
 	
 	
 	//Return an array of all bikes avaiable to buy
 	public String[] getBikesToBuy() throws RemoteException {
+		
+		List<String> bikesList = this.eiffelBikeStorage.bikesToBuy();
 		//Pour tester
-//		List<String> bikesList = this.eiffelBikeStorage.bikesToBuy();
-		List<String> bikesList = this.eiffelBikeStorage.bikesToBorrow();
+//		List<String> bikesList = this.eiffelBikeStorage.bikesToBorrow();
 		String[] tab = new String[bikesList.size()];
 		for (int i = 0; i < bikesList.size(); i++) {
 			tab[i] = bikesList.get(i);
@@ -62,16 +64,15 @@ public class GustaveBikeService {
 	//Buy a bike, bike returned can be null when there is not enough founds
 	public GustaveBike buyBike(int bikeID, int userID, String currencyType) throws RemoteException {
         BikeInterface bike = bikeStorageAccess.getBike(bikeID);
-        //Il faut verifier si bike != null
+        
         if(bike != null) {
         	 String priceBike = fxtopServices.convert(String.valueOf(bike.getPrice()), "FRA", currencyType, null, null, null).getResultAmount();
         	 if(this.bankService.removeFounds(userID, Long.valueOf(priceBike))) {
 
-                 //Une fois que c'est payé on remove le bike avec bikeStorageAccess.removeBike(bikeID);
-                 //On enleve du panier avec this.removeFromCard
-             	bikeStorageAccess.removeBike(bikeID);
-             	this.removeFromCard(userID, bikeID);
-                return new GustaveBike(bike.getName(), bike.getNotes(), bike.getPrice());
+                GustaveBike bikeBought =  new GustaveBike(bike.getName(), bike.getNotes(), bike.getPrice());
+                this.removeFromCard(userID, bikeID);
+                bikeStorageAccess.removeBike(bikeID);
+                return bikeBought;
              }
              else {
                  return null;
@@ -135,13 +136,11 @@ public class GustaveBikeService {
 		if(this.card.containsKey(userID)) {
 			
 			List<BikeInterface> card = this.card.get(userID);
-			List<BikeInterface> listToremove = new ArrayList<>();
 			
 			for (int i = 0; i < card.size(); i++) {
 				GustaveBike bikeBought = this.buyBike(card.get(i).getId(), userID, currencyType);
 				if(bikeBought != null) {
 					bikesBought.add(bikeBought);
-					listToremove.add(card.get(i));
 				}
 			}
 			
@@ -149,7 +148,6 @@ public class GustaveBikeService {
 			
 			for (int i = 0; i < bikesBought.size(); i++) {
 				arr[i] = bikesBought.get(i);
-				card.remove(listToremove.get(i));
 			}
 			
 			return arr;		
@@ -165,12 +163,30 @@ public class GustaveBikeService {
 		if(this.card.containsKey(userID)) {
 			List<BikeInterface> card = this.card.get(userID);
 			BikeInterface bike = this.bikeStorageAccess.getBike(bikeID);
-			if(bike != null) {
-				card.remove(bike);
-				return true;
-			}else {
+			
+			if(bike == null) {
 				return false;
 			}
+			
+			List<BikeInterface> newCard = new ArrayList<>();
+			
+			for (BikeInterface bikeInterface : card) {
+				if(bikeInterface.getId() != bike.getId()) {
+					newCard.add(bikeInterface);
+				}
+			}
+			
+			if(card.size() == newCard.size()) {
+				return false;
+			}
+			else {
+				this.card.replace(userID, newCard);
+				return true;
+			}
+			
+			
+			
+			
 		}else {
 			return false;
 		}
@@ -179,13 +195,19 @@ public class GustaveBikeService {
 	//Return tab of bike description from the users card, return null if there is no bikes in card
 	public String[] getCard(int userID) throws RemoteException {
 		if(this.card.containsKey(userID)) {
-			List<BikeInterface> card = this.card.get(userID);
+			List<BikeInterface> cardList = this.card.get(userID);
 			
-			String[] tab = new String[card.size()];
-			for (int i = 0; i < card.size(); i++) {
-				tab[i] = "BikeID: " +card.get(i).getId() +" " +card.get(i).getNotes();
+			if(cardList.size() != 0) {
+				String[] tab = new String[cardList.size()];
+				for (int i = 0; i < cardList.size(); i++) {
+					tab[i] = "BikeID: " +cardList.get(i).getId() +" " +cardList.get(i).getNotes();
+				}
+				return tab;
 			}
-			return tab;
+			else {
+				return new String[0];
+			}
+			
 		}else {
 			return new String[0];
 		}

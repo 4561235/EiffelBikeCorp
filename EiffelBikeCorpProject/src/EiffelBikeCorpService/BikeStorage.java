@@ -24,7 +24,7 @@ public class BikeStorage extends UnicastRemoteObject implements EiffelBikeCorpIn
     }
 
     @Override
-    public void rentBike(EiffelUserInterface user, int bikeId) throws RemoteException {
+    public boolean rentBike(EiffelUserInterface user, int bikeId) throws RemoteException {
 
         if(this.bikeStorage.containsKey(bikeId)){
             BikeInterface bikeToBorrow = bikeStorage.get(bikeId);
@@ -33,12 +33,16 @@ public class BikeStorage extends UnicastRemoteObject implements EiffelBikeCorpIn
                 bikeToBorrow.isRented(true);
                 user.borrowBike(bikeToBorrow);
                 System.out.println("Ok borrowed");
+                return false;
             }
             else if(!user.hasABike()){
                 this.usersQueue.add(new BorrowRequest(user, bikeId));
                 System.out.println("Added to queue");
+                return true;
             }
         }
+
+        return false;
 
     }
 
@@ -82,9 +86,22 @@ public class BikeStorage extends UnicastRemoteObject implements EiffelBikeCorpIn
 
     @Override
     public List<String> bikesToBorrow() throws RemoteException {
-        return this.bikeStorage.entrySet().stream().map((entry) -> {
+//        return this.bikeStorage.entrySet().stream().map((entry) -> {
+//            try {
+//                return "BikeID: " +entry.getKey() +" " +entry.getValue().getNotes();
+//            } catch (RemoteException e) {
+//                throw new RuntimeException(e);
+//            }
+//        }).collect(Collectors.toList());
+        return this.bikeStorage.entrySet().stream().map(Map.Entry::getValue).filter((BikeInterface bike) -> {
             try {
-                return "BikeID: " +entry.getKey() +" " +entry.getValue().getNotes();
+                return !bike.isRented();
+            } catch (RemoteException e) {
+                throw new RuntimeException(e);
+            }
+        }).map((BikeInterface bike) -> {
+            try {
+                return "BikeID: " +bike.getId() +" " +bike.getNotes();
             } catch (RemoteException e) {
                 throw new RuntimeException(e);
             }
@@ -95,13 +112,13 @@ public class BikeStorage extends UnicastRemoteObject implements EiffelBikeCorpIn
     public List<String> bikesToBuy() throws RemoteException {
         return this.bikeStorage.entrySet().stream().map(Map.Entry::getValue).filter((BikeInterface bike) -> {
             try {
-                return !bike.getNotes().equals("") && !bike.isRented();
+                return bike.wasRentedOnce() && !bike.isRented();
             } catch (RemoteException e) {
                 throw new RuntimeException(e);
             }
         }).map((BikeInterface bike) -> {
             try {
-                return bike.getNotes();
+                return "BikeID: " +bike.getId() +" " +bike.getNotes();
             } catch (RemoteException e) {
                 throw new RuntimeException(e);
             }
