@@ -12,4 +12,5 @@ public interface BikeInterface extends Remote{
     public int getId() throws  RemoteException;
     public void isRented(boolean rented) throws RemoteException;
     public boolean isRented() throws RemoteException;
+    public boolean wasRentedOnce() throws RemoteException;
 }
