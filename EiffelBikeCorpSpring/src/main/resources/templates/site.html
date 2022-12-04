@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <h1>Welcome to Eiffel BikeCorp</h1>
+    <h2 th:text="${name}"></h2>
+    <button onclick="location.href='http://localhost:8081/EiffelBikeCorp/lease'">Lease your bike</button>
+    <button onclick="location.href='http://localhost:8081/EiffelBikeCorp/rent'">Rent a bike</button>
+    <button onclick="location.href='http://localhost:8081/EiffelBikeCorp/giveback'">Give back a bike</button>
+    <ul>
+        <li th:each="bike : ${bikes}" th:text="${bike}"></li>
+    </ul>
+</html>

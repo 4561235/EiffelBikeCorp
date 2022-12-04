@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<form action="#"  th:action="@{/EiffelBikeCorp/rent}" method="post" th:object="${formRent}">
+    <label for="s">Select BikeID to rent</label>
+    <select id="s" name="bikeID" th:field="*{bikeID}">
+        <option th:each="bikesID : *{bikesIDs}"
+                th:value="${bikesID}"
+                th:text="${bikesID}"
+                th:data="${bikesID}">
+        </option>
+    </select>
+    <ul>
+        <li th:each="bike : ${bikesToRent}" th:text="${bike}"></li>
+    </ul>
+    <button type="submit">Rent</button></div>
+</form>
+</html>

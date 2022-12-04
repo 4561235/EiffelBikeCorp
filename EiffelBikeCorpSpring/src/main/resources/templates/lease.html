@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <form action="#"  th:action="@{/EiffelBikeCorp/lease}" method="post" th:object="${formBike}">
+    <h2>Enter your Bike information : </h2>
+    <div><label for="n">Name:</label>
+      <input id="n" type="text" name="name" th:field="*{name}">
+      <span  th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Invalid name</span></div>
+    <div><label for="p">Price:</label>
+      <input type="text" id="p" name="price" th:field="*{price}">
+      <span  th:if="${#fields.hasErrors('price')}" th:errors="*{price}">Invalid price</span></div>
+    <div>
+      <button type="submit">Lease</button></div>
+  </form>
+</html>

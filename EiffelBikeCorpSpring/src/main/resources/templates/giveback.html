@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<form action="#"  th:action="@{/EiffelBikeCorp/giveback}" method="post" th:object="${formGiveBack}">
+  <label for="t" >Give a feel back : </label>
+  <textarea id="t" name="note" th:field="*{note}"></textarea>
+  <button type="submit">Giveback bike</button></div>
+</form>
+</html>
